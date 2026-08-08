@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://titledesk.theharnesslab.dev/sitemap.xml
+Sitemap: https://spencerandtheteagues.github.io/titledesk-site/sitemap.xml
