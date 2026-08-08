@@ -54,6 +54,13 @@ main { padding: 62px 0 80px; }
 
 .hero { padding: 44px 0 58px; }
 
+.hero-logo {
+  display: block;
+  width: min(620px, 100%);
+  height: auto;
+  margin: 0 auto 34px;
+}
+
 .eyebrow {
   color: var(--accent);
   font-size: 0.78rem;
