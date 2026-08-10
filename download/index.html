@@ -16,17 +16,26 @@
       <div class="eyebrow">Verified installation</div>
       <h1>Get the right TitleDesk build.</h1>
       <p class="lede">
-        Production installers are currently delivered through assisted onboarding. This keeps
-        customers on a verified build while Windows and macOS signing are completed.
+        Installers for Windows, macOS and Linux are published with a SHA-256 checksum for
+        every file, so you can confirm what you downloaded is exactly what we released.
       </p>
       <section class="policy">
-        <h2>After checkout</h2>
+        <h2>Download</h2>
+        <p><a class="button button-primary" href="https://github.com/THE-HARNESS-LAB/titledesk/releases/latest">Download TitleDesk Agent</a></p>
         <ol>
-          <li>Open the TitleDesk activation email and keep its one-time activation link private.</li>
-          <li>Email support from the same address used at checkout and tell us whether you use Windows, macOS, or Linux.</li>
-          <li>Install only the build supplied through the verified onboarding reply, then open the activation link on that computer.</li>
+          <li>Pick the file for your computer: <strong>Windows</strong> (<code>-win-x64-Setup.exe</code>), <strong>macOS</strong> (<code>-mac-…dmg</code>, Apple&nbsp;Silicon), or <strong>Linux</strong> (<code>-linux-x86_64.AppImage</code>).</li>
+          <li>Check it against the <code>SHA256SUMS</code> file on the same page — <code>Get-FileHash</code> on Windows, <code>shasum -a 256</code> on macOS and Linux.</li>
+          <li>Install it, then open your one-time activation link on that computer. Keep that link private.</li>
         </ol>
-        <p><a class="button button-primary" href="mailto:sales@theharnesslab.com?subject=TitleDesk%20installer%20request">Request my installer</a></p>
+        <p>
+          Windows and macOS code signing is still being completed, so those installers are
+          not yet signed: Windows will show a SmartScreen notice and macOS will ask you to
+          confirm the first open. Verifying the checksum above is what proves the file is
+          ours. <a href="https://github.com/THE-HARNESS-LAB/titledesk/blob/main/docs/install-windows.md">Windows guide</a> ·
+          <a href="https://github.com/THE-HARNESS-LAB/titledesk/blob/main/docs/install-macos.md">macOS guide</a> ·
+          <a href="https://github.com/THE-HARNESS-LAB/titledesk/blob/main/docs/install-linux.md">Linux guide</a>
+        </p>
+        <p>Need a hand, or an Intel Mac build? <a href="mailto:sales@theharnesslab.com?subject=TitleDesk%20installation%20help">Email us</a>.</p>
       </section>
       <div class="notice">Never paste an activation link, license credential, title document, or Google token into an unsolicited message. TitleDesk support will not ask for your payment-card number.</div>
     </main>
