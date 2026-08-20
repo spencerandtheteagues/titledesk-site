@@ -6,6 +6,11 @@
     <title>TitleDesk Agent — Title intelligence for oil &amp; gas landmen</title>
     <meta name="description" content="TitleDesk Agent is the desktop title factory for petroleum landmen. Local OCR, exact-fraction ownership, Customization Lab, and source-linked deliverables on Mac, Windows, and Linux.">
     <meta name="theme-color" content="#07060c">
+    <meta property="og:title" content="TitleDesk Agent — Title intelligence for oil &amp; gas landmen">
+    <meta property="og:description" content="Desktop title factory: OCR, runsheet, exact fractions, Customization Lab. Windows, macOS, and Linux. One license per seat.">
+    <meta property="og:image" content="https://titledesk.theharnesslab.com/shots/home.png">
+    <meta property="og:url" content="https://titledesk.theharnesslab.com/">
+    <meta property="og:type" content="website">
     <link rel="icon" href="./harness-lab-emblem.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,8 +48,11 @@
           </p>
           <p class="lede">Windows, macOS, and Linux. One license per seat. Checkout below issues exactly the number of activations you buy.</p>
         </div>
-        <div>
+        <div class="hero-visual">
           <img class="hero-logo" src="./titledesk-agent-logo.png" alt="TitleDesk Agent — Title intelligence for oil and gas landmen, by The Harness Lab">
+          <figure class="hero-shot">
+            <img src="./shots/home.png" alt="TitleDesk Agent Home on the Reeves County sample project">
+          </figure>
         </div>
       </div>
 
@@ -53,24 +61,34 @@
         <h2>Three builds. Pick your machine.</h2>
         <p class="lede">Current release <strong>0.1.1</strong>. Verify the SHA-256 on the release page after download. After purchase, your activation email names this same installer set.</p>
         <div class="downloads">
-          <a class="dl-card" href="https://github.com/THE-HARNESS-LAB/titledesk/releases/download/v0.1.1/TitleDesk-Agent-0.1.1-mac-arm64-UNSIGNED-EVALUATION.dmg">
+          <div class="dl-card">
             <div class="dl-os">macOS</div>
             <h3>Apple silicon</h3>
-            <small>Universal workflow · .dmg · M-series Macs</small>
-            <small><a href="https://github.com/THE-HARNESS-LAB/titledesk/releases/download/v0.1.1/TitleDesk-Agent-0.1.1-mac-x64-UNSIGNED-EVALUATION.dmg">Intel Mac build</a></small>
-          </a>
-          <a class="dl-card" href="https://github.com/THE-HARNESS-LAB/titledesk/releases/download/v0.1.1/TitleDesk-Agent-0.1.1-win-x64-Setup.exe">
+            <small>Official org release · unsigned evaluation .dmg</small>
+            <p><a class="button button-primary" href="https://github.com/THE-HARNESS-LAB/titledesk/releases/latest/download/TitleDesk-Agent-0.1.1-mac-arm64-UNSIGNED-EVALUATION.dmg">Download M-series</a></p>
+            <small><a href="https://github.com/THE-HARNESS-LAB/titledesk/releases/latest/download/TitleDesk-Agent-0.1.1-mac-x64-UNSIGNED-EVALUATION.dmg">Intel Mac .dmg</a></small>
+          </div>
+          <div class="dl-card">
             <div class="dl-os">Windows</div>
             <h3>Windows 10 / 11 x64</h3>
-            <small>NSIS installer · no admin required for a user install</small>
-          </a>
-          <a class="dl-card" href="https://github.com/THE-HARNESS-LAB/titledesk/releases/download/v0.1.1/TitleDesk-Agent-0.1.1-linux-x86_64.AppImage">
+            <small>Official org release · NSIS setup</small>
+            <p><a class="button button-primary" href="https://github.com/THE-HARNESS-LAB/titledesk/releases/latest/download/TitleDesk-Agent-0.1.1-win-x64-Setup.exe">Download installer</a></p>
+          </div>
+          <div class="dl-card">
             <div class="dl-os">Linux</div>
             <h3>x86_64 AppImage</h3>
-            <small>Needs a desktop keyring (GNOME Keyring / KWallet)</small>
-          </a>
+            <small>Official org release · GNOME Keyring / KWallet</small>
+            <p><a class="button button-primary" href="https://github.com/THE-HARNESS-LAB/titledesk/releases/latest/download/TitleDesk-Agent-0.1.1-linux-x86_64.AppImage">Download AppImage</a></p>
+          </div>
         </div>
-        <p class="fine">Checksums: <a href="https://github.com/THE-HARNESS-LAB/titledesk/releases/download/v0.1.1/SHA256SUMS">SHA256SUMS</a>. Windows SmartScreen and Gatekeeper may warn until platform signing is complete — the hash is the authenticity check. Need a hand? <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a>.</p>
+        <p class="fine">
+          Installers are published only from
+          <a href="https://github.com/THE-HARNESS-LAB/titledesk/releases/latest">THE-HARNESS-LAB/titledesk</a>
+          (current <strong>v0.1.1</strong>).
+          Checksums: <a href="https://github.com/THE-HARNESS-LAB/titledesk/releases/latest/download/SHA256SUMS">SHA256SUMS</a>.
+          macOS builds are the org unsigned evaluation DMGs; Apple notarization is pending.
+          Need a hand? <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a>.
+        </p>
       </div>
 
       <div class="wrap" id="buy">
@@ -149,6 +167,48 @@
             </div>
           </div>
           <p>Company administrators lock the profile. Landmen switch profiles; they do not rewrite the house format the week before a due date. Engineers can export a JSON Schema, a field guide, and an example profile generated from the same rules the app validates.</p>
+          <div class="shots" aria-label="TitleDesk screenshots">
+            <figure class="shot">
+              <img src="./shots/lab.png" alt="Customization Lab: describe branding, report format, and company security policy in plain language">
+              <figcaption>Customization Lab — tell TitleDesk how the shop works. It proposes the config; nothing changes until you approve it.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="./shots/home.png" alt="TitleDesk Home on the built-in Reeves County sample project">
+              <figcaption>Home — what needs you next, on this computer, with or without AI.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="./shots/documents.png" alt="Documents screen showing classified instruments with parties and book/page">
+              <figcaption>Documents — originals stay where they are. TitleDesk reads, classifies, and files.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="./shots/runsheet.png" alt="Runsheet with chain-gap flag on a warranty deed">
+              <figcaption>Runsheet — source-linked instruments. Chain gaps are flagged, not hidden.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="./shots/package.png" alt="Submit Package screen for assembling the client folder tree">
+              <figcaption>Package — the folder tree your client actually accepts, named their way.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="./shots/connections.png" alt="Connections screen for Google Drive and research sources">
+              <figcaption>Connections — company Drive read-only. Personal Drive for finished work.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="./shots/ownership.png" alt="Ownership screen with exact-fraction mineral interests totaling 1">
+              <figcaption>Ownership — BigInt fractions. 1/2 + 1/2 is 1, not 0.999.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="./shots/issues.png" alt="Issues and Curative with evidence, next step, and export">
+              <figcaption>Curative — defects with evidence and a next step. Nothing acts itself.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="./shots/reports.png" alt="Reports screen for Word, Excel, PDF, and CSV drafts">
+              <figcaption>Reports — drafts from accepted facts only. Review before the client sees them.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="./shots/research.png" alt="Research browser with Texas RRC always allowed">
+              <figcaption>Research — dedicated browser, allowlisted hosts, take-over for passwords.</figcaption>
+            </figure>
+          </div>
         </div>
       </section>
 

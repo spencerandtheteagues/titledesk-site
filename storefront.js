@@ -75,7 +75,9 @@ checkoutBtn?.addEventListener('click', async () => {
     if (!data.url) throw new Error('Stripe did not return a checkout URL.');
     window.location.href = data.url;
   } catch (error) {
-    statusEl.textContent = error instanceof Error ? error.message : 'Checkout failed.';
+    const message = error instanceof Error ? error.message : 'Checkout failed.';
+    const mail = `mailto:sales@theharnesslab.com?subject=${encodeURIComponent(`TitleDesk ${seats()} seat purchase`)}`;
+    statusEl.innerHTML = `${message} Or <a href="${mail}">email sales@theharnesslab.com</a>.`;
     statusEl.className = 'status err';
     checkoutBtn.disabled = false;
   }

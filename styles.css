@@ -75,7 +75,17 @@ h1, h2, h3 { font-family: var(--serif); line-height: 1.15; margin: 8px 0 12px; }
 h1 { font-size: clamp(2.1rem, 4.6vw, 3.6rem); }
 h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 .lede { font-size: 1.12rem; color: var(--muted); max-width: 62ch; }
-.hero-logo { width: min(100%, 560px); filter: drop-shadow(0 20px 40px rgba(0,0,0,.5)); }
+.hero-visual { display: grid; gap: 18px; }
+.hero-logo { width: min(100%, 420px); filter: drop-shadow(0 20px 40px rgba(0,0,0,.5)); }
+.hero-shot {
+  margin: 0;
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #0b0814;
+}
+.hero-shot img { display: block; width: 100%; }
 
 .downloads {
   display: grid;
@@ -92,6 +102,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 .dl-card { padding: 16px; text-decoration: none; color: inherit; display: block; }
 .dl-card:hover { border-color: var(--gold); transform: translateY(-2px); }
 .dl-card small { color: var(--muted); display: block; }
+.dl-card .button { margin-top: 10px; }
 .dl-os { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); }
 .dl-card h3 { margin: 6px 0 4px; font-size: 1.15rem; }
 
@@ -165,6 +176,26 @@ table { width: 100%; border-collapse: collapse; font-size: 14px; }
 th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid rgba(255,255,255,.06); vertical-align: top; }
 th { color: var(--gold); font-weight: 600; }
 
+.shots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+.shot {
+  margin: 0;
+  background: #0b0814;
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.shot img { display: block; width: 100%; }
+.shot figcaption {
+  padding: 10px 14px 14px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 .proof, .notice {
   border: 1px solid var(--stroke);
   border-radius: 16px;
@@ -198,7 +229,7 @@ textarea { min-height: 140px; }
 .policy p, .policy li { color: var(--muted); }
 
 @media (max-width: 920px) {
-  .hero, .grid-3, .grid-2, .feat-grid, .pipeline, .downloads, .contact-grid {
+  .hero, .grid-3, .grid-2, .feat-grid, .pipeline, .downloads, .contact-grid, .shots {
     grid-template-columns: 1fr;
   }
   .site-header { flex-direction: column; align-items: flex-start; }
