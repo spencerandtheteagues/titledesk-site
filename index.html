@@ -3,173 +3,255 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="application-name" content="TitleDesk Agent">
-    <meta name="description" content="TitleDesk Agent is a desktop title-research, document-review, ownership-calculation, and report-assembly application for petroleum landmen and oil-and-gas title examiners.">
-    <title>TitleDesk Agent</title>
+    <title>TitleDesk Agent — Title intelligence for oil &amp; gas landmen</title>
+    <meta name="description" content="TitleDesk Agent is the desktop title factory for petroleum landmen. Local OCR, exact-fraction ownership, Customization Lab, and source-linked deliverables on Mac, Windows, and Linux.">
+    <meta name="theme-color" content="#07060c">
+    <link rel="icon" href="./harness-lab-emblem.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
-    <header>
-      <a class="brand" href="./">TitleDesk Agent</a>
+    <a class="skip" href="#buy">Skip to license purchase</a>
+    <header class="site-header">
+      <a class="brand-lock" href="./">
+        <img src="./harness-lab-emblem.png" alt="">
+        <strong>TitleDesk Agent</strong>
+      </a>
       <nav aria-label="Primary">
-        <a href="#product">Product</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#onboarding">Get TitleDesk</a>
+        <a href="#download">Download</a>
+        <a href="#buy">Buy licenses</a>
+        <a href="#lab">Customization Lab</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
         <a href="./privacy/">Privacy</a>
         <a href="./terms/">Terms</a>
       </nav>
     </header>
+
     <main>
-      <div class="hero">
-        <img class="hero-logo" src="./titledesk-logo.png" alt="TitleDesk Agent — Title Intelligence for Oil and Gas Landmen">
-        <div class="eyebrow">TitleDesk Agent for oil-and-gas title work</div>
-        <h1>TitleDesk Agent helps landmen research title and build source-linked reports.</h1>
-        <p class="lede">
-          TitleDesk Agent is a desktop title-research, document-review, ownership-calculation,
-          and report-assembly application for petroleum landmen and oil-and-gas title examiners.
-          It reads user-selected source documents, builds runsheets, calculates ownership with
-          exact fractions, tracks curative issues, and assembles reports on the user's computer.
-          Material conclusions stay tied to their source and remain subject to human review.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#pricing">View plans</a>
-          <a class="button button-secondary" href="mailto:sales@theharnesslab.com?subject=TitleDesk%20demo">Request a demo</a>
+      <div class="wrap hero" id="top">
+        <div>
+          <div class="eyebrow">By The Harness Lab · Oil &amp; gas title production</div>
+          <h1>The title factory that runs on the landman’s computer.</h1>
+          <p class="lede">
+            TitleDesk Agent reads the packet you already have, builds a source-linked runsheet,
+            computes ownership in exact fractions, tracks curative, and delivers the folder
+            your client actually accepts — Word, Excel, PDF, or CSV, named and filed the way
+            <em>your</em> shop works. AI is optional. Judgment stays with the landman.
+          </p>
+          <p class="lede">Windows, macOS, and Linux. One license per seat. Checkout below issues exactly the number of activations you buy.</p>
+        </div>
+        <div>
+          <img class="hero-logo" src="./titledesk-agent-logo.png" alt="TitleDesk Agent — Title intelligence for oil and gas landmen, by The Harness Lab">
         </div>
       </div>
 
-      <section id="product" class="grid" aria-label="Product features">
-        <div class="card">
-          <h2>Local first</h2>
-          <p>
-            Projects, extracted text, ownership work, and reports live on the user's computer.
-            Local OCR and the core title workflow work without connecting an AI provider.
-          </p>
+      <div class="wrap" id="download">
+        <div class="section-kicker">Get the desktop app</div>
+        <h2>Three builds. Pick your machine.</h2>
+        <p class="lede">Current release <strong>0.1.1</strong>. Verify the SHA-256 on the release page after download. After purchase, your activation email names this same installer set.</p>
+        <div class="downloads">
+          <a class="dl-card" href="https://github.com/THE-HARNESS-LAB/titledesk/releases/download/v0.1.1/TitleDesk-Agent-0.1.1-mac-arm64-UNSIGNED-EVALUATION.dmg">
+            <div class="dl-os">macOS</div>
+            <h3>Apple silicon</h3>
+            <small>Universal workflow · .dmg · M-series Macs</small>
+            <small><a href="https://github.com/THE-HARNESS-LAB/titledesk/releases/download/v0.1.1/TitleDesk-Agent-0.1.1-mac-x64-UNSIGNED-EVALUATION.dmg">Intel Mac build</a></small>
+          </a>
+          <a class="dl-card" href="https://github.com/THE-HARNESS-LAB/titledesk/releases/download/v0.1.1/TitleDesk-Agent-0.1.1-win-x64-Setup.exe">
+            <div class="dl-os">Windows</div>
+            <h3>Windows 10 / 11 x64</h3>
+            <small>NSIS installer · no admin required for a user install</small>
+          </a>
+          <a class="dl-card" href="https://github.com/THE-HARNESS-LAB/titledesk/releases/download/v0.1.1/TitleDesk-Agent-0.1.1-linux-x86_64.AppImage">
+            <div class="dl-os">Linux</div>
+            <h3>x86_64 AppImage</h3>
+            <small>Needs a desktop keyring (GNOME Keyring / KWallet)</small>
+          </a>
         </div>
-        <div class="card">
-          <h2>Google Drive, by choice</h2>
-          <p>
-            A company Drive connection uses Google's read-only scope. A separate personal
-            Drive connection can receive finished reports or packages when the user asks.
-          </p>
-        </div>
-        <div class="card">
-          <h2>Review before reliance</h2>
-          <p>
-            Machine-extracted instruments remain proposals until a person accepts them.
-            Reports show unsupported conclusions instead of hiding missing sources.
-          </p>
-        </div>
-        <div class="card">
-          <h2>Optional AI</h2>
-          <p>
-            AI-assisted drafting is optional and separately consented to. Users choose the
-            provider and can withdraw access in Settings.
-          </p>
-        </div>
-      </section>
-
-      <div class="notice">
-        TitleDesk does not sell personal information, serve advertising, or use Google user
-        data or title-project data to train generalized AI or machine-learning models.
+        <p class="fine">Checksums: <a href="https://github.com/THE-HARNESS-LAB/titledesk/releases/download/v0.1.1/SHA256SUMS">SHA256SUMS</a>. Windows SmartScreen and Gatekeeper may warn until platform signing is complete — the hash is the authenticity check. Need a hand? <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a>.</p>
       </div>
 
-      <section id="pricing" class="pricing-section" aria-labelledby="pricing-heading">
-        <div class="section-heading">
-          <div class="eyebrow">Production plans</div>
-          <h2 id="pricing-heading">Choose the license that fits your desk.</h2>
+      <div class="wrap" id="buy">
+        <div class="buy panel">
+          <div class="section-kicker">Stripe checkout · licenses issued automatically</div>
+          <h2>Buy seats. Get that many activations.</h2>
+          <p class="lede">The plan is chosen from how many seats you buy. Stripe quantity is the license count. After payment, TitleDesk emails one activation link per purchase to the checkout address — activate each computer from that email.</p>
+          <div class="seats-row">
+            <label for="seats"><strong>Seats</strong></label>
+            <input id="seats" type="number" min="1" max="500" value="1" inputmode="numeric">
+            <div class="term-row" role="group" aria-label="Billing term">
+              <button type="button" id="term-monthly" class="active">Monthly</button>
+              <button type="button" id="term-annual">12-month</button>
+            </div>
+          </div>
+          <p class="quote-total" id="quote-total">Individual · $249 / seat / mo</p>
+          <p class="quote-note" id="quote-note">One licensed computer. Built for an independent landman.</p>
           <p>
-            Every paid plan includes the desktop title workflow, local-first project storage,
-            source-linked reports, exact-fraction ownership calculations, and activation support.
+            <label>Checkout email
+              <input id="email" type="email" autocomplete="email" placeholder="you@company.com">
+            </label>
+          </p>
+          <p><button class="button button-primary" id="checkout" type="button">Pay with Stripe</button></p>
+          <p class="status" id="buy-status" role="status"></p>
+          <p class="fine">
+            <strong>Automatic pricing:</strong> 1 seat → Individual <strong>$249/seat</strong>.
+            2 or more seats → Enterprise <strong>$349/seat</strong>.
+            First 12-month contract of <strong>40+ seats</strong> → Founder year one <strong>$199/seat</strong> (one time, then Enterprise).
+            Subscriptions renew until canceled. Tax extra. By paying you agree to the
+            <a href="./terms/">Terms</a> and <a href="./privacy/">Privacy Policy</a>.
           </p>
         </div>
+      </div>
 
-        <div class="pricing-grid">
-          <article class="price-card">
-            <div>
-              <div class="plan-label">Solo</div>
-              <h3>For an independent landman</h3>
-              <p class="price"><span>$99</span> / month</p>
-              <p class="price-note">or $990 annually · two computers</p>
-              <ul>
-                <li>One named subscriber</li>
-                <li>Activation on up to two computers</li>
-                <li>Local OCR and core title workflow</li>
-                <li>Email activation and onboarding support</li>
-              </ul>
-            </div>
-            <div class="purchase-actions">
-              <a class="button button-primary" href="https://buy.stripe.com/fZueVdeDQ3mR2woaMQ4wM00">Choose monthly</a>
-              <a class="button button-secondary" href="https://buy.stripe.com/9B6dR9eDQg9D2wo8EI4wM01">Choose annual</a>
-            </div>
-          </article>
-
-          <article class="price-card featured">
-            <div>
-              <div class="plan-label">Team</div>
-              <h3>For a crew or title department</h3>
-              <p class="price"><span>$129</span> / workstation / month</p>
-              <p class="price-note">or $1,290 per workstation annually</p>
-              <ul>
-                <li>Adjustable quantity from 1–100 workstations</li>
-                <li>One licensed computer per purchased seat</li>
-                <li>Company workspace and policy controls</li>
-                <li>Assisted rollout and activation support</li>
-              </ul>
-            </div>
-            <div class="purchase-actions">
-              <a class="button button-primary" href="https://buy.stripe.com/eVq7sL0N03mR3AscUY4wM02">Choose monthly</a>
-              <a class="button button-secondary" href="https://buy.stripe.com/6oU8wP7bof5z5IA4os4wM03">Choose annual</a>
-            </div>
-          </article>
-
-          <article class="price-card enterprise-card">
-            <div>
-              <div class="plan-label">Enterprise</div>
-              <h3>For a tailored deployment</h3>
-              <p>
-                Contact us for pilot terms, larger rollouts, workspace policy, and deployment
-                requirements. Enterprise licenses are quoted and provisioned directly.
-              </p>
-            </div>
-            <a class="button button-secondary" href="mailto:sales@theharnesslab.com?subject=TitleDesk%20enterprise">Contact sales</a>
-          </article>
-        </div>
-
-        <div class="purchase-disclosure">
-          <strong>Before you subscribe:</strong> Production onboarding is currently assisted.
-          After checkout, TitleDesk emails the purchaser an activation link and installation
-          instructions. Subscriptions renew automatically at the selected monthly or annual
-          interval until canceled. Stripe processes payment. By subscribing, you agree to the
-          <a href="./terms/">Terms of Service</a> and acknowledge the
-          <a href="./privacy/">Privacy Policy</a>. Prices exclude any applicable tax.
+      <section class="wrap" id="story">
+        <div class="section-kicker">The job</div>
+        <h2>Title work is still a factory. Most of the hours are mechanical.</h2>
+        <p class="lede">County packets, OCR, runsheets, exact fractions, curative lists, and a client folder tree that must match the house format. TitleDesk does that work on the laptop. The landman accepts what is true, refuses what is thin, and keeps the opinion.</p>
+        <div class="pipeline" aria-label="TitleDesk pipeline">
+          <div class="pipe"><b>1</b> Documents</div>
+          <div class="pipe"><b>2</b> Extract</div>
+          <div class="pipe"><b>3</b> Chain</div>
+          <div class="pipe"><b>4</b> Exact fractions</div>
+          <div class="pipe"><b>5</b> Defects</div>
+          <div class="pipe"><b>6</b> Deliver</div>
         </div>
       </section>
 
-      <section id="onboarding" class="policy onboarding">
-        <div class="eyebrow">Installation and onboarding</div>
-        <h2>Start with a verified customer build.</h2>
-        <p>
-          TitleDesk is delivered through assisted onboarding while platform-signed installers
-          are finalized. After purchase, use the email address from checkout to request the
-          correct installer and complete activation. Do not download TitleDesk from an
-          unofficial mirror or accept an installer sent from an address you do not recognize.
-        </p>
-        <a class="button button-secondary" href="./download/">Installation help</a>
+      <section class="wrap" id="lab">
+        <div class="lab">
+          <div class="section-kicker">The product inside the product</div>
+          <h2>Customization Lab — TitleDesk becomes <em>your</em> shop.</h2>
+          <p class="lede">
+            No two land departments file, search, or deliver the same way. Forking the app per client does not scale.
+            A free-form template language would let a model write code. Customization Lab is the third path:
+            you <strong>describe the workflow in English</strong>. TitleDesk proposes a validated company profile.
+            Nothing is written until a person approves the plain-language change.
+          </p>
+          <div class="example">“Ownership report as Word, not Excel. Call Owner ‘Mineral Owner’. Package folder {{project.name}} - Landman Submitted {{date.today}}. Search back to sovereignty. Always pull ratifications. Upload finished work to my personal Drive, never the company Drive.”</div>
+          <div class="grid-2">
+            <div>
+              <h3>Research process</h3>
+              <p>Preferred domains (Courthouse Direct, TexasFile, RRC, and the hosts you allow). How far back title is run — sovereignty or a house year count. Adjoining tracts. Gap thresholds. Document types you always pull. Defects worth raising. Require a human on every instrument, or only the thin ones.</p>
+            </div>
+            <div>
+              <h3>Sources &amp; connections</h3>
+              <p>Company Google Drive is read-only at Google, in the app, and in the database. Personal Drive is the only place finished packages go, when you say so. Connectors name a credential in the OS keychain — there is no place for a model to paste a stolen token. Hosts are allowlisted and re-checked when they fire.</p>
+            </div>
+            <div>
+              <h3>Formatting of finished work</h3>
+              <p>Each report type — runsheet, ownership, curative, document index, and more — chooses Excel, Word, PDF, or CSV. Columns, labels, order, freeze header, draft watermark, company name, logo, accent color, footer. Placeholders like {{project.county}} are a closed list. Unknown tags are refused at save, not printed on a client PDF.</p>
+            </div>
+            <div>
+              <h3>How it is delivered, and where</h3>
+              <p>The deliverable is the folder tree. You name LEASES, SELLER’S FILE, opinions, well files, ratifications. Filing rules match your prefixes (Lse, TO-, Assn). Empty folders stay visible so missing work is obvious — or you suppress them. One click builds the tree and saves it to the personal Drive you connected.</p>
+            </div>
+          </div>
+          <p>Company administrators lock the profile. Landmen switch profiles; they do not rewrite the house format the week before a due date. Engineers can export a JSON Schema, a field guide, and an example profile generated from the same rules the app validates.</p>
+        </div>
       </section>
 
-      <section class="policy">
-        <h2>Google OAuth disclosure</h2>
-        <p>
-          TitleDesk uses Google OAuth only for visible Google Drive features the user chooses.
-          Read the full <a href="./privacy/">Privacy Policy</a> for the exact data accessed,
-          how local caching works, when a user-selected AI provider may receive content, and
-          how to disconnect and delete data.
-        </p>
+      <section class="wrap" id="features">
+        <div class="section-kicker">Everything in the workstation</div>
+        <h2>The full TitleDesk surface.</h2>
+        <div class="feat-grid">
+          <article class="card"><h3>Paste the assignment</h3><p>Reads the letter as data, not instructions. Says what it can and cannot do. Plans the app’s column and the landman’s column in parallel.</p></article>
+          <article class="card"><h3>Local OCR</h3><p>Tesseract on the machine. Multi-page TIFFs, scanned opinions, county image packets. No per-page cloud bill. Pages that cannot be read are marked “needs your eyes,” never stored as empty.</p></article>
+          <article class="card"><h3>Classification</h3><p>Twenty-three instrument types. Book/page, instrument number, dates, parties, legal. Filename beats body text so a ratification does not steal the instrument it recites.</p></article>
+          <article class="card"><h3>Proposed → accepted</h3><p>Nothing enters the runsheet or ownership until a person accepts it. Thin OCR stays blank rather than inventing a plausible lessor.</p></article>
+          <article class="card"><h3>Exact fractions</h3><p>BigInt rationals. 1/3 + 1/3 + 1/3 is 1. Money is integer cents. Over-conveyance is an exact fraction, not a rounding artifact.</p></article>
+          <article class="card"><h3>Runsheet</h3><p>Source-linked rows, chain-gap flags, Word/Excel export in the company’s columns.</p></article>
+          <article class="card"><h3>Ownership &amp; HBP</h3><p>Net mineral acres, balance checks, leasehold, wells, production import, operator history, held-by-production, conflicts.</p></article>
+          <article class="card"><h3>Curative</h3><p>Issues with evidence, next step, and status. The list a landman actually works, not a chatbot summary.</p></article>
+          <article class="card"><h3>Wells &amp; Texas API</h3><p>Canonical 42-CCC-NNNNN identity. Partial county codes are not wells. RRC workbooks import by sheet.</p></article>
+          <article class="card"><h3>Research browser</h3><p>Dedicated profile, domain allowlist, metered paid sites, take-over for passwords. Official Texas RRC is always allowed.</p></article>
+          <article class="card"><h3>Optional AI</h3><p>Claude, local Ollama, Anthropic, OpenAI, Moonshot, custom. Consent-gated. Untrusted assignment text never gets tools.</p></article>
+          <article class="card"><h3>Reports &amp; packages</h3><p>Ten report types. Client workbook compile against a golden. Transactional package assembly. Publish only after release gates pass.</p></article>
+          <article class="card"><h3>Drive, correctly</h3><p>Company Drive read-only. Personal Drive for output. Shared-with-me and starred roots. Never writes to the company corpus.</p></article>
+          <article class="card"><h3>Workspaces</h3><p>One signed app. Switch companies without a custom build. Isolated encrypted databases per workspace.</p></article>
+          <article class="card"><h3>Time, billing, owners</h3><p>Day rates, expenses, invoices in exact cents. Owner and offer tracking. Deadlines from lease data.</p></article>
+          <article class="card"><h3>GIS plat</h3><p>Tract boundaries, well locations, offline SVG, GeoJSON import. Complements — not a replacement for — ArcGIS.</p></article>
+          <article class="card"><h3>Encrypted at rest</h3><p>AES-256-GCM database. Key in macOS Keychain, Windows DPAPI, or Linux libsecret. Append-only audit log.</p></article>
+          <article class="card"><h3>Licensing</h3><p>Device-based seats. Offline lease. Stripe Customer Portal. Activation email from licenses@theharnesslab.com.</p></article>
+        </div>
+      </section>
+
+      <section class="wrap" id="safety">
+        <div class="section-kicker">Invariants</div>
+        <h2>These are the product. They are tested, not hoped.</h2>
+        <div class="grid-3">
+          <div class="card"><h3>Company Drive is never writable</h3><p>Token scope, app refusal, and SQLite triggers. A folder labeled company cannot be given write access.</p></div>
+          <div class="card"><h3>A model proposes. Code computes.</h3><p>Ownership math is deterministic. Reports refuse unsupported figures instead of looking finished.</p></div>
+          <div class="card"><h3>Works with no AI</h3><p>Reading, OCR, classification, runsheet, ownership, billing, and packages are local. AI only drafts.</p></div>
+        </div>
+      </section>
+
+      <section class="wrap" id="proof">
+        <div class="proof">
+          <div class="section-kicker">On a real unit</div>
+          <h2>This is not a slide-deck demo.</h2>
+          <p>
+            TitleDesk has been run end-to-end on a live Montague County unit packet — 21 documents,
+            300+ OCR pages, multi-page unit TIFFs, RRC production, source-linked runsheet, tract table,
+            curative with page cites — without a landman keying rows and without a courthouse plant.
+            Connecting Courthouse Direct and TexasFile is how the missing-instrument tail (current index,
+            named volume/page pulls) is automated the same way. Judgment stays on the desk.
+          </p>
+        </div>
+      </section>
+
+      <section class="wrap" id="pricing-detail">
+        <div class="section-kicker">Seat math</div>
+        <h2>What you are buying.</h2>
+        <table>
+          <thead><tr><th>When</th><th>Plan</th><th>Price</th><th>Licenses</th></tr></thead>
+          <tbody>
+            <tr><td>1 seat</td><td>Individual / Solo</td><td>$249 / seat / month<br>$2,988 / seat / year</td><td>Exactly 1 activation</td></tr>
+            <tr><td>2–39 seats, or 40+ monthly</td><td>Enterprise</td><td>$349 / seat / month<br>$4,188 / seat / year</td><td>Exactly the quantity on the Stripe invoice</td></tr>
+            <tr><td>First 40+ seats on a 12-month contract</td><td>Founder year one</td><td>$199 / seat / month billed annually ($2,388 / seat)</td><td>Exactly the quantity purchased · one qualifying contract, ever</td></tr>
+          </tbody>
+        </table>
+        <p class="fine">After the founder year, that account continues on Enterprise. Team $129 legacy subscriptions remain honored. Manage billing in the Stripe Customer Portal from your receipt.</p>
+      </section>
+
+      <section class="wrap" id="contact">
+        <div class="section-kicker">People</div>
+        <h2>Talk to The Harness Lab.</h2>
+        <div class="contact-grid">
+          <div>
+            <p>Sales, pilots, and 40-seat contracts: <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a>.</p>
+            <p>Activation and install: same inbox, or reply to the license email from <strong>licenses@theharnesslab.com</strong>.</p>
+            <p>
+              <a class="hl-link" href="https://theharnesslab.com/">
+                <img src="./harness-lab-lockup.png" alt="The Harness Lab">
+                <span>theharnesslab.com</span>
+              </a>
+            </p>
+          </div>
+          <form id="contact-form">
+            <input name="name" required maxlength="120" placeholder="Name" autocomplete="name">
+            <input name="email" type="email" required placeholder="Work email" autocomplete="email">
+            <input name="seats" type="number" min="1" max="500" placeholder="Seats (optional)">
+            <textarea name="message" required placeholder="What do you need TitleDesk to look like when it is yours?"></textarea>
+            <button class="button button-primary" type="submit">Email sales</button>
+            <p class="status" id="contact-status" role="status"></p>
+          </form>
+        </div>
       </section>
     </main>
+
     <footer>
-      <span>© 2026 The Harness Lab · TitleDesk Agent</span>
-      <span><a href="mailto:sales@theharnesslab.com?subject=TitleDesk%20support">Support</a> · <a href="./download/">Install</a> · <a href="./privacy/">Privacy</a> · <a href="./terms/">Terms</a></span>
+      <a class="hl-link" href="https://theharnesslab.com/">
+        <img src="./harness-lab-emblem.png" alt="">
+        <span>© 2026 The Harness Lab</span>
+      </a>
+      <span>
+        <a href="./privacy/">Privacy</a> ·
+        <a href="./terms/">Terms</a> ·
+        <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a>
+      </span>
     </footer>
+    <script src="./storefront.js" defer></script>
   </body>
 </html>
