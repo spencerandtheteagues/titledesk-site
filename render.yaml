@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: titledesk
+    runtime: static
+    repo: https://github.com/spencerandtheteagues/titledesk-site
+    branch: main
+    buildCommand: "true"
+    staticPublishPath: .
+    domains:
+      - title-desk.com
+      - www.title-desk.com
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+    routes:
+      - type: rewrite
+        source: /download
+        destination: /download/index.html
+      - type: rewrite
+        source: /thanks
+        destination: /thanks/index.html
+      - type: rewrite
+        source: /privacy
+        destination: /privacy/index.html
+      - type: rewrite
+        source: /terms
+        destination: /terms/index.html
