@@ -17,14 +17,10 @@ const API = 'https://titledesk-licensing.theharnesslab.workers.dev';
    Keep in step with the pricing table in index.html. A divergence is treated
    as a fault and blocks checkout rather than charging an unadvertised price. */
 const PUBLISHED = {
-  'solo:monthly': 24900,        // $249 / seat / month
-  'enterprise:annual': 418800,  // $349 / seat / month, billed annually
+  'solo:monthly': 24900,        // $249 / seat / month, month to month
+  'solo:annual': 237600,        // $198 / seat / month on a 12-month contract
+  'enterprise:annual': 418800,  // $349 / seat / month, always a 12-month contract
   'founder:annual': 238800,     // $199 / seat / month, billed annually
-};
-
-/* Sold by arrangement, not through this form. */
-const CONTRACTED = {
-  'solo:annual': 'The Solo 12-month rate of $198/seat is a contracted rate — we set it up directly.',
 };
 
 const seatsEl = document.getElementById('seats');
@@ -136,14 +132,6 @@ function unblockCheckout() {
 async function refreshQuote() {
   if (!totalEl) return;
   applyTermRules();
-
-  const contracted = CONTRACTED['solo:' + term];
-  if (seats() === 1 && contracted) {
-    totalEl.textContent = '$198 / seat / month';
-    if (noteEl) noteEl.textContent = 'Solo, on a 12-month contract.';
-    blockCheckout(contracted, 'warn');
-    return;
-  }
 
   const token = ++quoteToken;
   try {
