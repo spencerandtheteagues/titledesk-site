@@ -77,7 +77,9 @@ checkoutBtn?.addEventListener('click', async () => {
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Checkout failed.';
     const mail = `mailto:sales@theharnesslab.com?subject=${encodeURIComponent(`TitleDesk ${seats()} seat purchase`)}`;
-    statusEl.innerHTML = `${message} Or <a href="${mail}">email sales@theharnesslab.com</a>.`;
+    statusEl.innerHTML = /sales@theharnesslab\.com/i.test(message)
+      ? message
+      : `${message} Or <a href="${mail}">email sales@theharnesslab.com</a>.`;
     statusEl.className = 'status err';
     checkoutBtn.disabled = false;
   }
