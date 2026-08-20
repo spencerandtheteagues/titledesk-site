@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TitleDesk Agent — Title intelligence for oil &amp; gas landmen</title>
     <meta name="description" content="TitleDesk Agent is the desktop title factory for petroleum landmen. Local OCR, exact-fraction ownership, Customization Lab, and source-linked deliverables on Mac, Windows, and Linux.">
-    <meta name="theme-color" content="#07060c">
+    <meta name="theme-color" content="#000000">
     <meta property="og:title" content="TitleDesk Agent — Title intelligence for oil &amp; gas landmen">
     <meta property="og:description" content="Desktop title factory: OCR, runsheet, exact fractions, Customization Lab. Windows, macOS, and Linux. One license per seat.">
     <meta property="og:image" content="https://title-desk.com/shots/home.png">
@@ -14,15 +14,16 @@
     <link rel="icon" href="./harness-lab-emblem.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
     <a class="skip" href="#buy">Skip to license purchase</a>
     <header class="site-header">
       <a class="brand-lock" href="./">
-        <img src="./harness-lab-emblem.png" alt="">
-        <strong>TitleDesk Agent</strong>
+        <img class="brand-td" src="./titledesk-logo.png" alt="TitleDesk Agent">
+        <span class="brand-rule" aria-hidden="true"></span>
+        <img class="brand-hl" src="./harness-lab-emblem.png" alt="The Harness Lab">
       </a>
       <nav aria-label="Primary">
         <a href="#download">Download</a>
@@ -40,6 +41,9 @@
         <div>
           <div class="eyebrow">By The Harness Lab · Oil &amp; gas title production</div>
           <h1>The title factory that runs on the landman’s computer.</h1>
+          <p class="lede">
+            With full customization and onboarding from The Harness Lab, TitleDesk Agent can do 95%+ of the landman’s daily work and reduce the time it takes to complete one assignment from approximately 72 hours to under 30 minutes. With TitleDesk and customization, every landman can complete 5–10 assignments daily.
+          </p>
           <p class="lede">
             TitleDesk Agent reads the packet you already have, builds a source-linked runsheet,
             computes ownership in exact fractions, tracks curative, and delivers the folder
@@ -92,35 +96,57 @@
       </div>
 
       <div class="wrap" id="buy">
-        <div class="buy panel">
-          <div class="section-kicker">Stripe checkout · licenses issued automatically</div>
-          <h2>Buy seats. Get that many activations.</h2>
-          <p class="lede">The plan is chosen from how many seats you buy. Stripe quantity is the license count. After payment, TitleDesk emails one activation link per purchase to the checkout address — activate each computer from that email.</p>
-          <div class="seats-row">
-            <label for="seats"><strong>Seats</strong></label>
-            <input id="seats" type="number" min="1" max="500" value="1" inputmode="numeric">
-            <div class="term-row" role="group" aria-label="Billing term">
-              <button type="button" id="term-monthly" class="active">Monthly</button>
-              <button type="button" id="term-annual">12-month</button>
+        <div class="section-kicker">Stripe checkout · licenses issued automatically</div>
+        <h2>Buy seats. Get that many activations.</h2>
+        <p class="lede">Two distinct plans. Stripe quantity is the license count. After payment, TitleDesk emails one activation link per purchase to the checkout address — activate each computer from that email.</p>
+        <div class="buy-grid">
+          <article class="price-card" id="solo">
+            <div class="section-kicker">Solo · independent landman</div>
+            <h3>One licensed computer</h3>
+            <p class="price-face">$249 <span>/ seat / mo month-to-month</span></p>
+            <p class="quote-note">Or a 12-month contract at <strong>$198 / seat / mo</strong> billed annually — $2,376 / year.</p>
+            <input id="solo-seats" type="hidden" value="1">
+            <div class="term-row" role="group" aria-label="Solo billing term">
+              <button type="button" id="solo-term-monthly" class="active">Month-to-month</button>
+              <button type="button" id="solo-term-annual">12-month</button>
             </div>
-          </div>
-          <p class="quote-total" id="quote-total">Individual · $249 / seat / mo</p>
-          <p class="quote-note" id="quote-note">One licensed computer. Built for an independent landman.</p>
-          <p>
+            <p class="quote-total" id="solo-quote-total">Loading live total…</p>
+            <p class="quote-note" id="solo-quote-note"></p>
             <label>Checkout email
-              <input id="email" type="email" autocomplete="email" placeholder="you@company.com">
+              <input id="solo-email" type="email" autocomplete="email" placeholder="you@company.com">
             </label>
-          </p>
-          <p><button class="button button-primary" id="checkout" type="button">Pay with Stripe</button></p>
-          <p class="status" id="buy-status" role="status"></p>
-          <p class="fine">
-            <strong>Automatic pricing:</strong> 1 seat → Individual <strong>$249/seat</strong>.
-            2 or more seats → Enterprise <strong>$349/seat</strong>.
-            First 12-month contract of <strong>40+ seats</strong> → Founder year one <strong>$199/seat</strong> (one time, then Enterprise).
-            Subscriptions renew until canceled. Tax extra. By paying you agree to the
-            <a href="./terms/">Terms</a> and <a href="./privacy/">Privacy Policy</a>.
-          </p>
+            <p><button class="button button-primary" id="checkout-solo" type="button">Pay with Stripe</button></p>
+            <p class="status" id="solo-status" role="status"></p>
+            <p class="fine">Month-to-month posts term <code>monthly</code>. 12-month posts term <code>annual</code>. Subscriptions renew until canceled. Tax extra.</p>
+          </article>
+          <article class="price-card price-card-enterprise" id="enterprise">
+            <div class="section-kicker">Enterprise · 1-year contracts</div>
+            <h3>Shops and land departments</h3>
+            <p class="price-face">$349 <span>/ seat / mo billed annually</span></p>
+            <div class="founders">
+              <strong>Founders rate — $199/seat/mo.</strong>
+              The first company to buy 40+ seats on a one-year contract gets $199 per seat per month, billed annually. Live total comes from the licensing API.
+            </div>
+            <div class="seats-row">
+              <label for="enterprise-seats"><strong>Seats</strong></label>
+              <input id="enterprise-seats" type="number" min="1" max="500" value="5" inputmode="numeric">
+            </div>
+            <p class="quote-total" id="enterprise-quote-total">Loading live total…</p>
+            <p class="quote-note" id="enterprise-quote-note"></p>
+            <label>Checkout email
+              <input id="enterprise-email" type="email" autocomplete="email" placeholder="you@company.com">
+            </label>
+            <p><button class="button button-primary" id="checkout-enterprise" type="button">Pay with Stripe</button></p>
+            <p class="status" id="enterprise-status" role="status"></p>
+            <p class="fine">All Enterprise seats are one-year contracts. Posts term <code>annual</code>. Tax extra.</p>
+          </article>
         </div>
+        <p class="fine">
+          Device-based seats. Activation email from <strong>licenses@theharnesslab.com</strong>.
+          Manage billing in the Stripe Customer Portal from your receipt.
+          By paying you agree to the <a href="./terms/">Terms</a> and <a href="./privacy/">Privacy Policy</a>.
+          Need a hand? <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a>.
+        </p>
       </div>
 
       <section class="wrap" id="story">
@@ -267,12 +293,13 @@
         <table>
           <thead><tr><th>When</th><th>Plan</th><th>Price</th><th>Licenses</th></tr></thead>
           <tbody>
-            <tr><td>1 seat</td><td>Individual / Solo</td><td>$249 / seat / month<br>$2,988 / seat / year</td><td>Exactly 1 activation</td></tr>
-            <tr><td>2–39 seats, or 40+ monthly</td><td>Enterprise</td><td>$349 / seat / month<br>$4,188 / seat / year</td><td>Exactly the quantity on the Stripe invoice</td></tr>
-            <tr><td>First 40+ seats on a 12-month contract</td><td>Founder year one</td><td>$199 / seat / month billed annually ($2,388 / seat)</td><td>Exactly the quantity purchased · one qualifying contract, ever</td></tr>
+            <tr><td>Month-to-month</td><td>Solo</td><td>$249 / seat / month</td><td>Exactly 1 activation · one licensed computer</td></tr>
+            <tr><td>12-month contract</td><td>Solo</td><td>$198 / seat / month billed annually ($2,376 / year)</td><td>Exactly 1 activation · one licensed computer</td></tr>
+            <tr><td>1-year contract</td><td>Enterprise</td><td>$349 / seat / month billed annually</td><td>Exactly the quantity on the Stripe invoice</td></tr>
+            <tr><td>First 40+ seats on a 1-year contract</td><td>Founders</td><td>$199 / seat / month billed annually</td><td>One qualifying company, ever · then Enterprise</td></tr>
           </tbody>
         </table>
-        <p class="fine">After the founder year, that account continues on Enterprise. Team $129 legacy subscriptions remain honored. Manage billing in the Stripe Customer Portal from your receipt.</p>
+        <p class="fine">After the founder year, that account continues on Enterprise. Team $129 legacy subscriptions remain honored. Manage billing in the Stripe Customer Portal from your receipt. Device-based seats. Activation from licenses@theharnesslab.com.</p>
       </section>
 
       <section class="wrap" id="contact">
@@ -301,16 +328,18 @@
       </section>
     </main>
 
-    <footer>
-      <a class="hl-link" href="https://theharnesslab.com/">
-        <img src="./harness-lab-emblem.png" alt="">
-        <span>© 2026 The Harness Lab</span>
+    <footer class="site-footer">
+      <a class="powered-by" href="https://theharnesslab.com/">
+        <p class="powered-kicker">Powered by</p>
+        <img class="powered-emblem" src="./harness-lab-emblem.png" alt="">
+        <img class="powered-lockup" src="./harness-lab-lockup.png" alt="The Harness Lab">
       </a>
-      <span>
-        <a href="./privacy/">Privacy</a> ·
-        <a href="./terms/">Terms</a> ·
+      <nav class="footer-links" aria-label="Legal">
+        <a href="./privacy/">Privacy</a>
+        <a href="./terms/">Terms</a>
         <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a>
-      </span>
+      </nav>
+      <p class="footer-copy">© 2026 The Harness Lab · TitleDesk Agent</p>
     </footer>
     <script src="./storefront.js" defer></script>
   </body>
