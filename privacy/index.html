@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Privacy Policy for TitleDesk Agent, including Google API data access, use, storage, sharing, retention, and deletion.">
+    <title>Privacy Policy — TitleDesk Agent</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand-lock" href="../"><img src="../harness-lab-emblem.png" alt=""><strong>TitleDesk Agent</strong></a>
+      <nav aria-label="Primary"><a href="../">Product</a><a href="../#buy">Buy</a><a href="./" aria-current="page">Privacy</a><a href="../terms/">Terms</a></nav>
+    </header>
+    <main class="wrap policy">
+      <div class="eyebrow">Policy version 1.0 · Effective August 8, 2026</div>
+      <h1>Privacy Policy</h1>
+      <p class="lede">
+        TitleDesk Agent is professional desktop software offered by The Harness Lab. This
+        policy covers the desktop application, its licensing and
+        activation service, and these TitleDesk web pages.
+      </p>
+      <div class="notice">
+        Title-project data stays on the user's computer unless the user deliberately connects
+        an outside service. We do not run advertising, sell personal information, or use
+        title-project or Google user data to train generalized AI or machine-learning models.
+      </div>
+
+      <section class="policy">
+        <h2>1. Information TitleDesk handles</h2>
+        <h3>Project and professional data</h3>
+        <p>TitleDesk can handle documents, scans, extracted text, project and client names, property descriptions, ownership interests, contacts, deadlines, research history, time entries, expenses, reports, and other information the user imports or creates. This is processed on the user's computer and is not sent to The Harness Lab's licensing service.</p>
+        <h3>Google user data</h3>
+        <p>Google Drive sign-in is optional. When connected, TitleDesk may access the Google account email; Drive, folder, and file names; file identifiers, types, sizes, modification times, and checksums; contents of supported files in a folder the user chooses; and, for a separately connected personal Drive, folders and files needed to save reports or packages the user asks TitleDesk to upload.</p>
+        <ul>
+          <li><strong>Company Drive:</strong> <code>openid</code>, email, and <code>drive.readonly</code>. This token can list, read, export, and download selected company files. Google does not grant it write permission.</li>
+          <li><strong>Personal Drive:</strong> <code>openid</code>, email, and <code>drive</code>. This token can read selected files and create folders or upload finished work when the user directs TitleDesk to save there.</li>
+        </ul>
+        <p>TitleDesk does not request Google Contacts, Gmail, Calendar, advertising, or profile permissions beyond the email used to label the connection.</p>
+        <h3>Credentials, licensing, and diagnostics</h3>
+        <p>OAuth tokens and user-supplied credentials are encrypted through the operating system's secure credential store. If commercial licensing is used, we process the customer or company name, email, Stripe customer and subscription identifiers, subscription status, plan, device allowance, app version, device name and platform, an app-scoped machine fingerprint or its hash, activation status, and security events. Stripe—not TitleDesk—processes full payment credentials.</p>
+        <p>TitleDesk does not automatically upload analytics, crash reports, document contents, or diagnostics. The local diagnostic report excludes document contents, credentials, project names, and private paths and leaves the computer only if the user shares it. The web host may process ordinary request information such as IP address, browser type, requested page, and time.</p>
+      </section>
+
+      <section class="policy">
+        <h2>2. How information is used</h2>
+        <p>Information is used only for user-facing functions the user selects: importing and synchronizing documents; building runsheets, ownership calculations, issue lists, maps, reports, and packages; showing the connected account; saving finished work to a personal Drive; running optional AI features after consent; operating approved connectors; securing local data; administering billing and licensed devices; preventing fraud; and answering support, privacy, security, or legal requests.</p>
+        <p>We do not use Google user data or title-project data for advertising, retargeting, credit decisions, surveillance, data brokerage, or sale.</p>
+      </section>
+
+      <section class="policy">
+        <h2>3. Storage and security</h2>
+        <p>The structured database is stored on the user's computer and encrypted with AES-256-GCM. Its key is protected by macOS Keychain, Windows credential protection, or a supported Linux keyring. Google and other tokens are encrypted before storage in that database.</p>
+        <p>Files downloaded from Drive are mirrored into TitleDesk's local application-data folder. Source documents, Drive-cache files, exports, working copies, and AI-workspace files are local files; their protection also depends on the operating-system account, filesystem permissions, and full-disk encryption. Encrypted backups remain wherever the user saves them.</p>
+        <p>The licensing service uses Cloudflare Workers and D1. Licensing secrets are not bundled with the desktop app. No storage or transmission method is guaranteed completely secure.</p>
+      </section>
+
+      <section class="policy">
+        <h2>4. Google API data use and Limited Use</h2>
+        <p><strong>TitleDesk Agent's use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including its Limited Use requirements.</strong></p>
+        <ul>
+          <li>Google user data is used only for visible TitleDesk features the user requests.</li>
+          <li>It is not sold or used for advertising, lending, surveillance, data brokerage, or generalized AI/model training.</li>
+          <li>The Harness Lab staff do not receive or review Drive file contents through normal operation.</li>
+          <li>Selected content is transferred to a user-chosen AI provider only after the user enables AI access and runs a user-facing feature that needs it. The provider processes it under the user's account and its own terms and privacy policy.</li>
+          <li>A user-configured connector sends data only after its destination is approved and it is intentionally run.</li>
+          <li>Other disclosure is limited to security needs, legal obligations, or a business transfer with any consent required by law and Google's policy.</li>
+        </ul>
+      </section>
+
+      <section class="policy">
+        <h2>5. When information is shared</h2>
+        <p>Information may be processed as needed by Google for OAuth and Drive operations; a user-selected AI provider for an enabled feature; a user-configured connector; Cloudflare for the licensing bridge and D1; Stripe for billing; Keygen for license and device provisioning; Resend for activation email; a research site the user chooses to visit; or authorities and transaction participants where legally permitted and required.</p>
+        <p>Licensing vendors do not receive Google Drive contents or project documents from the desktop app. Local Ollama use does not send content to a cloud AI provider.</p>
+      </section>
+
+      <section class="policy">
+        <h2>6. Retention and deletion</h2>
+        <ul>
+          <li>Google tokens remain locally until the user disconnects or replaces the connection, clears application data, or Google revokes the grant. Disconnect asks Google to revoke the grant and deletes TitleDesk's local token record.</li>
+          <li>Disconnecting does not silently delete files already downloaded, imported, copied into the AI workspace, exported, or backed up. Those copies remain until the user deletes the relevant document, project, workspace, cache/application data, export, or backup.</li>
+          <li>Project records remain locally until the user deletes them or removes application data.</li>
+          <li>Licensing and billing records remain while needed to provide subscriptions, administer devices, keep required accounting records, prevent fraud, resolve disputes, and meet legal duties. Users may request deletion, subject to required retention.</li>
+        </ul>
+      </section>
+
+      <section class="policy">
+        <h2>7. Choices, children, and policy changes</h2>
+        <p>Users can use TitleDesk without Google Drive or cloud AI; choose company read-only or personal Drive access; disconnect either account; revoke access through Google; withdraw AI access; clear the workspace; and delete documents, projects, credentials, and local data. Removing local information does not remove copies the user exported, backed up, uploaded, or sent elsewhere.</p>
+        <p>TitleDesk is a professional business tool and is not directed to children. We do not knowingly collect children's personal information through TitleDesk.</p>
+        <p>We update the date and both public and in-app copies when practices change. A new use of Google user data will be disclosed and any required consent obtained before that use begins.</p>
+      </section>
+
+      <section class="policy">
+        <h2>8. Contact</h2>
+        <p>Privacy questions, access requests, corrections, or deletion requests: <a href="mailto:sales@theharnesslab.com?subject=TitleDesk%20privacy">sales@theharnesslab.com</a>. Include “TitleDesk privacy” in the subject. Do not email title documents, credentials, activation secrets, or Google tokens.</p>
+      </section>
+    </main>
+    <footer><span>© 2026 The Harness Lab · TitleDesk Agent</span><span><a href="../">Product</a> · <a href="../terms/">Terms</a></span></footer>
+  </body>
+</html>
