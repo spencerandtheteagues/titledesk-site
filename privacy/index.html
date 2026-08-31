@@ -13,7 +13,7 @@
       <nav aria-label="Primary"><a href="../">Product</a><a href="../#buy">Buy</a><a href="./" aria-current="page">Privacy</a><a href="../terms/">Terms</a></nav>
     </header>
     <main class="wrap policy">
-      <div class="eyebrow">Policy version 1.0 · Effective August 8, 2026</div>
+      <div class="eyebrow">Policy version 1.0 · Effective 30 August 2026</div>
       <h1>Privacy Policy</h1>
       <p class="lede">
         TitleDesk Agent is professional desktop software offered by The Harness Lab. This
@@ -33,8 +33,8 @@
         <h3>Google user data</h3>
         <p>Google Drive sign-in is optional. When connected, TitleDesk may access the Google account email; Drive, folder, and file names; file identifiers, types, sizes, modification times, and checksums; contents of supported files in a folder the user chooses; and, for a separately connected personal Drive, folders and files needed to save reports or packages the user asks TitleDesk to upload.</p>
         <ul>
-          <li><strong>Company Drive:</strong> <code>openid</code>, email, and <code>drive.readonly</code>. This token can list, read, export, and download selected company files. Google does not grant it write permission.</li>
-          <li><strong>Personal Drive:</strong> <code>openid</code>, email, and <code>drive</code>. This token can read selected files and create folders or upload finished work when the user directs TitleDesk to save there.</li>
+          <li><strong>Company Drive:</strong> <code>openid</code>, email, and <code>drive.file</code>. Google Picker: only the folders and files the landman chooses. Used to import assignment files. Company Drive remains read-only in app logic — TitleDesk does not write there even if the token could write to picked files.</li>
+          <li><strong>Personal Drive:</strong> <code>openid</code>, email, and <code>drive.file</code>. Google Picker: only the folders and files the landman chooses. Used to save a finished package the landman asked to upload.</li>
         </ul>
         <p>TitleDesk does not request Google Contacts, Gmail, Calendar, advertising, or profile permissions beyond the email used to label the connection.</p>
         <h3>Credentials, licensing, and diagnostics</h3>
@@ -58,11 +58,13 @@
       <section class="policy">
         <h2>4. Google API data use and Limited Use</h2>
         <p><strong>TitleDesk Agent's use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy, including its Limited Use requirements.</strong></p>
+        <p>The use of information received from Google Workspace scopes will adhere to the Google User Data Policy, including the Limited Use requirements.</p>
+        <p>Google Workspace APIs are not used to develop, improve, or train generalized or non-personalized AI and/or ML models.</p>
         <ul>
           <li>Google user data is used only for visible TitleDesk features the user requests.</li>
           <li>It is not sold or used for advertising, lending, surveillance, data brokerage, or generalized AI/model training.</li>
           <li>The Harness Lab staff do not receive or review Drive file contents through normal operation.</li>
-          <li>Selected content is transferred to a user-chosen AI provider only after the user enables AI access and runs a user-facing feature that needs it. The provider processes it under the user's account and its own terms and privacy policy.</li>
+          <li>Google user data, including Drive file contents, is sent to a user-chosen AI provider only when the user turns that feature on, and only to run that user-facing feature. It is never used to train any model. The provider processes it under the user's account and its own terms and privacy policy.</li>
           <li>A user-configured connector sends data only after its destination is approved and it is intentionally run.</li>
           <li>Other disclosure is limited to security needs, legal obligations, or a business transfer with any consent required by law and Google's policy.</li>
         </ul>
