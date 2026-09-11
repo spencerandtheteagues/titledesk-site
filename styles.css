@@ -32,7 +32,7 @@
   /* Type */
   --ink: #f7f4ec;
   --muted: #948e84;
-  --muted-dim: #6b665e;
+  --muted-dim: #817b71;
 
   /* Line */
   --line: rgba(212, 160, 23, 0.20);
@@ -611,6 +611,12 @@ p { margin: 0 0 14px; }
 .dl-card ul { margin: 0 0 16px; padding-left: 17px; color: var(--muted); font-size: 13.6px; }
 .dl-card ul li { margin-bottom: 5px; }
 .dl-card .button { margin-top: auto; }
+.button.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+  text-align: center;
+  user-select: none;
+}
 .dl-alt { margin-top: 10px; font-size: 12.6px; color: var(--muted); text-align: center; }
 
 .dl-verify {
@@ -829,6 +835,8 @@ textarea { min-height: 132px; resize: vertical; }
 .status.warn { color: var(--warn); }
 
 table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 20px; }
+.table-scroll { max-width: 100%; overflow-x: auto; }
+.table-scroll table { min-width: 680px; }
 th, td { text-align: left; padding: 13px 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.06); vertical-align: top; }
 th {
   color: var(--gold);
@@ -1080,3 +1088,26 @@ footer {
   body { background: #fff; color: #000; }
   .site-header, .hero-cta, .term-row, footer { display: none; }
 }
+
+/* ---- SEO pages: long-form article layout (added 2026-09-11) ---- */
+.article { max-width: 78ch; }
+.article h2 { margin-top: 2.4rem; }
+.article h3 { margin-top: 1.6rem; color: var(--gold-pale); }
+.article p, .article li { color: var(--ink); line-height: 1.65; }
+.article ul, .article ol { padding-left: 1.3rem; }
+.article li { margin: .35rem 0; }
+.article table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .95rem; }
+.article th, .article td { text-align: left; padding: .55rem .6rem; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+.article th { color: var(--gold-pale); font-weight: 600; }
+.related { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+.related h2 { font-size: 1.1rem; margin: 0 0 .8rem; }
+.related ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .5rem 1.2rem; }
+.related a { color: var(--gold-lit); }
+.breadcrumb { font-size: .85rem; color: var(--muted); margin: 1.2rem 0 .4rem; }
+.breadcrumb a { color: var(--muted); }
+.gloss dt { color: var(--gold-pale); font-weight: 600; margin-top: 1rem; }
+.gloss dd { margin: .25rem 0 0; color: var(--ink); line-height: 1.6; }
+.explore { margin-top: 3rem; }
+.explore .grid-3 a.card { display: block; text-decoration: none; }
+.explore .card h3 { margin: 0 0 .4rem; color: var(--gold-lit); }
+.explore .card p { margin: 0; color: var(--muted); font-size: .95rem; }

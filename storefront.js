@@ -57,14 +57,17 @@ function setStatus(node, message, kind) {
 function statusWithSalesLink(node, message, subject) {
   if (!node) return;
   node.textContent = '';
-  node.append(document.createTextNode(message));
-  if (!/sales@theharnesslab\.com/i.test(message)) {
-    node.append(document.createTextNode(' Or '));
-    const link = document.createElement('a');
-    link.href = 'mailto:sales@theharnesslab.com?subject=' + encodeURIComponent(subject);
-    link.textContent = 'email sales@theharnesslab.com';
-    node.append(link, document.createTextNode('.'));
-  }
+  node.append(document.createTextNode(message + ' '));
+  const link = document.createElement('a');
+  link.href = 'mailto:sales@theharnesslab.com?subject=' + encodeURIComponent(subject);
+  link.textContent = 'Email sales@theharnesslab.com';
+  node.append(link, document.createTextNode('.'));
+}
+
+function customerSafeError(error, fallback) {
+  const message = error instanceof Error ? error.message.trim() : '';
+  if (!message || /failed to fetch|networkerror|load failed/i.test(message)) return fallback;
+  return message;
 }
 
 /* --------------------------------------------------------------------------
@@ -168,11 +171,12 @@ async function refreshQuote() {
     setStatus(statusEl, '', null);
   } catch (error) {
     if (token !== quoteToken) return;
-    if (noteEl) {
-      noteEl.textContent = error instanceof Error ? error.message : 'Pricing unavailable.';
-    }
+    if (noteEl) noteEl.textContent = customerSafeError(
+      error,
+      'Could not reach the pricing service. No charge was attempted.',
+    );
     totalEl.textContent = 'Pricing unavailable';
-    blockCheckout('Checkout is unavailable right now.', 'err');
+    blockCheckout('Checkout could not reach the secure pricing service. No charge was attempted.', 'err');
   }
 }
 
@@ -224,7 +228,7 @@ if (checkoutBtn) {
     } catch (error) {
       statusWithSalesLink(
         statusEl,
-        error instanceof Error ? error.message : 'Checkout failed.',
+        customerSafeError(error, 'Checkout could not open Stripe. No charge was made.'),
         'TitleDesk ' + seats() + ' seat purchase',
       );
       if (statusEl) statusEl.className = 'status err';

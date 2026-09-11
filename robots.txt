@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /thanks/
 
 Sitemap: https://title-desk.com/sitemap.xml

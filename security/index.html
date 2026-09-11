@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Security &amp; Privacy — Local by Default | TitleDesk Agent</title>
+    <meta name="description" content="What leaves your computer and when: TitleDesk runs OCR, extraction and reports locally, encrypts at rest with AES-256-GCM, treats company Drive as read-only, and keeps an append-only audit log.">
+    <link rel="canonical" href="https://title-desk.com/security/">
+    <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TitleDesk Agent">
+    <meta property="og:title" content="Security &amp; Privacy — Local by Default | TitleDesk Agent">
+    <meta property="og:description" content="What leaves your computer and when: TitleDesk runs OCR, extraction and reports locally, encrypts at rest with AES-256-GCM, treats company Drive as read-only, and keeps an append-only audit log.">
+    <meta property="og:url" content="https://title-desk.com/security/">
+    <meta property="og:image" content="https://title-desk.com/shots/home.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Security &amp; Privacy — Local by Default | TitleDesk Agent">
+    <meta name="twitter:description" content="What leaves your computer and when: TitleDesk runs OCR, extraction and reports locally, encrypts at rest with AES-256-GCM, treats company Drive as read-only, and keeps an append-only audit log.">
+    <meta name="twitter:image" content="https://title-desk.com/shots/home.png">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://titledesk-licensing.theharnesslab.workers.dev; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <link rel="icon" href="/harness-lab-emblem.png">
+    <link rel="stylesheet" href="/styles.css?v=0.3.0">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://title-desk.com/#org", "name": "The Harness Lab", "url": "https://theharnesslab.com/", "email": "sales@theharnesslab.com", "telephone": "+1-325-763-8701", "founder": {"@type": "Person", "name": "Spencer Teague"}, "sameAs": ["https://theharnesslab.dev/", "https://github.com/THE-HARNESS-LAB"], "logo": "https://title-desk.com/harness-lab-lockup.png"}, {"@type": "WebSite", "@id": "https://title-desk.com/#site", "url": "https://title-desk.com/", "name": "TitleDesk Agent", "publisher": {"@id": "https://title-desk.com/#org"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://title-desk.com/"}, {"@type": "ListItem", "position": 2, "name": "Local by default. Connected services are explicit.", "item": "https://title-desk.com/security/"}]}, {"@type": "WebPage", "@id": "https://title-desk.com/security/#page", "url": "https://title-desk.com/security/", "name": "Security & Privacy — Local by Default | TitleDesk Agent", "description": "What leaves your computer and when: TitleDesk runs OCR, extraction and reports locally, encrypts at rest with AES-256-GCM, treats company Drive as read-only, and keeps an append-only audit log.", "isPartOf": {"@id": "https://title-desk.com/#site"}, "about": {"@id": "https://title-desk.com/#app"}, "dateModified": "2026-09-11"}]}</script>
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand-lock" href="/">
+        <img src="/harness-lab-emblem.webp" alt="" width="38" height="38">
+        <strong>TitleDesk Agent<b>by The Harness Lab</b></strong>
+      </a>
+      <nav aria-label="Primary">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/landman-software/">Landman software</a>
+        <a href="/title-runsheet-software/">Runsheets</a>
+        <a href="/texas-mineral-title/">Texas</a>
+        <a href="/security/" aria-current="page">Security</a>
+        <a href="/guides/">Guides</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/pricing/">Pricing</a>
+      </nav>
+    </header>
+    <main id="main">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <span>Security &amp;amp; privacy</span></nav>
+        <div class="section-kicker">Security &amp;amp; privacy</div>
+        <h1>Local by default. Connected services are <em>explicit.</em></h1>
+        <p class="lede">TitleDesk is a desktop application. Ordinary document processing is local; selected content can leave the computer only when you deliberately use a connected service.</p>
+        <article class="article">
+
+<h2>What leaves your computer, and when</h2>
+<table><tr><th>Data</th><th>Leaves your computer?</th></tr>
+<tr><td>Title documents, scans, county records</td><td>No by default — selected content leaves only when you explicitly use a connected service.</td></tr>
+<tr><td>OCR text and extractions</td><td>No by default — OCR runs locally (Tesseract).</td></tr>
+<tr><td>Ownership calculations, runsheets, reports</td><td>No by default — a report leaves only when you explicitly export or upload it.</td></tr>
+<tr><td>Project files and folders</td><td>No by default — selected files leave only when you explicitly send or upload them.</td></tr>
+<tr><td>Licence activation (device fingerprint, licence status)</td><td>Yes — to the licence server only.</td></tr>
+<tr><td>Content you explicitly send to a connected AI</td><td>Yes — to the AI provider you chose.</td></tr>
+<tr><td>Files you sync to a Drive workspace you connected</td><td>Yes — to your own Google Drive.</td></tr>
+<tr><td>Data you send through an approved connector or research source</td><td>Yes — to the HTTPS host you approved.</td></tr></table>
+<h2>Company Drive is read-only</h2>
+<p>Both Drive roles use Google's <code>drive.file</code> Picker scope. Application rules and SQLite guardrails refuse company-Drive writes. Personal Drive can receive finished packages when you say so.</p>
+<h2>A model proposes. Code computes.</h2>
+<p>Ownership math is deterministic. A deterministic parser always runs first; a model can add to what it found but can never delete a requirement, overrule a person, or decide what the software is capable of. Assignment text is treated as data and never receives tools. Reports refuse unsupported figures instead of looking finished.</p>
+<h2>The record cannot be rewritten</h2>
+<p>An append-only audit log records every consequential action — acceptance, rejection or change of a determination, and who did it — and cannot be edited or deleted, including by the software itself.</p>
+<h2>Encrypted at rest</h2>
+<p>AES-256-GCM database. The key is held in the macOS Keychain, Windows DPAPI or Linux libsecret — never in a file next to the data. One installation switches between companies with an isolated encrypted database per workspace; one company's workspace cannot read another's.</p>
+<h2>Research inside the fence</h2>
+<p>A dedicated research browser with its own profile touches only domains you have approved, with spending safeguards for paid sources. Passwords are entered by you in take-over; the software never holds the credential.</p>
+<h2>Paid actions are provable</h2>
+<p>Before a paid county document is clicked, the intent is written to encrypted disk. If the response is lost, the attempt is reconciled — never retried blindly — and a document already receipted is reused rather than bought again.</p>
+<p>Policy documents: <a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a>.</p>
+<p><a class="button button-primary" href="/pricing/">See pricing</a> <a class="button button-secondary" href="/contact/">Talk to Spencer</a></p>
+        </article>
+        <section class="related" aria-label="Related pages">
+          <h2>Keep reading</h2>
+          <ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Service</a></li><li><a href="/how-it-works/">How it works</a></li><li><a href="/faq/">FAQ</a></li></ul>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <a class="hl-link" href="https://theharnesslab.com/"><img src="/harness-lab-lockup.webp" alt="The Harness Lab" width="800" height="184" loading="lazy" decoding="async"></a>
+          <p class="fine">TitleDesk Agent is built and supported by The Harness Lab.<br>Spencer Teague · <a href="mailto:spencer@theharnesslab.com">spencer@theharnesslab.com</a> · <a href="tel:+13257638701">325-763-8701</a></p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <nav aria-label="Product">
+            <a href="/how-it-works/">How it works</a>
+            <a href="/landman-software/">Landman software</a>
+            <a href="/title-runsheet-software/">Title runsheet software</a>
+            <a href="/mineral-title-research-software/">Mineral title research</a>
+            <a href="/chain-of-title-software/">Chain of title</a>
+            <a href="/landman-ocr/">Local OCR</a>
+            <a href="/customization-lab/">Customization Lab</a>
+            <a href="/security/">Security &amp; privacy</a>
+            <a href="/download/">Build status</a>
+          </nav>
+        </div>
+        <div>
+          <h4>Learn &amp; buy</h4>
+          <nav aria-label="Learn and buy">
+            <a href="/guides/">Guides</a>
+            <a href="/glossary/">Landman glossary</a>
+            <a href="/texas-mineral-title/">Texas mineral title</a>
+            <a href="/compare/">Where it fits</a>
+            <a href="/pricing/">Pricing</a>
+            <a href="/faq/">FAQ</a>
+            <a href="/contact/">Contact</a>
+            <a href="https://theharnesslab.com/">theharnesslab.com</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>© 2026 The Harness Lab. All rights reserved.</span>
+        <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a></span>
+      </div>
+    </footer>
+  </body>
+</html>
