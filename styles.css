@@ -1111,3 +1111,7 @@ footer {
 .explore .grid-3 a.card { display: block; text-decoration: none; }
 .explore .card h3 { margin: 0 0 .4rem; color: var(--gold-lit); }
 .explore .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+/* v0.4.0 (2026-09-14): ROI page, downloads live. */
+.article table td strong { white-space: nowrap; }
+.readout .r-fig small { white-space: nowrap; }

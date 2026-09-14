@@ -19,7 +19,7 @@
     <meta name="twitter:image" content="https://title-desk.com/shots/home.png">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://titledesk-licensing.theharnesslab.workers.dev; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
     <link rel="icon" href="/harness-lab-emblem.png">
-    <link rel="stylesheet" href="/styles.css?v=0.3.0">
+    <link rel="stylesheet" href="/styles.css?v=0.4.0">
     <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://title-desk.com/#org", "name": "The Harness Lab", "url": "https://theharnesslab.com/", "email": "sales@theharnesslab.com", "telephone": "+1-325-763-8701", "founder": {"@type": "Person", "name": "Spencer Teague"}, "sameAs": ["https://theharnesslab.dev/", "https://github.com/THE-HARNESS-LAB"], "logo": "https://title-desk.com/harness-lab-lockup.png"}, {"@type": "WebSite", "@id": "https://title-desk.com/#site", "url": "https://title-desk.com/", "name": "TitleDesk Agent", "publisher": {"@id": "https://title-desk.com/#org"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://title-desk.com/"}, {"@type": "ListItem", "position": 2, "name": "Guides", "item": "https://title-desk.com/guides/"}, {"@type": "ListItem", "position": 3, "name": "Exact-fraction mineral ownership", "item": "https://title-desk.com/guides/exact-fraction-mineral-ownership/"}]}, {"@type": "WebPage", "@id": "https://title-desk.com/guides/exact-fraction-mineral-ownership/#page", "url": "https://title-desk.com/guides/exact-fraction-mineral-ownership/", "name": "Exact-Fraction Mineral Ownership: Why Decimals Fail | TitleDesk", "description": "How compounding decimal rounding corrupts mineral ownership through a chain of title, and why exact rational arithmetic — 1/3 + 1/3 + 1/3 = 1 — is the only safe way to compute net mineral acres.", "isPartOf": {"@id": "https://title-desk.com/#site"}, "about": {"@id": "https://title-desk.com/#app"}, "dateModified": "2026-09-11"}, {"@type": "Article", "@id": "https://title-desk.com/guides/exact-fraction-mineral-ownership/#article", "headline": "Exact-Fraction Mineral Ownership: Why Decimals Fail", "description": "How compounding decimal rounding corrupts mineral ownership through a chain of title, and why exact rational arithmetic — 1/3 + 1/3 + 1/3 = 1 — is the only safe way to compute net mineral acres.", "url": "https://title-desk.com/guides/exact-fraction-mineral-ownership/", "datePublished": "2026-09-11", "dateModified": "2026-09-11", "author": {"@type": "Person", "name": "Spencer Teague", "worksFor": {"@id": "https://title-desk.com/#org"}}, "publisher": {"@id": "https://title-desk.com/#org"}, "image": "https://title-desk.com/shots/runsheet.png", "mainEntityOfPage": "https://title-desk.com/guides/exact-fraction-mineral-ownership/"}]}</script>
   </head>
   <body>
@@ -33,6 +33,7 @@
         <a href="/how-it-works/">How it works</a>
         <a href="/landman-software/">Landman software</a>
         <a href="/title-runsheet-software/">Runsheets</a>
+        <a href="/roi/">ROI</a>
         <a href="/texas-mineral-title/">Texas</a>
         <a href="/security/">Security</a>
         <a href="/guides/">Guides</a>
@@ -53,7 +54,7 @@
 <h2>Exact arithmetic</h2><p>Represent every interest as a rational number with arbitrary-precision integers — a numerator and a denominator that never overflow and never round. Then 1/3 + 1/3 + 1/3 is exactly 1; 1/3 of 160.33 acres is 16033/300 acres all the way to the report; and an over-conveyance is reported as exactly what it is: "over by 1/4".</p>
 <h2>Balance checking</h2><p>With exact fractions, "does this tract's ownership total one?" becomes a yes-or-no question. An interest that does not total to one is flagged, not rounded away. Net mineral acres are computed from exact fractions and only then rendered as decimals for the workbook, with the fraction kept beside them.</p>
 <h2>Money too</h2><p>Day rates, expenses and invoices are integer cents for the same reason: 0.1 + 0.2 is not 0.3 in floating point, and a landman's invoice should not depend on it.</p>
-<h2>In TitleDesk</h2><p>Interests are stored and computed as BigInt rationals throughout the ownership screen, the acreage ledger and the reports. <a href="/mineral-title-research-software/">Mineral title research software.</a></p><p class="fine">TitleDesk does not publish a universal time-savings or throughput figure. Packets, county sources, scan quality and assignment scope vary; qualify it on a representative held-out assignment from your own shop. Customer downloads and checkout are paused while the current build completes packaged and native-platform qualification — see <a href="/download/">build status</a>.</p><p><a class="button button-primary" href="/pricing/">See pricing</a> <a class="button button-secondary" href="/contact/">Talk to Spencer</a></p>
+<h2>In TitleDesk</h2><p>Interests are stored and computed as BigInt rationals throughout the ownership screen, the acreage ledger and the reports. <a href="/mineral-title-research-software/">Mineral title research software.</a></p><p class="fine">On real assignments completed by working landmen, TitleDesk's automated run takes about twenty minutes for work that takes a landman three to five days; the landman then reviews and certifies. Packets, county sources and scan quality move the figure, so the <a href="/roi/">ROI page</a> shows every assumption, and we will help you qualify it on one of your own assignments. <a href="/download/">Download v0.2.0</a> or <a href="/contact/">talk to Spencer</a>.</p><p><a class="button button-primary" href="/pricing/">See pricing</a> <a class="button button-secondary" href="/contact/">Talk to Spencer</a></p>
         </article>
         <section class="related" aria-label="Related pages">
           <h2>Keep reading</h2>
@@ -78,12 +79,13 @@
             <a href="/landman-ocr/">Local OCR</a>
             <a href="/customization-lab/">Customization Lab</a>
             <a href="/security/">Security &amp; privacy</a>
-            <a href="/download/">Build status</a>
+            <a href="/download/">Download</a>
           </nav>
         </div>
         <div>
           <h4>Learn &amp; buy</h4>
           <nav aria-label="Learn and buy">
+            <a href="/roi/">ROI &amp; economics</a>
             <a href="/guides/">Guides</a>
             <a href="/glossary/">Landman glossary</a>
             <a href="/texas-mineral-title/">Texas mineral title</a>
