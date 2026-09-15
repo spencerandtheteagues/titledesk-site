@@ -1115,3 +1115,87 @@ footer {
 /* v0.4.0 (2026-09-14): ROI page, downloads live. */
 .article table td strong { white-space: nowrap; }
 .readout .r-fig small { white-space: nowrap; }
+
+/* --------------------------------------------------------------------------
+   Storefront: the plan chooser on /download/, and the thank-you page
+   -------------------------------------------------------------------------- */
+[hidden] { display: none !important; }
+.choice-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 22px 0 16px; }
+.choice {
+  text-align: left;
+  padding: 18px 18px 16px;
+  background: linear-gradient(180deg, var(--surface-1), var(--surface-2));
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color .18s ease, transform .18s ease;
+}
+.choice:hover { border-color: var(--line-lit); transform: translateY(-1px); }
+.choice.is-active {
+  border-color: var(--gold);
+  box-shadow: 0 0 40px -18px rgba(212, 160, 23, 0.7);
+  background: linear-gradient(180deg, rgba(212, 160, 23, 0.12), rgba(212, 160, 23, 0.02));
+}
+.choice-tier { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+.choice-price { font-family: var(--mono); font-size: 1.55rem; font-weight: 600; color: var(--platinum); letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.choice-price small { font-size: 12px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+.choice-sub { font-size: 13px; color: var(--muted); line-height: 1.45; }
+.choice-panel {
+  margin-top: 8px;
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, var(--surface-1), var(--surface-2));
+}
+.choice-panel h3 { margin: 0 0 6px; font-size: 1.25rem; }
+.choice-panel .lede { margin-top: 0; }
+.choice-panel .button { margin-top: 18px; }
+.form-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 18px; }
+.form-grid .span-2 { grid-column: 1 / -1; }
+.unlock { margin-top: 26px; padding: 16px 20px; border: 1px dashed var(--line-soft); border-radius: var(--radius); }
+.unlock summary { cursor: pointer; color: var(--gold-pale); font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; }
+.unlock-row { display: flex; gap: 10px; align-items: flex-end; flex-wrap: wrap; }
+.unlock-row label { flex: 1 1 320px; margin-top: 8px; }
+.code-box { margin: 22px 0; padding: 20px 22px; border: 1px solid var(--line-lit); border-radius: var(--radius); background: #020202; }
+.code-label { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.code-value { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.code-value code {
+  font-family: var(--mono);
+  font-size: 15px;
+  color: var(--gold-lit);
+  word-break: break-all;
+  user-select: all;
+  padding: 10px 12px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  background: #000;
+  flex: 1 1 320px;
+}
+.steps { counter-reset: step; list-style: none; padding: 0; margin: 18px 0; }
+.steps li { position: relative; padding: 10px 0 10px 40px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); color: var(--muted); }
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute; left: 0; top: 9px;
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  border: 1px solid var(--line-lit);
+  color: var(--gold-lit);
+  font-family: var(--mono);
+  font-size: 12px;
+  display: grid; place-items: center;
+}
+.steps li b { color: var(--platinum); }
+.pulse { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--warn); box-shadow: 0 0 8px var(--warn); margin-right: 8px; animation: pulse 1.4s ease-in-out infinite; vertical-align: middle; }
+@keyframes pulse { 50% { opacity: 0.35; } }
+.thanks-page h1 { font-size: clamp(1.9rem, 4vw, 2.7rem); }
+.thanks-page .downloads { margin-top: 12px; }
+@media (max-width: 1040px) { .choice-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 880px) { .choice-grid, .form-grid { grid-template-columns: 1fr; } }
+a.choice, a.choice:hover { text-decoration: none; color: var(--ink); }
+.choice-price small { display: block; margin-top: 2px; }

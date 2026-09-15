@@ -3,28 +3,95 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thank you — TitleDesk Agent</title>
-    <link rel="stylesheet" href="../styles.css">
-      <link rel="canonical" href="https://title-desk.com/thanks/">
-      <meta name="robots" content="noindex,nofollow">
-      <meta name="description" content="Payment return page.">
+    <title>Thank you for purchasing TitleDesk Agent</title>
+    <meta name="description" content="Your TitleDesk Agent activation code and download links.">
+    <link rel="canonical" href="https://title-desk.com/thanks/">
+    <meta name="robots" content="noindex,nofollow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://titledesk-licensing.theharnesslab.workers.dev; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <link rel="icon" href="/harness-lab-emblem.png">
+    <link rel="stylesheet" href="/styles.css?v=0.5.0">
   </head>
-  <body>
+  <body data-page="thanks">
+    <a class="skip" href="#main">Skip to content</a>
     <header class="site-header">
-      <a class="brand-lock" href="../"><img src="../harness-lab-emblem.png" alt=""><strong>TitleDesk Agent</strong></a>
-      <nav><a href="../download/">Download</a><a href="../#buy">Pricing</a><a href="../privacy/">Privacy</a></nav>
+      <a class="brand-lock" href="/">
+        <img src="/harness-lab-emblem.webp" alt="" width="38" height="38">
+        <strong>TitleDesk Agent<b>by The Harness Lab</b></strong>
+      </a>
+      <nav aria-label="Primary">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/download/">Download</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/pricing/">Pricing</a>
+      </nav>
     </header>
-    <main class="wrap policy thanks-page">
-      <div class="eyebrow">Payment return</div>
-      <h1>We are confirming your purchase.</h1>
-      <p class="lede">If Stripe confirmed payment, TitleDesk is reconciling the purchase and activation capacity. Do not submit payment again from another tab.</p>
-      <ol>
-        <li>Watch for <strong>TitleDesk &lt;licenses@theharnesslab.com&gt;</strong>.</li>
-        <li>Download the current build, v0.2.0, from the <a href="../download/">download page</a> and verify its checksum before you open it.</li>
-        <li>After receipt, open the one-time activation link on each licensed computer. Each seat is one activation.</li>
-      </ol>
-      <p>If the email has not arrived in ten minutes, write <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a> from the purchase address. Do not send card numbers or activation secrets.</p>
+    <main id="main">
+      <div class="wrap thanks-page">
+        <div class="section-kicker" id="thanks-kicker">Thank you</div>
+        <h1 id="thanks-title">Thank you for purchasing TitleDesk Agent.</h1>
+        <p class="lede" id="thanks-lede">Your activation code will appear here in a moment — it is also being emailed to you.</p>
+        <p class="status warn" id="thanks-status" role="status" aria-live="polite"><span class="pulse"></span>Confirming with Stripe…</p>
+
+        <div id="thanks-ready" hidden>
+          <div class="code-box">
+            <div class="code-label">Your activation code</div>
+            <div class="code-value">
+              <code id="activation-code"></code>
+              <button class="button button-secondary" id="copy-code" type="button">Copy</button>
+            </div>
+            <p class="fine">The same code has been sent to <strong id="thanks-email"></strong>. It activates <span id="thanks-seats">one computer</span>. Keep the email; the code is the key to every seat.</p>
+          </div>
+
+          <p class="fine" id="thanks-trial" hidden>Your 7-day free trial is running. The $1 card verification has already been refunded (allow 5–10 business days for it to show on your statement). Cancel any time in the first 7 days from the button below and you pay nothing; otherwise the Individual seat continues at $199 a month.</p>
+          <p class="fine" id="thanks-demo" hidden>No card was taken. Spencer will call you to set the demo up; the 14 days start when the first computer activates, and the code must be redeemed within 14 days.</p>
+
+          <h2>Download and install</h2>
+          <div class="downloads">
+            <div class="dl-card bezel">
+              <div class="dl-os">macOS</div>
+              <h3>Apple silicon</h3>
+              <div class="dl-req">macOS 12+ · Apple silicon · about 220 MB</div>
+              <ul><li>Signed and notarized by Apple; opens normally the first time</li></ul>
+              <a class="button button-primary button-block" data-platform="mac-arm64" href="/download/" aria-disabled="true">Download for Apple silicon</a>
+              <p class="dl-alt">Intel Mac: <a data-platform="mac-x64" href="/download/">download the Intel image</a></p>
+            </div>
+            <div class="dl-card bezel">
+              <div class="dl-os">Windows</div>
+              <h3>Windows 10 / 11</h3>
+              <div class="dl-req">64-bit · signed installer · about 170 MB</div>
+              <ul><li>Authenticode-signed with an RFC 3161 timestamp</li></ul>
+              <a class="button button-primary button-block" data-platform="windows" href="/download/" aria-disabled="true">Download for Windows</a>
+              <p class="dl-alt">Deploying to a fleet? <a href="/contact/">Ask about deployment</a>.</p>
+            </div>
+            <div class="dl-card bezel">
+              <div class="dl-os">Linux</div>
+              <h3>x86_64 AppImage</h3>
+              <div class="dl-req">Supplied on request</div>
+              <ul><li>Built from the same source, sent with its checksum</li></ul>
+              <a class="button button-secondary button-block" href="/contact/">Request the Linux build</a>
+            </div>
+          </div>
+          <p class="fine">Verify the checksum before you open the file: the published SHA-256 for each build is on the <a href="/download/#verify">download page</a>.</p>
+
+          <h2>Activate</h2>
+          <ol class="steps">
+            <li><b>Install TitleDesk</b> — on macOS drag it to Applications; on Windows run the installer.</li>
+            <li><b>Open it and paste your activation code</b> into the activation screen. Each seat is one computer; the same code activates every seat you bought.</li>
+            <li><b>Work offline.</b> Once activated, TitleDesk keeps working without a connection for extended periods.</li>
+          </ol>
+          <p><a class="button button-secondary" id="portal-link" href="#">Manage or cancel your subscription</a></p>
+        </div>
+
+        <p class="fine">Questions, or an email that has not arrived within the hour: <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a> from the purchase address. Do not send card numbers or activation secrets.</p>
+      </div>
     </main>
-    <footer><span>© 2026 The Harness Lab</span><a href="https://theharnesslab.com/">theharnesslab.com</a></footer>
+    <footer>
+      <div class="footer-legal">
+        <span>© 2026 The Harness Lab. All rights reserved.</span>
+        <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="https://theharnesslab.com/">theharnesslab.com</a></span>
+      </div>
+    </footer>
+    <script src="/storefront.js?v=0.4.0" defer></script>
   </body>
 </html>
