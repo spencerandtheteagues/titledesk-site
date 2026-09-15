@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TitleDesk storefront — title-desk.com
+   TitleDesk storefront — title-desk.com  (v0.5.0)
 
    CSP: script-src 'self'. No inline handlers; everything binds from here.
 
@@ -536,5 +536,80 @@ if (!('IntersectionObserver' in window) || reduceMotion) {
   revealables.forEach((el) => observer.observe(el));
 }
 
+
+/* --------------------------------------------------------------------------
+   Manage billing (/manage/)
+
+   No account, no password. The activation code opens billing on the spot;
+   an email address only ever earns a link sent to that address, and the
+   `?k=` on that link is redeemed here for a fresh Stripe portal session.
+   -------------------------------------------------------------------------- */
+function initManagePage() {
+  const linkStatus = $('link-status');
+  const codeForm = $('code-form');
+  const emailForm = $('email-form');
+  const token = params.get('k');
+
+  function open(url) {
+    /* Same tab: Stripe's portal returns to title-desk.com when done. */
+    window.location.assign(url);
+  }
+
+  if (token && linkStatus) {
+    linkStatus.hidden = false;
+    setStatus(linkStatus, 'Opening your billing portal…', 'warn');
+    postJson('/v1/billing/portal-by-link', { token: token })
+      .then((data) => { setStatus(linkStatus, 'Taking you to Stripe…', 'ok'); open(data.url); })
+      .catch((error) => {
+        statusWithSalesLink(linkStatus, customerSafeError(error, 'The link could not be opened.'), 'TitleDesk billing');
+      });
+  }
+
+  if (codeForm) {
+    codeForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const input = $('manage-code');
+      const status = $('code-status');
+      const submit = codeForm.querySelector('button[type="submit"]');
+      const code = input ? input.value.trim() : '';
+      if (!code) { if (input) input.reportValidity(); return; }
+      setStatus(status, 'Checking the code…', null);
+      if (submit) submit.disabled = true;
+      try {
+        const data = await postJson('/v1/billing/portal-by-code', { code: code });
+        setStatus(status, 'Taking you to Stripe…', 'ok');
+        open(data.url);
+      } catch (error) {
+        statusWithSalesLink(status, customerSafeError(error, 'The code could not be checked.'), 'TitleDesk billing');
+      } finally {
+        if (submit) submit.disabled = false;
+      }
+    });
+  }
+
+  if (emailForm) {
+    emailForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const input = $('manage-email');
+      const status = $('email-status');
+      const submit = emailForm.querySelector('button[type="submit"]');
+      const email = input ? input.value.trim() : '';
+      if (!email || (input && !input.checkValidity())) { if (input) input.reportValidity(); return; }
+      setStatus(status, 'Sending…', null);
+      if (submit) submit.disabled = true;
+      try {
+        const data = await postJson('/v1/billing/portal-by-email', { email: email });
+        setStatus(status, (data && data.message) || 'If that address has a subscription, a link is on its way.', 'ok');
+        if (input) input.value = '';
+      } catch (error) {
+        statusWithSalesLink(status, customerSafeError(error, 'The request could not be sent.'), 'TitleDesk billing');
+      } finally {
+        if (submit) submit.disabled = false;
+      }
+    });
+  }
+}
+
 if (page === 'download') initDownloadPage();
 if (page === 'thanks') initThanksPage();
+if (page === 'manage') initManagePage();

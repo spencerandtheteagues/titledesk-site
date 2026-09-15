@@ -1199,3 +1199,25 @@ footer {
 @media (max-width: 880px) { .choice-grid, .form-grid { grid-template-columns: 1fr; } }
 a.choice, a.choice:hover { text-decoration: none; color: var(--ink); }
 .choice-price small { display: block; margin-top: 2px; }
+
+/* ---- Manage billing (/manage/) ---- */
+.manage-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 22px 0 8px; }
+.manage-note { margin-top: 20px; }
+.manage-card, .manage-note {
+  position: relative;
+  padding: 22px 22px 18px;
+  background: linear-gradient(180deg, var(--surface-1), var(--surface-2));
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+}
+.manage-card h2 { margin: 6px 0 8px; font-size: 1.25rem; }
+.manage-card form { display: grid; gap: 10px; margin-top: 14px; }
+.manage-card label { font-size: 13px; opacity: .85; }
+.manage-card input {
+  width: 100%; padding: 12px 14px; font: inherit; font-family: var(--mono);
+  background: rgba(0,0,0,.35); color: inherit;
+  border: 1px solid var(--line-soft); border-radius: 10px;
+}
+.manage-card input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
+.manage-card .button { justify-self: start; }
+@media (max-width: 760px) { .manage-grid { grid-template-columns: 1fr; } }

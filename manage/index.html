@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Manage or cancel your TitleDesk subscription</title>
+    <meta name="description" content="Cancel a TitleDesk subscription, change the card on file, or read past invoices. Paste the activation code from your purchase email, or ask for a link to the email address that bought the seat.">
+    <link rel="canonical" href="https://title-desk.com/manage/">
+    <meta name="robots" content="index,follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="TitleDesk Agent">
+    <meta property="og:title" content="Manage or cancel your TitleDesk subscription">
+    <meta property="og:description" content="Cancel, change the card on file, or read invoices. No account or password needed.">
+    <meta property="og:url" content="https://title-desk.com/manage/">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://titledesk-licensing.theharnesslab.workers.dev; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <link rel="icon" href="/harness-lab-emblem.png">
+    <link rel="stylesheet" href="/styles.css?v=0.5.1">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://title-desk.com/#org", "name": "The Harness Lab", "url": "https://theharnesslab.com/", "email": "sales@theharnesslab.com", "telephone": "+1-325-763-8701", "founder": {"@type": "Person", "name": "Spencer Teague"}, "sameAs": ["https://theharnesslab.dev/", "https://github.com/THE-HARNESS-LAB"], "logo": "https://title-desk.com/harness-lab-lockup.png"}, {"@type": "WebPage", "@id": "https://title-desk.com/manage/#page", "url": "https://title-desk.com/manage/", "name": "Manage or cancel your TitleDesk subscription", "isPartOf": {"@id": "https://title-desk.com/#site"}, "dateModified": "2026-09-15"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I cancel TitleDesk?", "acceptedAnswer": {"@type": "Answer", "text": "Open title-desk.com/manage/, paste the activation code from your purchase email or ask for a link to the address that bought the seat, then choose Cancel subscription in the billing portal. Cancelling during a 7-day trial means you are never charged."}}, {"@type": "Question", "name": "Do I need an account or password to cancel?", "acceptedAnswer": {"@type": "Answer", "text": "No. TitleDesk has no customer login. Your activation code opens billing immediately, and the purchase email address can request a one-time link."}}]}]}</script>
+  </head>
+  <body data-page="manage">
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand-lock" href="/">
+        <img src="/harness-lab-emblem.webp" alt="" width="38" height="38">
+        <strong>TitleDesk Agent<b>by The Harness Lab</b></strong>
+      </a>
+      <nav aria-label="Primary">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/download/">Download</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/pricing/">Pricing</a>
+      </nav>
+    </header>
+    <main id="main">
+      <div class="wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> › <span>Manage billing</span></nav>
+        <div class="section-kicker">Billing</div>
+        <h1>Manage or cancel your subscription.</h1>
+        <p class="lede">Cancel, change the card on file, or read past invoices. There is no TitleDesk account and no password: your activation code opens billing straight away, or we send a link to the address that bought the seat.</p>
+
+        <p class="status" id="link-status" role="status" aria-live="polite" hidden></p>
+
+        <div class="choice-grid manage-grid">
+          <section class="bezel manage-card" aria-labelledby="by-code-heading">
+            <div class="section-kicker">Fastest</div>
+            <h2 id="by-code-heading">I have my activation code.</h2>
+            <p class="fine">The <code>tdact_…</code> code from your purchase email. Holding it is proof enough; it opens billing for that subscription and nothing else.</p>
+            <form id="code-form" novalidate>
+              <label for="manage-code">Activation code</label>
+              <input id="manage-code" name="code" type="text" autocomplete="off" spellcheck="false" placeholder="tdact_…" required>
+              <button class="button button-primary" type="submit">Open billing</button>
+            </form>
+            <p class="status" id="code-status" role="status" aria-live="polite"></p>
+          </section>
+
+          <section class="bezel manage-card" aria-labelledby="by-email-heading">
+            <div class="section-kicker">If the code is lost</div>
+            <h2 id="by-email-heading">Send a link to my email.</h2>
+            <p class="fine">Use the address that bought the seat. We reply the same way whether or not an address has a subscription, so nobody can use this page to find out who our customers are.</p>
+            <form id="email-form" novalidate>
+              <label for="manage-email">Email address</label>
+              <input id="manage-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+              <button class="button button-secondary" type="submit">Email me a link</button>
+            </form>
+            <p class="status" id="email-status" role="status" aria-live="polite"></p>
+          </section>
+        </div>
+
+        <section class="bezel manage-note" aria-labelledby="what-heading">
+          <h2 id="what-heading">What you can do there</h2>
+          <ul>
+            <li><b>Cancel.</b> During a 7-day Individual trial, cancelling means you are never charged and the $1 card check stays refunded. After that, cancelling stops the next renewal; the seat keeps working to the end of the period you already paid for.</li>
+            <li><b>Change the card</b> on file, or fix a card that failed.</li>
+            <li><b>Read and download invoices</b> for every charge.</li>
+          </ul>
+          <p class="fine">Work already saved on your computer is yours and stays there. TitleDesk keeps title documents and projects locally; cancelling billing does not reach into them or delete anything.</p>
+        </section>
+
+        <section class="bezel manage-note" aria-labelledby="edge-heading">
+          <h2 id="edge-heading">Two cases this page cannot settle</h2>
+          <p><b>An Enterprise demo or a licence issued directly.</b> Those were granted by hand and were never billed through Stripe, so there is nothing to cancel. Write <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a> and it will be ended for you.</p>
+          <p><b>Enterprise seats on an annual contract.</b> The portal shows the invoices and the card; a mid-term change of seat count is a conversation. Write <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a> from the purchase address.</p>
+          <p class="fine">Never send a card number, an activation code, or any other secret by email.</p>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-legal">
+        <span>© 2026 The Harness Lab. All rights reserved.</span>
+        <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/manage/">Manage billing</a> · <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a></span>
+      </div>
+    </footer>
+    <script src="/storefront.js?v=0.5.0" defer></script>
+  </body>
+</html>
