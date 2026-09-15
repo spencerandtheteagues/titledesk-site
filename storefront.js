@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TitleDesk storefront — title-desk.com  (v0.5.0)
+   TitleDesk storefront — title-desk.com  (v0.5.1)
 
    CSP: script-src 'self'. No inline handlers; everything binds from here.
 
@@ -28,7 +28,7 @@ const PUBLISHED = {
   'founder:annual': 238800,     // Founder year one: $199 / seat / month, billed annually
 };
 const ENTERPRISE_MONTHLY_RATE = 34900;
-const PLATFORMS = ['mac-arm64', 'mac-x64', 'windows'];
+const PLATFORMS = ['mac-arm64', 'mac-x64', 'windows', 'linux'];
 
 const page = document.body.dataset.page || '';
 const params = new URLSearchParams(window.location.search);
