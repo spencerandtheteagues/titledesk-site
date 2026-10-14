@@ -246,6 +246,50 @@ p { margin: 0 0 14px; }
 .fine { color: var(--muted-dim); font-size: 12.5px; line-height: 1.6; }
 .fine a { color: var(--muted); }
 
+.release-pill {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 5px 12px;
+  margin: 0 0 18px;
+  padding: 8px 13px;
+  border: 1px solid var(--line-lit);
+  border-radius: 12px;
+  color: var(--gold-pale);
+  background: rgba(212, 160, 23, 0.06);
+  font-size: 12.5px;
+  font-weight: 650;
+  text-decoration: none;
+}
+.release-pill span { color: var(--silver); font-weight: 450; }
+.hero-timing { color: var(--gold-pale); font-weight: 600; }
+.hero-timing a { display: inline-block; font-size: 13px; font-weight: 450; }
+.feature-label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gold-lit);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.guidance-blue { border-top: 2px solid #7db9ff; }
+.guidance-blue .feature-label { color: #a8d1ff; }
+.guidance-red { border-top: 2px solid #e07a5f; }
+.guidance-red .feature-label { color: #f2a18d; }
+.section-action { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin-top: 24px; }
+.release-notes { border-top: 1px solid var(--line); }
+.release-notes h3 { margin-top: 30px; }
+.fix-list { max-width: 1000px; padding-left: 22px; }
+.fix-list li { padding: 0 0 9px 5px; color: var(--silver); }
+.fix-list strong { color: var(--ink); }
+.product-disclaimer {
+  width: min(var(--max), calc(100% - 40px));
+  margin: 28px auto 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.product-disclaimer small { font-size: 12.5px; }
+
 /* --------------------------------------------------------------------------
    Surfaces — the bezel. Corner ticks, hairline rule, near-invisible fill.
    -------------------------------------------------------------------------- */
@@ -1050,7 +1094,7 @@ footer {
 
 @media (max-width: 880px) {
   .hero { grid-template-columns: 1fr; }
-  .hero-visual { order: -1; }
+  .hero-visual { order: 0; }
   .hero-logo { margin: 0 auto; }
   .grid-2, .grid-3, .grid-4, .feat-grid,
   .downloads, .price-grid, .contact-grid, .shots,
