@@ -1,0 +1,985 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TitleDesk Agent — Landman Title Work Automation Software</title>
+    <meta name="description" content="Landman title research software for county records, chain of title, runsheets and mineral ownership. Review source-linked reports with TitleDesk Agent.">
+    <meta name="theme-color" content="#000000">
+    <meta name="author" content="The Harness Lab">
+    <link rel="canonical" href="https://title-desk.com/desktop-agent/">
+    <meta property="og:title" content="TitleDesk Agent — Landman Title Work Automation Software">
+    <meta property="og:description" content="Landman title research software for county records, chain of title, runsheets and mineral ownership. Review source-linked reports with TitleDesk Agent.">
+    <meta property="og:image" content="https://title-desk.com/shots/home.png">
+    <meta property="og:url" content="https://title-desk.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="/harness-lab-emblem.png">
+    <link rel="preload" as="image" href="/titledesk-agent-logo.webp">
+    <link rel="stylesheet" href="/styles.css?v=0.5.2">
+      <meta name="robots" content="index,follow,max-image-preview:large">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://title-desk.com/#org", "name": "The Harness Lab", "url": "https://theharnesslab.com/", "email": "sales@theharnesslab.com", "telephone": "+1-325-763-8701", "founder": {"@type": "Person", "name": "Spencer Teague"}, "sameAs": ["https://theharnesslab.dev/", "https://github.com/THE-HARNESS-LAB"], "logo": "https://title-desk.com/harness-lab-lockup.png"}, {"@type": "SoftwareApplication", "@id": "https://title-desk.com/#app", "name": "TitleDesk Agent", "applicationCategory": "BusinessApplication", "applicationSubCategory": "Landman title research software", "operatingSystem": "macOS, Windows, Linux", "url": "https://title-desk.com/", "image": "https://title-desk.com/shots/home.png", "author": {"@id": "https://title-desk.com/#org"}, "publisher": {"@id": "https://title-desk.com/#org"}, "description": "TitleDesk connects county-record research, local OCR, source-linked runsheets, exact ownership and net mineral acres with reports in your client’s format.", "featureList": ["Blue assistance cards for missing records and facts", "Red AI connection recovery cards", "Continue interrupted assignments and reuse examined records", "CountyRecords.com county-index research", "Configured CourthouseDirect subscription viewing", "TexasFile free-index research and page-priced PDFs on Windows (v0.2.15 and later)", "Local PDF and multi-page TIFF OCR", "Source-linked runsheets, exact ownership fractions and net mineral acres", "Client-format workbooks and verified package delivery", "Signed automatic updates installed when you quit"], "offers": [{"@type": "Offer", "name": "Individual, monthly (7-day free trial)", "price": "199.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://title-desk.com/download/", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "199.00", "priceCurrency": "USD", "unitText": "seat per month"}}, {"@type": "Offer", "name": "Enterprise, 12-month contract", "price": "4188.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://title-desk.com/download/", "priceSpecification": {"@type": "UnitPriceSpecification", "price": "4188.00", "priceCurrency": "USD", "unitText": "seat per year"}}], "softwareVersion": "0.2.18", "downloadUrl": "https://title-desk.com/download/"}, {"@type": "WebSite", "@id": "https://title-desk.com/#site", "url": "https://title-desk.com/", "name": "TitleDesk Agent", "publisher": {"@id": "https://title-desk.com/#org"}}, {"@type": "WebPage", "@id": "https://title-desk.com/#page", "url": "https://title-desk.com/", "name": "TitleDesk Agent — landman title work automation software", "isPartOf": {"@id": "https://title-desk.com/#site"}, "about": {"@id": "https://title-desk.com/#app"}, "dateModified": "2026-10-26"}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How long does an assignment take?", "acceptedAnswer": {"@type": "Answer", "text": "Plan on about an hour to a few hours, depending on assignment complexity. See the product information at the bottom of the page for factors that can extend elapsed time."}}, {"@type": "Question", "name": "What work does TitleDesk automate?", "acceptedAnswer": {"@type": "Answer", "text": "Assignment intake, connected county-record searches, document reading, runsheet preparation, chain organization, exact ownership and acreage calculations, curative tracking and report assembly. You review the source evidence and the finished work in one workspace."}}, {"@type": "Question", "name": "Has TitleDesk been used on real assignments?", "acceptedAnswer": {"@type": "Answer", "text": "TitleDesk has been exercised on Texas title assignments, with source documents and landman reports used to check the research and examination workflow. Source citations, exact ownership fractions and net mineral acres stay beside the report for your review."}}, {"@type": "Question", "name": "Do my title documents go to the cloud?", "acceptedAnswer": {"@type": "Answer", "text": "Local OCR, exact-fraction arithmetic and report assembly run on your computer. The current automated title-examination workflow sends selected page images to the AI provider you chose after consent; Drive, county-records and other connectors receive only what their task requires. See the table above for the full breakdown."}}, {"@type": "Question", "name": "Does it need an internet connection?", "acceptedAnswer": {"@type": "Answer", "text": "Local OCR and existing project files can work offline. Automated assignment research needs internet access for the county-records provider, the selected AI and Drive delivery; licensing also checks in periodically."}}, {"@type": "Question", "name": "Do I have to use AI?", "acceptedAnswer": {"@type": "Answer", "text": "Local OCR, project records, exact-fraction arithmetic, billing and report assembly work without AI. The current automated title-assignment and page-examination workflow requires a connected AI that can read page images; you select the provider, and TitleDesk tests it before searching or spending."}}, {"@type": "Question", "name": "Why does the ownership math matter so much?", "acceptedAnswer": {"@type": "Answer", "text": "Because decimals lie. 1/3 as a decimal is 0.333…, and three of them do not add to 1. Run that through a chain of title and the error compounds into real money. TitleDesk uses exact fractions, so 1/3 + 1/3 + 1/3 is exactly 1, and an over-conveyance is reported as an exact excess such as \"over by 1/4\"."}}, {"@type": "Question", "name": "Can I trust what the AI extracted?", "acceptedAnswer": {"@type": "Answer", "text": "Every extracted date, party and fraction is reviewable, with a link to the source page. You can accept, correct or reject the proposed reading as you examine the record."}}, {"@type": "Question", "name": "I work for several companies. Will their data get mixed?", "acceptedAnswer": {"@type": "Answer", "text": "No. Each company configuration is an isolated workspace with its own encrypted database. One company's workspace cannot read another's, and you switch between them explicitly. A company workspace can also be removed from your computer entirely, along with its data."}}, {"@type": "Question", "name": "Can a company set TitleDesk up once and hand it to its landmen?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — that is exactly what the 15-day build-out and Customization Lab are for. A company configures policy, security posture and research procedure, then distributes that configuration. The landman does not reassemble it."}}, {"@type": "Question", "name": "Can I install it on more than one computer?", "acceptedAnswer": {"@type": "Answer", "text": "Seats are counted per device: one seat is one licensed computer. Some earlier contracts retain their original device allowance. Tell us if you need to move an activation to a different machine."}}, {"@type": "Question", "name": "What happens when my licence expires?", "acceptedAnswer": {"@type": "Answer", "text": "TitleDesk switches to restricted operation. Existing work remains readable and exportable, and project files stay on disk; creating or changing work requires an active licence."}}, {"@type": "Question", "name": "My activation link expired, or never arrived.", "acceptedAnswer": {"@type": "Answer", "text": "Paid-purchase activation links are single-use and last ten minutes. Evaluation invitations remain redeemable until the deadline stated in the invitation. Email comes from licenses@theharnesslab.com — check spam first, then email sales@theharnesslab.com from the address you purchased or requested with."}}, {"@type": "Question", "name": "Is the source code available? We have procurement requirements.", "acceptedAnswer": {"@type": "Answer", "text": "TitleDesk is commercial software; the public repository carries releases and documentation only. Companies with requirements around source escrow or independent security review should contact spencer@theharnesslab.com directly — those arrangements are made, not refused."}}, {"@type": "Question", "name": "Why does macOS warn when I first open TitleDesk?", "acceptedAnswer": {"@type": "Answer", "text": "From v0.2.2 it should not. The macOS images are signed with an Apple Developer ID and notarized by Apple, and the notarization ticket is stapled to the disk image, so the app opens normally the first time and does so even if the Mac is offline. The Windows v0.2.18 installer is not yet code-signed; a signed copy follows. If Windows shows Windows protected your PC, choose More info, then Run anyway. Every download has a published SHA-256 checksum on the download page."}}, {"@type": "Question", "name": "Will my copy update automatically?", "acceptedAnswer": {"@type": "Answer", "text": "Compatible customer copies check shortly after launch and every four hours, download signed updates in the background and apply them when you quit. Every platform receives v0.2.17. Workspace and activation are preserved. Copies older than v0.2.4 need a one-time manual installation."}}]}]}</script>
+  </head>
+  <body>
+    <a class="skip" href="#buy">Skip to purchase options</a>
+
+    <header class="site-header">
+      <a class="brand-lock" href="/desktop-agent/">
+        <img src="/harness-lab-emblem.webp" alt="" width="38" height="38">
+        <strong>TitleDesk Agent<b>by The Harness Lab</b></strong>
+      </a>
+      <nav aria-label="Primary">
+        <a href="/how-it-works/">How it works</a>
+        <a href="/landman-software/">Landman software</a>
+        <a href="/title-runsheet-software/">Runsheets</a>
+        <a href="/roi/">ROI</a>
+        <a href="/texas-mineral-title/">Texas</a>
+        <a href="/security/">Security</a>
+        <a href="/guides/">Guides</a>
+        <a href="/faq/">FAQ</a>
+        <a href="/contact/">Contact</a>
+        <a class="nav-cta" href="/desktop-agent/pricing/">Pricing</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <div class="wrap hero" id="top">
+        <div>
+          <div class="eyebrow">By The Harness Lab · Landman title work automation</div>
+          <a class="release-pill" href="/download/">Newest update available · Windows v0.2.18 <span>Mac &amp; Linux v0.2.17</span></a>
+            <h1>Your assignment. Your sources. <em>Landman title work, connected.</em></h1>
+          <p class="hero-timing">Plan on about an hour to a few hours, depending on assignment complexity. <a href="#release-notes">See the latest features and fixes.</a></p>
+          <p class="lede">Paste the assignment. Research county records, examine deeds and probate, build the chain of title, and work mineral ownership in exact fractions. TitleDesk brings the source pages, runsheet, curative questions and client workbook together in one place.</p>
+          <p class="lede">Use your existing ChatGPT/Codex or Claude subscription. Read scanned records with local OCR, reuse documents you already own, and choose a purchase ceiling for each assignment. Review the evidence, then open your report package and deliver it to Google Drive.</p>
+          <div class="hero-cta">
+            <a class="button button-primary" href="/download/?plan=trial">Start the 7-day free trial</a>
+            <a class="button button-secondary" href="/download/">Download TitleDesk</a>
+            <a class="button button-secondary" href="#contact">Talk to Spencer</a>
+          </div>
+          <div class="hero-trust">
+            <span>County research</span>
+            <span>Runs on your machine</span>
+            <span>Exact fractions</span>
+            <span>Your AI provider</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-logo" src="/titledesk-agent-logo.webp"
+               srcset="./titledesk-agent-logo-960.webp 960w, ./titledesk-agent-logo.webp 1200w"
+               sizes="(max-width: 880px) 92vw, 46vw"
+               width="1200" height="800" fetchpriority="high"
+               alt="TitleDesk Agent — title intelligence for oil and gas landmen, by The Harness Lab">
+          <figure class="hero-shot">
+            <img src="/shots/home.webp" width="1440" height="900" decoding="async"
+                 alt="TitleDesk Agent Home screen showing the Reeves County sample project">
+          </figure>
+        </div>
+      </div>
+
+      <!-- ================= READOUTS ================= -->
+      <div class="wrap">
+        <div class="readouts reveal">
+          <div class="readout"><div class="r-label">Assignment planning</div><div class="r-fig">1<small>hour to a few hours</small></div><p class="r-note">Depending on complexity, document volume and the available records.</p><div class="meter"><i class="fill-96"></i></div></div>
+          <div class="readout"><div class="r-label">Ownership arithmetic</div><div class="r-fig">1/3<small>stays exact</small></div><p class="r-note">Fractions, reservations and net mineral acres carried through the report.</p><div class="meter"><i class="fill-82"></i></div></div>
+          <div class="readout"><div class="r-label">Local document OCR</div><div class="r-fig">$0<small>per-page OCR fee</small></div><p class="r-note">Read scans on your computer and reuse your saved instruments.</p><div class="meter"><i class="fill-74"></i></div></div>
+          <div class="readout"><div class="r-label">Individual plan</div><div class="r-fig">$199<small>per month</small></div><p class="r-note">Start with a seven-day trial and connect the AI plan you already use.</p><div class="meter"><i class="fill-60"></i></div></div>
+        </div><p class="fine">Your TitleDesk licence, AI plan and research-provider purchases each stay under your control. Explore the <a href="/roi/">time-saving calculator</a> using your own workflow and rates.</p>
+      </div>
+
+      <!-- ================= LATEST FEATURES ================= -->
+      <section class="wrap" id="latest-features" aria-labelledby="latest-features-title">
+        <div class="section-kicker">The latest TitleDesk</div>
+        <h2 id="latest-features-title">More sources. Clearer guidance. Keep your work moving.</h2>
+        <p class="lede">Turn an assignment and a stack of recorded instruments into a source-linked runsheet, ownership analysis and client-ready report package. The newest Windows update adds TexasFile research and smoother AI setup.</p>
+        <div class="grid-3 reveal">
+          <div class="card bezel guidance-blue"><span class="feature-label">Blue assistance box</span><h3>A clear question, right when it matters.</h3><p>See the missing instrument, tract or fact that needs your help. Type your answer or attach a PDF or TIFF, then continue the examination with the evidence you supplied.</p></div>
+          <div class="card bezel guidance-red"><span class="feature-label">Red AI recovery box</span><h3>Know how to get moving again.</h3><p>If an AI connection needs attention, TitleDesk explains the problem and the next step. Restore the connection and continue with your saved assignment.</p></div>
+          <div class="card bezel"><span class="feature-label">Assignment recovery</span><h3>Pick up where you left off.</h3><p>Continue an interrupted assignment with its saved research, examined documents and purchase records. Your existing work stays part of the run.</p></div>
+          <div class="card bezel"><span class="feature-label">CountyRecords.com</span><h3>Search the index. Follow the chain.</h3><p>Research county indexes by abstract, party and recording reference. Bring the recorded instruments into the examination under the purchase ceiling you choose.</p></div>
+          <div class="card bezel"><span class="feature-label">CourthouseDirect</span><h3>Put your subscription views to work.</h3><p>Examine recorded page images through a configured CourthouseDirect subscription. Saved working copies and view-allowance tracking keep the evidence available for reuse.</p></div>
+          <div class="card bezel"><span class="feature-label">TexasFile · Windows</span><h3>Find the record before you buy it.</h3><p>Search the free county index by name, abstract or book, volume and page. Review recording details and page counts, then use exact page-priced PDF quotes within your approved budget.</p></div>
+          <div class="card bezel"><span class="feature-label">Documents you already own</span><h3>Make your existing file count.</h3><p>Add saved or previously purchased records with their county and citation. TitleDesk reuses matching copies across the research instead of buying the same instrument again.</p></div>
+          <div class="card bezel"><span class="feature-label">Signed automatic updates</span><h3>The latest fixes come to you.</h3><p>Compatible installed copies download updates in the background and apply them when you quit TitleDesk. Open it again to work in the new version, with your workspace and activation preserved.</p></div>
+          <div class="card bezel"><span class="feature-label">Your client's format</span><h3>From exact fractions to the finished workbook.</h3><p>Carry reservations, probate and heirship questions, ownership fractions and net mineral acres into your report. Keep source pages, curatives and the submission folder tree together.</p></div>
+        </div>
+        <p class="section-action"><a class="button button-primary" href="/download/?plan=trial">Try the latest TitleDesk</a> <a href="/how-it-works/">Walk through the workflow</a></p>
+      </section>
+
+      <!-- ================= WHERE IT FITS ================= -->
+      <section class="wrap" id="fit">
+        <div class="section-kicker">The category</div>
+        <h2>Where TitleDesk fits in a land software stack.</h2>
+        <p class="lede">
+          Each of these does its job well. Together they still leave the actual work — the reading,
+          the extraction, the organizing, the assembly — on a landman's desk. That is the gap
+          TitleDesk was built to fill.
+        </p>
+
+        <div class="stack reveal">
+          <div class="stack-row">
+            <div class="stack-cat">Data platforms<b>Enverus, LandGate</b></div>
+            <div class="stack-desc">Lease, production and drilling intelligence, mapping and asset analytics. <b>They supply source data and context.</b></div>
+            <div class="stack-price">Data &amp; analytics</div>
+          </div>
+          <div class="stack-row">
+            <div class="stack-cat">Systems of record<b>Quorum, Energy Components</b></div>
+            <div class="stack-desc">Lease management, contract tracking and land administration. <b>They hold approved business records.</b></div>
+            <div class="stack-price">System of record</div>
+          </div>
+          <div class="stack-row">
+            <div class="stack-cat">AI assistants<b>ChatGPT, Claude</b></div>
+            <div class="stack-desc">Summarizing, drafting and ad-hoc analysis. <b>They provide general-purpose model assistance.</b></div>
+            <div class="stack-price">General assistant</div>
+          </div>
+          <div class="stack-row">
+            <div class="stack-cat">Automation tools<b>Zapier, Make, n8n</b></div>
+            <div class="stack-desc">Integration and triggers between systems. <b>They move information between configured services.</b></div>
+            <div class="stack-price">Integration layer</div>
+          </div>
+          <div class="stack-row">
+            <div class="stack-cat">AI land tools<b>Emerging category</b></div>
+            <div class="stack-desc">Search and Q&amp;A across land datasets and document summarization. <b>They focus on retrieval and analysis.</b></div>
+            <div class="stack-price">Land-specific AI</div>
+          </div>
+          <div class="stack-row is-us bezel">
+            <div class="stack-cat">TitleDesk Agent<b>The Harness Lab</b></div>
+            <div class="stack-desc">Structured research through extraction and organization toward a repeatable deliverable in the company's format, with source links and provenance for review. <b>It supports the assignment workflow.</b></div>
+            <div class="stack-price">from $199 / seat / mo</div>
+          </div>
+        </div>
+
+        <div class="gap-callout reveal">
+          <h3>The workflow TitleDesk is built to support</h3>
+          <p>
+            TitleDesk connects structured research, extraction, organization, review and packaging
+            in the company's format. It complements the data platform and system of record around it.
+
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= THE JOB ================= -->
+      <section class="wrap" id="story">
+        <div class="section-kicker">The job</div>
+        <h2>Title work is still a factory. Most of the hours are mechanical, and those are the hours TitleDesk takes.</h2>
+        <p class="lede">
+          County packets, OCR, runsheets, exact fractions, curative lists, and a client folder tree
+          that must match the house format. TitleDesk does that work on the laptop. The landman
+          accepts what is true, refuses what is thin, and keeps the opinion.
+        </p>
+        <div class="pipeline reveal" role="group" aria-label="TitleDesk pipeline">
+          <div class="pipe"><b>01</b> Documents</div>
+          <div class="pipe"><b>02</b> Extract</div>
+          <div class="pipe"><b>03</b> Chain</div>
+          <div class="pipe"><b>04</b> Exact fractions</div>
+          <div class="pipe"><b>05</b> Defects</div>
+          <div class="pipe"><b>06</b> Deliver</div>
+        </div>
+      </section>
+
+      <!-- ================= FULL FEATURE REVIEW ================= -->
+      <section class="wrap" id="features">
+        <div class="section-kicker">Application feature review</div>
+        <h2>Core workflow areas, in the order the work happens.</h2>
+        <p class="lede">
+          The landman keeps every judgment. TitleDesk does the reading, the extraction, the
+          organizing and the report assembly. Connect your sources once, then follow the assignment
+          from intake through review and delivery.
+        </p>
+
+        <div class="phase reveal">
+          <div class="phase-head">
+            <span class="phase-num">PHASE 01</span>
+            <h3>Taking the assignment</h3>
+            <span class="phase-count">3 capabilities</span>
+          </div>
+          <div class="feat">
+            <h4>Paste Your Assignment</h4>
+            <p>Paste the assignment letter your client sent. TitleDesk reads it as <strong>data, never as instructions</strong>, extracts the county, survey, abstract, acreage and named parties, and organizes the research around your assignment. Review the extracted facts and correct them before the run starts.</p>
+          </div>
+          <div class="feat">
+            <h4>Two-column work plan</h4>
+            <p>Every task is owned by either TitleDesk or the landman. Anything moved to the landman's column is marked <strong>manual</strong> and is never touched automatically.</p>
+          </div>
+          <div class="feat">
+            <h4>Rounds until it's done</h4>
+            <p>When a round finishes, TitleDesk works out what is still outstanding from the project's own records — <strong>not by asking a model whether it is finished</strong> — and plans the next round. Only the landman closes an assignment.</p>
+          </div>
+        </div>
+
+        <div class="phase reveal">
+          <div class="phase-head">
+            <span class="phase-num">PHASE 02</span>
+            <h3>Reading the documents</h3>
+            <span class="phase-count">4 capabilities</span>
+          </div>
+          <div class="feat">
+            <h4>On-machine OCR</h4>
+            <p>Scanned county records are read locally on the laptop with Tesseract. No OCR API, no internet connection and no per-page cloud charge. Your saved instruments stay ready for the next assignment.</p>
+          </div>
+          <div class="feat">
+            <h4>Multi-page instruments</h4>
+            <p>Recorders return whole instruments as one multi-page image. TitleDesk processes each page and surfaces extraction failures for review, including exhibits and lease schedules on later pages.</p>
+          </div>
+          <div class="feat">
+            <h4>Document classification</h4>
+            <p>Works out what each document is — lease, opinion, unit designation, plat, probate, and twenty-three instrument types in all — and which submission folder it belongs in, using your company's own naming conventions where you have them. Filename beats body text, so a ratification does not steal the instrument it recites.</p>
+          </div>
+          <div class="feat">
+            <h4>Nothing disappears quietly</h4>
+            <p>A page OCR cannot read is marked <strong>"needs your eyes"</strong> rather than being recorded as blank. Thin OCR stays empty rather than inventing a plausible lessor.</p>
+          </div>
+        </div>
+
+        <div class="phase reveal">
+          <div class="phase-head">
+            <span class="phase-num">PHASE 03</span>
+            <h3>Building the work product</h3>
+            <span class="phase-count">7 capabilities</span>
+          </div>
+          <div class="feat">
+            <h4>Runsheet</h4>
+            <p>Recorded instruments in chronological order with grantor, grantee, volume and page, instrument number and interest — <strong>each row linked to the page it was read from</strong>. Chain gaps are flagged, not hidden. Word and Excel export in the company's columns.</p>
+          </div>
+          <div class="feat">
+            <h4>Row provenance</h4>
+            <p>Entries record how they were read: entered by a person, read off the page deterministically, or proposed by a model and accepted. Review source links and provenance before delivery.</p>
+          </div>
+          <div class="feat">
+            <h4>Curative and issues list</h4>
+            <p>Unleased interests, unreleased prior leases, probate and heirship gaps, assignment-chain defects — each with the document and page it came from, and a proposed next step. The list a landman actually works, not a chatbot summary.</p>
+          </div>
+          <div class="feat">
+            <h4>Ownership by tract</h4>
+            <p>Mineral and leasehold ownership tracked per tract, with balance checking so an interest that does not total to one is <strong>flagged rather than rounded away</strong>. Net mineral acres, leasehold, held-by-production and conflicts included.</p>
+          </div>
+          <div class="feat">
+            <h4>Exact fraction arithmetic</h4>
+            <p>Interests are stored and computed as exact BigInt rationals, never floating point. <strong>1/3 + 1/3 + 1/3 is exactly 1.</strong> A 1/3 of 160.33 acres stays exact all the way to the report, and an over-conveyance is reported as an exact excess such as "over by 1/4". Money is integer cents.</p>
+          </div>
+          <div class="feat">
+            <h4>Wells, leases and production</h4>
+            <p>Texas RRC production data imported and matched to wells and leases, with gap detection across production months. Canonical 42-CCC-NNNNN API identity — partial county codes are not wells. RRC workbooks import by sheet without confusing the API number, lease number or district.</p>
+          </div>
+          <div class="feat">
+            <h4>Heirship tree</h4>
+            <p>Estates, heirs and determinations mapped, with each determination <strong>held for review before it affects ownership</strong>.</p>
+          </div>
+        </div>
+
+        <div class="phase reveal">
+          <div class="phase-head">
+            <span class="phase-num">PHASE 04</span>
+            <h3>Delivering it</h3>
+            <span class="phase-count">4 capabilities</span>
+          </div>
+          <div class="feat">
+            <h4>Your workbook, filled in</h4>
+            <p>Reports are written into <strong>the company's own Excel template</strong> — matching your column names to TitleDesk's by meaning, never overwriting a row a person has corrected, and never touching a column it was not asked to map. Ten report types in Word, Excel, PDF or CSV.</p>
+          </div>
+          <div class="feat">
+            <h4>Submission package</h4>
+            <p>Builds the folder tree you actually turn in, every document filed in the folder your client expects, named to your convention. <strong>Originals are copied, never moved.</strong> Empty folders stay visible so missing work is obvious — or you suppress them.</p>
+          </div>
+          <div class="feat">
+            <h4>Clear review questions</h4>
+            <p>The blue assistance card names the tract, instrument and question. Add what you know or upload the supporting record, and TitleDesk incorporates it into the examination.</p>
+          </div>
+          <div class="feat">
+            <h4>Save straight to Drive</h4>
+            <p>A user can direct a finished package to a separately connected personal Google Drive. Delivery to a personal Drive is hash-pinned: every uploaded file is verified against the package the gate approved.</p>
+          </div>
+        </div>
+
+        <div class="phase reveal">
+          <div class="phase-head">
+            <span class="phase-num">PHASE 05</span>
+            <h3>Control and safety</h3>
+            <span class="phase-count">8 capabilities</span>
+          </div>
+          <div class="feat">
+            <h4>Local by default</h4>
+            <p>Local OCR and exact arithmetic stay on the machine. Automated title examination sends selected page images to the AI provider you chose after consent; Drive, county-records and other connectors receive only what their task requires. A company Drive is treated as read-only by application rules and database guardrails.</p>
+          </div>
+          <div class="feat">
+            <h4>The model stays reviewable</h4>
+            <p>Follow each material conclusion to its source page. Review ownership, reservations and curative questions with the evidence beside you, and keep the final professional judgment in your hands.</p>
+          </div>
+          <div class="feat">
+            <h4>Bring your own AI</h4>
+            <p>Connect your existing ChatGPT/Codex or Claude subscription from setup or Settings. API providers and local Ollama are available too. Local OCR has no per-page AI fee; your selected AI plan or API account handles the AI usage.</p>
+          </div>
+          <div class="feat">
+            <h4>Local work without AI</h4>
+            <p>Local OCR, project records, exact-fraction arithmetic, billing and report assembly remain available without AI. <strong>The current automated title-assignment and page-examination workflow requires a connected AI that can read page images.</strong></p>
+          </div>
+          <div class="feat">
+            <h4>Append-only audit log</h4>
+            <p>Every consequential action is recorded and <strong>cannot be edited or deleted, including by the software itself</strong>. If a determination was accepted, rejected or changed, that is on the record with who did it.</p>
+          </div>
+          <div class="feat">
+            <h4>Research stays inside the fence</h4>
+            <p>A dedicated research browser with its own profile touches only domains you have approved, with spending safeguards built in for paid sources such as CourthouseDirect and TexasFile. Take-over for passwords. The official Texas RRC is always allowed.</p>
+          </div>
+          <div class="feat">
+            <h4>Encrypted at rest</h4>
+            <p>AES-256-GCM database. Key held in the macOS Keychain, Windows DPAPI or Linux libsecret — never in a file next to the data.</p>
+          </div>
+          <div class="feat">
+            <h4>Workspaces and licensing</h4>
+            <p>One TitleDesk installation switches between companies without a custom build, with an isolated encrypted database per workspace — one company's workspace cannot read another's. Device-based seats, offline lease, Stripe Customer Portal, activation from <strong>licenses@theharnesslab.com</strong>.</p>
+          </div>
+        </div>
+
+        <div class="phase reveal">
+          <div class="phase-head">
+            <span class="phase-num">PHASE 06</span>
+            <h3>Also in the workstation</h3>
+            <span class="phase-count">3 capabilities</span>
+          </div>
+          <div class="feat">
+            <h4>Time, billing and owners</h4>
+            <p>Day rates, expenses and invoices in exact cents. Owner and offer tracking. Deadlines derived from lease data.</p>
+          </div>
+          <div class="feat">
+            <h4>GIS plat</h4>
+            <p>Tract boundaries, well locations, offline SVG rendering and GeoJSON import. Complements — and does not attempt to replace — ArcGIS.</p>
+          </div>
+          <div class="feat">
+            <h4>Customization Lab</h4>
+            <p>Folder names, filing rules, report columns and deliverable structure configured to the company's standards, so output is <strong>repeatable across every landman and every assignment</strong>. Described in full below.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CUSTOMIZATION LAB ================= -->
+      <section class="wrap" id="lab">
+        <div class="lab bezel">
+          <div class="section-kicker">The product inside the product</div>
+          <h2>Customization Lab — TitleDesk becomes <em>your</em> shop.</h2>
+          <p class="lede">
+            No two land departments file, search, or deliver the same way. Forking the app per client
+            does not scale. A free-form template language would let a model write code. Customization
+            Lab is the third path: you <strong>describe the workflow in English</strong>. TitleDesk
+            proposes a validated company profile. Nothing is written until a person approves the
+            plain-language change.
+          </p>
+          <div class="example">
+            “Ownership report as Word, not Excel. Call Owner ‘Mineral Owner’. Package folder
+            {{project.name}} - Landman Submitted {{date.today}}. Search back to sovereignty. Always
+            pull ratifications. Upload finished work to my personal Drive, never the company Drive.”
+          </div>
+          <div class="grid-2">
+            <div class="card">
+              <h3>Research process</h3>
+              <p>Preferred domains — Courthouse Direct, TexasFile, the RRC, and the hosts you allow. How far back title is run: sovereignty, or a house year count. Adjoining tracts. Gap thresholds. Document types you always pull. Defects worth raising. Require a human on every instrument, or only the thin ones.</p>
+            </div>
+            <div class="card">
+              <h3>Sources &amp; connections</h3>
+              <p>Both company and personal Drive connections use Google's narrow <code>drive.file</code> Picker scope, limited to items the user selects or TitleDesk creates. TitleDesk treats company Drive as read-only in application rules and database guardrails. Personal Drive can receive finished packages when you say so. Connector hosts must be approved before use.</p>
+            </div>
+            <div class="card">
+              <h3>Formatting of finished work</h3>
+              <p>Each report type — runsheet, ownership, curative, document index and more — chooses Excel, Word, PDF or CSV. Columns, labels, order, freeze header, draft watermark, company name, logo, accent colour, footer. Placeholders like {{project.county}} are a closed list; unknown tags are refused at save, not printed on a client PDF.</p>
+            </div>
+            <div class="card">
+              <h3>How it is delivered, and where</h3>
+              <p>The deliverable is the folder tree. You name LEASES, SELLER'S FILE, opinions, well files and ratifications. Filing rules match your prefixes (Lse, TO-, Assn). Empty folders can stay visible so missing work is obvious. Delivery to a personal Drive is hash-pinned: every uploaded file is verified against the package the gate approved.</p>
+            </div>
+          </div>
+          <p>
+            Any company can be set up this way: by the buyer, in plain English, or by a Harness Lab technician who installs TitleDesk on your machines, configures it to your shop and teaches your landmen to use it during the <a href="#onboarding">15-day build-out</a>. Engineers can export a JSON Schema, a field
+            guide, and an example profile generated from the same rules the app validates.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= SCREENS ================= -->
+      <section class="wrap" id="screens">
+        <div class="section-kicker">The application</div>
+        <h2>Product screens on the built-in sample project.</h2>
+        <p class="lede">These are screenshots of TitleDesk running its synthetic Reeves County sample project.</p>
+        <div class="shots">
+          <figure class="shot">
+            <img src="/shots/lab.webp" srcset="./shots/lab-720.webp 720w, ./shots/lab.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="Customization Lab: describing branding, report format and company security policy in plain language">
+            <figcaption><b>Customization Lab</b> — tell TitleDesk how the shop works. It proposes the config; nothing changes until you approve it.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/shots/documents.webp" srcset="./shots/documents-720.webp 720w, ./shots/documents.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="Documents screen showing classified instruments with parties and book and page">
+            <figcaption><b>Documents</b> — originals stay where they are. TitleDesk reads, classifies and files.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/shots/runsheet.webp" srcset="./shots/runsheet-720.webp 720w, ./shots/runsheet.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="Runsheet with a chain-gap flag on a warranty deed">
+            <figcaption><b>Runsheet</b> — source-linked instruments. Chain gaps are flagged, not hidden.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/shots/ownership.webp" srcset="./shots/ownership-720.webp 720w, ./shots/ownership.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="Ownership screen with exact-fraction mineral interests totalling one">
+            <figcaption><b>Ownership</b> — BigInt fractions. 1/2 + 1/2 is 1, not 0.999.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/shots/issues.webp" srcset="./shots/issues-720.webp 720w, ./shots/issues.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="Issues and curative screen with evidence, next step and export">
+            <figcaption><b>Curative</b> — defects with evidence and a next step. Nothing acts itself.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/shots/package.webp" srcset="./shots/package-720.webp 720w, ./shots/package.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="Submit Package screen for assembling the client folder tree">
+            <figcaption><b>Package</b> — the folder tree your client actually accepts, named their way.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/shots/reports.webp" srcset="./shots/reports-720.webp 720w, ./shots/reports.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="Reports screen for Word, Excel, PDF and CSV drafts">
+            <figcaption><b>Reports</b> — drafts from accepted facts only. Review before the client sees them.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/shots/wells.webp" srcset="./shots/wells-720.webp 720w, ./shots/wells.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="Wells and leases screen with import controls">
+            <figcaption><b>Wells &amp; leases</b> — import Texas RRC workbooks without confusing the API number, lease number or district.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/shots/research.webp" srcset="./shots/research-720.webp 720w, ./shots/research.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="Research browser with Texas RRC always allowed">
+            <figcaption><b>Research</b> — dedicated browser, allowlisted hosts, take-over for passwords.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/shots/connections.webp" srcset="./shots/connections-720.webp 720w, ./shots/connections.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="Connections screen for Google Drive and research sources">
+            <figcaption><b>Connections</b> — company Drive read-only. Personal Drive for finished work.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/shots/home.webp" srcset="./shots/home-720.webp 720w, ./shots/home.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="TitleDesk Home on the built-in Reeves County sample project">
+            <figcaption><b>Home</b> — what needs you next, on this computer, with or without AI.</figcaption>
+          </figure>
+          <figure class="shot">
+            <img src="/shots/settings.webp" srcset="./shots/settings-720.webp 720w, ./shots/settings.webp 1440w" sizes="(max-width: 880px) 92vw, 46vw" width="1440" height="900" loading="lazy" decoding="async" alt="TitleDesk commercial activation screen">
+            <figcaption><b>Licensing</b> — activate from the purchase email; project data never goes to the licensing service.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ================= SECURITY ================= -->
+      <section class="wrap" id="security">
+        <div class="section-kicker">Security &amp; privacy</div>
+        <h2>Local by default. Connected services are explicit.</h2>
+        <p class="lede">
+          TitleDesk is a desktop application. Ordinary document processing is local; selected
+          content can leave the computer when you deliberately use a connected service.
+        </p>
+        <table>
+          <caption class="fine">What leaves your computer, and when</caption>
+          <thead>
+            <tr><th scope="col">Data</th><th scope="col">Leaves your computer?</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Title documents, scans, county records</td><td><b>No by default</b> — selected content leaves only when you explicitly use a connected service</td></tr>
+            <tr><td>OCR text and extractions</td><td><b>No by default</b> — OCR runs locally (Tesseract)</td></tr>
+            <tr><td>Ownership calculations, runsheets, reports</td><td><b>No by default</b> — a report leaves only when you explicitly export or upload it</td></tr>
+            <tr><td>Project files and folders</td><td><b>No by default</b> — selected files leave only when you explicitly send or upload them</td></tr>
+            <tr><td>Licence activation (device fingerprint, licence status)</td><td>Yes — to the licence server only</td></tr>
+            <tr><td>Content you explicitly send to a connected AI</td><td>Yes — to the AI provider you chose</td></tr>
+            <tr><td>Files you sync to a Drive workspace you connected</td><td>Yes — to your own Google Drive</td></tr>
+            <tr><td>Data you send through an approved connector or research source</td><td>Yes — to the HTTPS host you approved</td></tr>
+          </tbody>
+        </table>
+
+        <div class="grid-3 reveal">
+          <div class="card bezel"><h3>Company Drive is treated as read-only</h3><p>Both Drive roles use Google's <code>drive.file</code> Picker scope. Application rules and SQLite guardrails refuse company-Drive writes.</p></div>
+          <div class="card bezel"><h3>A model proposes. Code computes.</h3><p>Ownership math is deterministic. Reports refuse unsupported figures instead of looking finished.</p></div>
+          <div class="card bezel"><h3>The record cannot be rewritten</h3><p>The Activity log is append-only. TitleDesk cannot edit or delete entries in it — not through the interface, and not through the AI.</p></div>
+        </div>
+
+        <div class="card bezel reveal">
+          <h3>Google Drive is optional</h3>
+          <p>Drive sign-in is optional. Company Drive is read-only, used to import assignment files via Google Picker (<code>drive.file</code>). Personal Drive is write access, used to save a finished package the landman asked to upload via Google Picker (<code>drive.file</code>). TitleDesk does not back up the app or database to Drive. See the <a href="/privacy/">privacy policy</a>.</p>
+        </div>
+
+        <p class="fine">
+          An independent contractor can hold several company configurations side by side; they are
+          isolated, and a company workspace can be removed from the computer entirely along with its
+          local data. Reporting a security problem: email
+          <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a> with "security" in the
+          subject — please do not open a public issue. Full detail in the
+          <a href="/privacy/">privacy policy</a>.
+        </p>
+      </section>
+
+      <!-- ================= PROOF ================= -->
+      <section class="wrap" id="proof"><div class="proof bezel reveal"><div class="section-kicker">Built around the record</div><h2>Evidence you can follow. Calculations you can check.</h2><p>TitleDesk brings source documents, recording citations, exact ownership fractions and net mineral acres together with the client report. More than 5,400 automated checks cover the research workflow, evidence handling and calculations, alongside checks of the packaged OCR and AI tools. Open the source, review the conclusion, and deliver work in your client’s format.</p></div></section>
+
+      <!-- ================= BUILD STATUS ================= -->
+      <section class="wrap" id="download">
+        <div class="section-kicker">Download · Choose your platform</div>
+        <h2>The newest version is available.</h2>
+        <p class="lede">
+          Download <strong>v0.2.17 for Windows</strong>, with every records-provider connection, TexasFile research and the latest Codex and Claude connection fixes, or <strong>v0.2.17 for Mac and Linux</strong>, which now carry the same TexasFile research, CourthouseDirect viewer and connection fixes. Every download starts with a plan — a 7-day Individual trial,
+          Individual or Enterprise seats, or a 14-day Enterprise demo — and comes with the activation
+          code that turns the download into a working copy.
+        </p>
+        <div class="choice-grid">
+          <a class="choice" href="/download/?plan=trial">
+            <span class="choice-tier">Individual · free trial</span>
+            <span class="choice-price">7 days free <small>then $199 / mo</small></span>
+            <span class="choice-sub">Card required; $1 verification refunded immediately. Cancel any time in the 7 days.</span>
+          </a>
+          <a class="choice" href="/download/?plan=individual">
+            <span class="choice-tier">Individual · buy now</span>
+            <span class="choice-price">$199 <small>/ month</small></span>
+            <span class="choice-sub">One licensed computer, month to month, every feature.</span>
+          </a>
+          <a class="choice" href="/download/?plan=enterprise">
+            <span class="choice-tier">Enterprise · seats</span>
+            <span class="choice-price">$349 <small>/ seat / month</small></span>
+            <span class="choice-sub">Type the number of seats; 12-month contract billed annually.</span>
+          </a>
+          <a class="choice" href="/download/?plan=demo">
+            <span class="choice-tier">Enterprise · demo</span>
+            <span class="choice-price">14 days free <small>+ a setup call</small></span>
+            <span class="choice-sub">No card. Spencer sets it up with you, on up to 5 computers.</span>
+          </a>
+        </div>
+        <p class="fine">
+          Signed and notarized macOS images (Apple silicon and Intel) and a Windows installer
+          (v0.2.18 is not yet code-signed), each with a published SHA-256 on the
+          <a href="/download/#verify">download page</a>. The Linux AppImage has a signed verification receipt. Already have an
+          activation code? <a href="/download/">Unlock the download with it</a>.
+        </p>
+      </section>
+
+      <!-- ================= PRICING ================= -->
+      <section class="wrap" id="buy">
+        <div class="section-kicker">Purchase options</div>
+        <h2>The full menu.</h2>
+        <p class="lede">
+          One licence per seat — a seat is one licensed computer. Checkout is open: pick a plan, pay on Stripe, and your activation code appears on the receipt page and in your email. Enterprise buyers who want a look first get a 14-day demo and a setup call.
+        </p>
+
+        <div class="price-grid">
+          <div class="price-card bezel">
+            <div class="price-tier">Individual <span class="badge">7-day free trial</span></div>
+            <div class="price-tag">$199</div>
+            <div class="price-unit">per month, after a 7-day free trial</div>
+            <div class="price-term">Month to month · cancel anytime</div>
+            <ul>
+              <li>One licensed computer</li>
+              <li>Built for the <b>independent landman</b></li>
+              <li>Every feature — the trial is not a reduced build</li>
+              <li>Card required; a <b>$1 verification, refunded immediately</b></li>
+              <li>Cancel within 7 days and pay nothing; otherwise $199/month from day 8</li>
+            </ul>
+            <a class="button button-primary button-block" href="/download/?plan=trial">Start the 7-day free trial</a>
+            <p class="dl-alt">Skip the trial: <a href="/download/?plan=individual">buy the seat now</a></p>
+          </div>
+
+          <div class="price-card bezel is-feature">
+            <div class="price-tier">Enterprise</div>
+            <div class="price-tag">$349</div>
+            <div class="price-unit">per seat / month · seats × $349</div>
+            <div class="price-term">12-month contract · billed annually</div>
+            <ul>
+              <li>Type the number of seats; the total is <b>seats × $349 a month</b>, billed for the year</li>
+              <li><b>Company workspaces</b> and locked profiles</li>
+              <li><b>Customization Lab</b> configured to your shop</li>
+              <li>Managed configuration distributed to every landman</li>
+              <li>Priority support from The Harness Lab</li>
+            </ul>
+            <a class="button button-primary button-block" href="/download/?plan=enterprise">Buy Enterprise seats</a>
+            <p class="dl-alt">Want a look first? <a href="/download/?plan=demo">Take the 14-day demo</a></p>
+          </div>
+
+          <div class="price-card bezel">
+            <div class="price-tier">Enterprise demo</div>
+            <div class="price-tag">14 days</div>
+            <div class="price-unit">free, with a setup call</div>
+            <div class="price-term">No card · up to 5 computers</div>
+            <ul>
+              <li>Spencer calls you to <b>set it up, explain everything</b> and troubleshoot</li>
+              <li>Full Enterprise workflow on up to five computers</li>
+              <li>14 days from the first activation; expires on its own</li>
+              <li>Your name, company, position, phone, address and seat count are all we ask</li>
+            </ul>
+            <a class="button button-secondary button-block" href="/download/?plan=demo">Request the 14-day demo</a>
+          </div>
+        </div>
+
+        <div class="price-grid">
+          <div class="price-card bezel is-feature">
+            <div class="price-tier">Founder — year one <span class="badge">One company, ever</span></div>
+            <div class="price-tag">$199</div>
+            <div class="price-unit">per seat / month, billed annually</div>
+            <div class="price-term">40 seats or more · 12-month contract</div>
+            <ul>
+              <li>The <b>first company to buy 40 or more seats</b> — once, ever</li>
+              <li>Year one at <b>seats × $199 a month</b> instead of $349</li>
+              <li><b>$2,388 per seat</b> for the first year</li>
+              <li>Continues on standard Enterprise pricing afterwards</li>
+              <li>Applied automatically at checkout while it lasts</li>
+            </ul>
+            <a class="button button-primary button-block" href="/download/?plan=enterprise&amp;seats=40">Claim the founder year</a>
+          </div>
+
+          <div class="price-card bezel">
+            <div class="price-tier">Already have a code?</div>
+            <div class="price-tag">Unlock</div>
+            <div class="price-unit">the download with your activation code</div>
+            <div class="price-term">Purchases, trials, demos and issued licences</div>
+            <ul>
+              <li>Paste the <b>tdact_</b> code from your email on the download page</li>
+              <li>Download links stay valid for 30 days and can be re-issued with the same code</li>
+              <li>Each seat is one computer; the same code activates every seat you bought</li>
+              <li>Lost the email? Write sales@theharnesslab.com from the purchase address</li>
+            </ul>
+            <a class="button button-secondary button-block" href="/download/">Unlock the download</a>
+          </div>
+
+          <div class="price-card bezel">
+            <div class="price-tier">Legacy</div>
+            <div class="price-tag">$129</div>
+            <div class="price-unit">per seat / month</div>
+            <div class="price-term">Existing Team subscriptions — honoured</div>
+            <ul>
+              <li>Team $129 legacy subscriptions <b>remain honoured</b></li>
+              <li>Earlier contracts keep their original device allowance</li>
+              <li>Manage billing in the Stripe Customer Portal</li>
+              <li>No forced migration</li>
+            </ul>
+            <a class="button button-secondary button-block" href="#contact">Ask about your contract</a>
+          </div>
+        </div>
+
+        <!-- ---- 15-day onboarding package ---- -->
+        <div class="pkg bezel reveal" id="onboarding">
+          <div class="section-kicker">Setup, onboarding &amp; support</div>
+          <div class="pkg-head">
+            <div>
+              <h2>The 15-day build-out.</h2>
+              <p class="lede">
+                A Harness Lab technician sets TitleDesk up around how your company actually works —
+                and for those fifteen days, anything you need built into your version of TitleDesk
+                gets built, at no additional cost.
+              </p>
+            </div>
+            <div class="pkg-price">$5,000<small>15-day engagement</small></div>
+          </div>
+          <ul class="pkg-list">
+            <li><b>Technician-led setup</b> Installation, licensing and configuration on your machines by a Harness Lab technician.</li>
+            <li><b>Personal on-call support</b> 9–5, Monday to Friday, for any problem — a person, not a ticket queue.</li>
+            <li><b>Staff training</b> Your landmen trained on the workflow they will actually run.</li>
+            <li><b>Bug fixes</b> Anything that breaks during the period is fixed during the period.</li>
+            <li><b>Full company customization</b> Folder trees, filing rules, report columns, naming conventions, research policy.</li>
+            <li><b>Company-specific setup</b> Workspaces, locked profiles and managed configuration distributed to every seat.</li>
+            <li><b>Custom features built free</b> Any special feature you need is built into your version of TitleDesk during the 15 days — no charge.</li>
+            <li><b>You keep the configuration</b> The profile is yours, and it keeps working after the engagement ends.</li>
+          </ul>
+          <div class="hero-cta">
+            <a class="button button-primary" href="mailto:spencer@theharnesslab.com?subject=TitleDesk%2015-day%20onboarding%20engagement&amp;body=Company%3A%0ASeats%3A%0AStart%20date%3A%0AWhat%20we%20need%20TitleDesk%20to%20look%20like%3A">Book the 15-day engagement</a>
+            <a class="button button-secondary" href="tel:+13257638701">Call 325-763-8701</a>
+          </div>
+          <p class="fine">
+            The engagement is arranged directly — it is not a self-service checkout. Licences are
+            purchased separately at the seat pricing above.
+          </p>
+        </div>
+
+        <!-- ---- Checkout ---- -->
+        <div class="buy panel bezel" id="checkout-panel">
+          <div class="section-kicker">How checkout works</div>
+          <h2>Choose, pay on Stripe, activate.</h2>
+          <p class="lede">
+            Pick a plan on the <a href="/download/">download page</a>. Stripe takes the payment or the
+            trial card; the receipt page shows your activation code and the download for your platform,
+            and the same code is emailed to you. Paste it into TitleDesk on each licensed computer.
+          </p>
+          <p class="fine">
+            Trials cancel from the receipt page, or at any time from <a href="/manage/">Manage billing</a>. Enterprise demos take no
+            card and come with a setup call. Companies with procurement, escrow or fleet-deployment
+            requirements <a href="#contact">talk to Spencer</a> first.
+          </p>
+        </div>
+
+        <section id="pricing-detail">
+          <div class="section-kicker">Seat math</div>
+          <h2>What you are buying.</h2>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Seat pricing comparison">
+          <table>
+            <thead>
+              <tr><th scope="col">When</th><th scope="col">Plan</th><th scope="col">Price</th><th scope="col">Term</th><th scope="col">Licences</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>1 seat, trying it</td><td><b>Individual trial</b></td><td>$0 for 7 days, then $199 / month<br>$1 card verification, refunded</td><td>Month to month · cancel in 7 days to pay nothing</td><td>Exactly 1 activation</td></tr>
+              <tr><td>1 seat</td><td><b>Individual</b></td><td>$199 / seat / month</td><td>Month to month</td><td>Exactly 1 activation</td></tr>
+              <tr><td>2 or more seats</td><td><b>Enterprise</b></td><td>seats × $349 / month<br>$4,188 / seat / year, billed annually</td><td><b>12-month contract</b></td><td>Exactly the quantity on the Stripe invoice</td></tr>
+              <tr><td>First contract of 40+ seats, ever</td><td><b>Founder — year one</b></td><td>seats × $199 / month<br>$2,388 / seat / year</td><td>12-month contract</td><td>Exactly the quantity purchased</td></tr>
+              <tr><td>Companies, before buying</td><td><b>Enterprise demo</b></td><td>Free for 14 days · no card</td><td>14 days from first activation</td><td>Up to 5 computers</td></tr>
+              <tr><td>Any of the above</td><td><b>15-day build-out</b></td><td>$5,000 one time</td><td>15 days</td><td>Setup, training, support, custom features</td></tr>
+            </tbody>
+          </table>
+          </div>
+          <p class="fine">
+            After the founder year, that account continues on Enterprise. Team $129 legacy
+            subscriptions remain honoured. Manage or cancel billing at any time from <a href="/manage/">title-desk.com/manage</a>,
+            with your activation code or purchase email. The founder rate is applied automatically at checkout to the first
+            qualifying order of 40 or more seats and disappears once claimed.
+          </p>
+        </section>
+      </section>
+
+
+      <!-- ================= EXPLORE ================= -->
+      <section class="wrap explore" id="explore">
+        <div class="section-kicker">Explore</div>
+        <h2>Landman software, explained page by page.</h2>
+        <div class="grid-3">
+          <a class="card" href="/landman-software/"><h3>Landman software</h3><p>What TitleDesk does across a whole assignment, and why it runs on your computer.</p></a>
+          <a class="card" href="/title-runsheet-software/"><h3>Title runsheet software</h3><p>Source-linked rows, chain gaps flagged, citations that must resolve.</p></a>
+          <a class="card" href="/mineral-title-research-software/"><h3>Mineral title research</h3><p>From the county index to net mineral acres, in exact fractions.</p></a>
+          <a class="card" href="/chain-of-title-software/"><h3>Chain of title</h3><p>Anchored on the source deed, kept on the right tract, gaps stated.</p></a>
+          <a class="card" href="/texas-mineral-title/"><h3>Texas mineral title</h3><p>Abstract and party index, GLO patents, RRC wells and production.</p></a>
+          <a class="card" href="/landman-ocr/"><h3>Local OCR</h3><p>Tesseract on the laptop: no OCR API, no per-page bill, works offline.</p></a>
+          <a class="card" href="/guides/"><h3>Guides</h3><p>Runsheets, chain of title, curative, exact fractions, reading a county index.</p></a>
+          <a class="card" href="/glossary/"><h3>Glossary</h3><p>The vocabulary of title work, as TitleDesk uses it.</p></a>
+          <a class="card" href="/compare/"><h3>Best landman software</h3><p>Compare title research, ownership, lease administration and client deliverables by workflow.</p></a>
+          <a class="card" href="/ai-landman-software/"><h3>AI landman software</h3><p>Selected AI page examination, local OCR, exact ownership calculations and the source evidence for review.</p></a>
+          <a class="card" href="/guides/best-landman-tools/"><h3>Best landman tools</h3><p>A practical toolkit for records access, OCR, runsheets, ownership, maps and the client handoff.</p></a>
+        </div>
+      </section>
+      <!-- ================= FAQ ================= -->
+      <section class="wrap" id="faq">
+        <div class="section-kicker">Questions land departments actually ask</div>
+        <h2>Before you commit.</h2>
+        <div class="faq">
+          <details class="qa">
+            <summary>Will my copy update automatically?</summary>
+            <div class="qa-body"><p>Yes, compatible customer copies check shortly after launch and every four hours, download signed updates in the background and apply them when you quit. Open TitleDesk again to use the new version. Every platform now receives v0.2.17. Your existing activation and subscription continue.</p></div>
+          </details>
+
+          <details class="qa">
+            <summary>How long does an assignment take?</summary>
+            <div class="qa-body"><p>Plan on about an hour to a few hours, depending on assignment complexity. TitleDesk handles research, document reading, chain organization and report assembly while you keep the source evidence and final review in view.</p></div>
+          </details>
+
+          <details class="qa">
+            <summary>What work does TitleDesk automate?</summary>
+            <div class="qa-body"><p>Assignment intake, connected county-record searches, document reading, runsheet preparation, chain organization, exact ownership and acreage calculations, curative tracking and report assembly. You review the source evidence and the finished work in one workspace.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Has TitleDesk been used on real assignments?</summary>
+            <div class="qa-body"><p>TitleDesk has been exercised on Texas title assignments, with source documents and landman reports used to check the research and examination workflow. Source citations, exact ownership fractions and net mineral acres stay beside the report for your review.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Do my title documents go to the cloud?</summary>
+            <div class="qa-body"><p>Local OCR, exact-fraction arithmetic and report assembly run on your computer. The current automated title-examination workflow sends selected page images to the AI provider you chose after consent; Drive, county-records and other connectors receive only what their task requires. See the table above for the full breakdown.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Does it need an internet connection?</summary>
+            <div class="qa-body"><p>Local OCR and existing project files can work offline. Automated assignment research needs internet access for the county-records provider, the selected AI and Drive delivery; licensing also checks in periodically.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Do I have to use AI?</summary>
+            <div class="qa-body"><p>Local OCR, project records, exact-fraction arithmetic, billing and report assembly work without AI. The current automated title-assignment and page-examination workflow requires a connected AI that can read page images; you select the provider, and TitleDesk tests it before searching or spending.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Why does the ownership math matter so much?</summary>
+            <div class="qa-body"><p>Because decimals lie. <code>1/3</code> as a decimal is <code>0.333…</code>, and three of them do not add to <code>1</code>. Run that through a chain of title and the error compounds into real money. TitleDesk uses exact fractions, so <code>1/3 + 1/3 + 1/3</code> is exactly <code>1</code>, and an over-conveyance is reported as an exact excess such as "over by <code>1/4</code>".</p></div>
+          </details>
+          <details class="qa">
+            <summary>Can I trust what the AI extracted?</summary>
+            <div class="qa-body"><p>Every extracted date, party and fraction is reviewable, with a link to the source page. You can accept, correct or reject the proposed reading as you examine the record.</p></div>
+          </details>
+          <details class="qa">
+            <summary>I work for several companies. Will their data get mixed?</summary>
+            <div class="qa-body"><p>No. Each company configuration is an isolated workspace with its own encrypted database. One company's workspace cannot read another's, and you switch between them explicitly. A company workspace can also be removed from your computer entirely, along with its data.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Can a company set TitleDesk up once and hand it to its landmen?</summary>
+            <div class="qa-body"><p>Yes — that is exactly what the 15-day build-out and Customization Lab are for. A company configures policy, security posture and research procedure, then distributes that configuration. The landman does not reassemble it.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Can I install it on more than one computer?</summary>
+            <div class="qa-body"><p>Seats are counted per device: one seat is one licensed computer. Some earlier contracts retain their original device allowance. Tell us if you need to move an activation to a different machine.</p></div>
+          </details>
+          <details class="qa">
+            <summary>What happens when my licence expires?</summary>
+            <div class="qa-body"><p>TitleDesk switches to restricted operation. Existing work remains readable and exportable, and project files stay on disk; creating or changing work requires an active licence.</p></div>
+          </details>
+          <details class="qa">
+            <summary>My activation link expired, or never arrived.</summary>
+            <div class="qa-body"><p>Paid-purchase activation links are single-use and last ten minutes. Evaluation invitations remain redeemable until the deadline stated in the invitation. Email comes from <code>licenses@theharnesslab.com</code> — check spam first, then email <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a> from the address you purchased or requested with.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Is the source code available? We have procurement requirements.</summary>
+            <div class="qa-body"><p>TitleDesk is commercial software; the public repository carries releases and documentation only. Companies with requirements around source escrow or independent security review should contact <a href="mailto:spencer@theharnesslab.com">spencer@theharnesslab.com</a> directly — those arrangements are made, not refused.</p></div>
+          </details>
+          <details class="qa">
+            <summary>Why does macOS warn when I first open TitleDesk?</summary>
+            <div class="qa-body"><p>From v0.2.2 it should not. The macOS images are signed with an Apple Developer ID and notarized by Apple, and the notarization ticket is stapled to the disk image, so the app opens normally the first time and does so even if the Mac is offline. The Windows v0.2.18 installer is not yet code-signed; a signed copy follows. If Windows shows Windows protected your PC, choose More info, then Run anyway. Every download has a published SHA-256 checksum on the <a href="/download/#verify">download page</a>.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section class="wrap" id="contact">
+        <div class="section-kicker">People, not a ticket queue</div>
+        <h2>Talk to Spencer at The Harness Lab.</h2>
+        <p class="lede">
+          TitleDesk is built by the person who answers the phone. Pilots, 40-seat contracts,
+          procurement questions and the 15-day build-out all go through the same line.
+        </p>
+
+        <div class="contact-grid">
+          <div>
+            <div class="person">
+              <img src="/harness-lab-emblem.webp" alt="" width="62" height="62">
+              <div>
+                <p class="p-name">Spencer Teague</p>
+                <p class="p-role">The Harness Lab · Founder</p>
+                <span class="p-line"><a href="mailto:spencer@theharnesslab.com">spencer@theharnesslab.com</a></span>
+                <span class="p-line"><a href="tel:+13257638701">325-763-8701</a></span>
+              </div>
+            </div>
+            <p class="fine">
+              Sales, pilots and contracts: <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a>.<br>
+              Activation and install: the same inbox, or reply to the licence email from
+              <strong>licenses@theharnesslab.com</strong>.<br>
+              On-call support during a 15-day engagement: 9–5, Monday to Friday.
+            </p>
+          </div>
+
+          <form id="contact-form">
+            <label class="field" for="cf-name">Name
+              <input id="cf-name" name="name" required maxlength="120" autocomplete="name" placeholder="Your name">
+            </label>
+            <label class="field" for="cf-email">Work email
+              <input id="cf-email" name="email" type="email" required placeholder="you@company.com" autocomplete="email">
+            </label>
+            <label class="field" for="cf-seats">Seats (optional)
+              <input id="cf-seats" name="seats" type="number" min="1" max="500" placeholder="How many landmen?">
+            </label>
+            <label class="field" for="cf-message">What do you need
+              <textarea id="cf-message" name="message" required placeholder="What do you need TitleDesk to look like when it is yours?"></textarea>
+            </label>
+            <button class="button button-primary" type="submit">Send to The Harness Lab</button>
+            <p class="status" id="contact-status" role="status"></p>
+          </form>
+        </div>
+
+        <!-- The two big Harness Lab doors -->
+        <div class="hl-doors">
+          <a class="hl-door" href="https://theharnesslab.com/">
+            <img src="/harness-lab-lockup.webp" alt="The Harness Lab" width="800" height="184" loading="lazy" decoding="async">
+            <div>
+              <div class="d-url">theharnesslab.com</div>
+              <p class="d-desc">The studio behind TitleDesk. Custom AI agent harnesses — setup, customer-owned builds, rescue work and audits.</p>
+            </div>
+            <div class="d-go">Visit the lab</div>
+          </a>
+          <a class="hl-door" href="https://theharnesslab.dev/">
+            <img src="/harness-lab-emblem.webp" alt="" width="42" height="42" loading="lazy" decoding="async">
+            <div>
+              <div class="d-url">theharnesslab.dev</div>
+              <p class="d-desc">The engineering side — how the harnesses are built, what runs them, and the work behind the products.</p>
+            </div>
+            <div class="d-go">Visit the dev site</div>
+          </a>
+        </div>
+      </section>
+      <!-- ================= RELEASE NOTES: BOTTOM OF PAGE ================= -->
+      <section class="wrap release-notes" id="release-notes" aria-labelledby="release-notes-title">
+        <div class="section-kicker">Latest updates · October 17, 2026</div>
+        <h2 id="release-notes-title">The newest version is available. Here is what we fixed.</h2>
+        <p>Get <a href="/download/">v0.2.18 for Windows, or v0.2.17 for Mac and Linux</a>. Existing customers can choose <strong>I already have a code</strong> and download with their current activation code.</p>
+        <h3>Windows v0.2.18 — assignment details you fill in yourself</h3>
+        <ul>
+          <li><strong>Run starts when the boxes are complete.</strong> Run reads Assignment details first and starts, or names the one fact still missing. No more pressing Read assignment after every edit.</li>
+          <li><strong>Tract numbers.</strong> One tract per line, with its acres and source deed: <em>Tract 1: 40 acres, DR 244/240</em>. Typed tracts replace the tracts read from the pasted text.</li>
+          <li><strong>Lessor / Grantor / Grantee.</strong> One box for every party to search, one name per line.</li>
+          <li><strong>Typed the way you type.</strong> A lower-case county, abstracts as A954 or 954, 1141, and acres as 80 ac. are read; gross acres you type win.</li>
+          <li><strong>Fixes from live assignments.</strong> TexasFile searches no longer stop on Chrome's error page or a one-record shortfall, highlighted volume/page results are read, and a source deed missing from the index is viewed on CourthouseDirect.</li>
+          <li><strong>Agent terminal.</strong> Special Requests can run Claude Code or Codex inside TitleDesk to keep a blocked assignment moving.</li>
+        </ul>
+        <h3>v0.2.17 — one release for Windows, Mac and Linux</h3>
+        <ul>
+          <li><strong>Saved sign-ins on Windows.</strong> The owner-only unattended credential is read from Windows Credential Manager; Windows copies previously reported it unavailable.</li>
+          <li><strong>Mac and Linux catch up.</strong> TexasFile research and page-priced PDFs, the CourthouseDirect subscription viewer, ordinary-Chrome sign-in for those two providers, and the Codex and Claude connection fixes now ship on every platform.</li>
+          <li><strong>CountyRecords sign-in unchanged.</strong> Sign in inside TitleDesk's own CountyRecords window as before; its login form supports it. Open email or Google pages in your own Chrome, not in that window.</li>
+          <li><strong>Previous fixes included.</strong> Everything in v0.2.14 through v0.2.16 remains included.</li>
+        </ul>
+        <h3>Windows v0.2.16 — TexasFile sign-in</h3>
+        <ul>
+          <li><strong>Sign in with ordinary Chrome.</strong> Sign into TexasFile normally, complete any verification the site requests, then close that Chrome window. TitleDesk verifies the saved session and connects automatically.</li>
+          <li><strong>Clear account matching.</strong> Username and email matching ignores letter case. If a different account is signed in, TitleDesk shows the actual account and the login you entered.</li>
+          <li><strong>Keep purchases separate.</strong> Connecting does not approve purchases. Free-index research, exact page quotes, assignment budgets and the page-pricing switch retain their existing controls.</li>
+          <li><strong>Previous fixes included.</strong> The Windows Codex configuration and Claude connection fixes from v0.2.15 remain included.</li>
+        </ul>
+        <h3>Windows v0.2.15 — AI connections and TexasFile</h3>
+        <ul class="fix-list">
+          <li><strong>Codex configuration compatibility.</strong> Fixed Windows connection failures caused by newer desktop Codex settings, while preserving your existing configuration.</li>
+          <li><strong>A real connection check.</strong> The Codex provider test now starts a review session before reporting success.</li>
+          <li><strong>Claude Code detection and sign-in.</strong> Fixed discovery of native and npm Windows installations, including installations made while TitleDesk is open, and improved signed-out and usage-limit reporting.</li>
+          <li><strong>Setup connection checks.</strong> Serialized overlapping TexasFile checks and discarded stale replies so an earlier result cannot overwrite the current connection state.</li>
+          <li><strong>TexasFile free-index research.</strong> Added name, abstract and recording-reference searches with pagination, coverage details and available page counts.</li>
+          <li><strong>Page-priced documents.</strong> Added exact TexasFile PDF quotes and the page-pricing switch, with assignment-budget checks and reuse of previously purchased copies.</li>
+          <li><strong>Windows runtime and packaging.</strong> Patched known dependency advisories and verified the signed installer, installed OCR and all 35 AI tools on native Windows.</li>
+          <li><strong>Platform-specific upgrades.</strong> Windows receives its latest update while Mac and Linux retain their corresponding verified downloads.</li>
+        </ul>
+        <h3>v0.2.13 — research, evidence and report fixes</h3>
+        <ul class="fix-list">
+          <li><strong>Interrupted assignments.</strong> Saved the original assignment inputs, research state, examined documents and decisions so a closed run can be continued.</li>
+          <li><strong>Saved records and duplicate retrieval.</strong> Restored previously examined copies before ownership analysis and reused supplied documents and landman runsheet records.</li>
+          <li><strong>Purchase accounting.</strong> Kept one approval tied to its run, preserved reconciled charges, and held uncertain purchase attempts for reconciliation instead of automatic retries.</li>
+          <li><strong>Research limits and progress.</strong> Added working-time limits, continue-or-stop questions, visible document-reading progress and durable research checkpoints.</li>
+          <li><strong>Blue and red guidance cards.</strong> Kept the AI recovery dialog from covering the landman's evidence request and made follow-up questions track the records still needed.</li>
+          <li><strong>Multi-page scans and dense documents.</strong> Improved TIFF/PDF page handling, split dense readings and checked attached exhibits when material clauses appear there.</li>
+          <li><strong>Document reading.</strong> Corrected readings of sole-devisee language, probate administration, mineral reservations, utility easements and numbers that describe surveys or certificates rather than ownership shares.</li>
+          <li><strong>Chain and tract matching.</strong> Improved abstract coverage, recording-reference and page-range matching, and excluded other-land records and company surname matches from the chain.</li>
+          <li><strong>Ownership replay.</strong> Corrected tenancy, trustee and representative conveyances, inherited-interest treatment, name ambiguity and expired term interests; retained supported derivations when a later answer failed evidence checks.</li>
+          <li><strong>Net mineral acres.</strong> Fixed workbook recalculation after fee exceptions and kept excluded acreage tied to the ownership analysis.</li>
+          <li><strong>CourthouseDirect viewing.</strong> Added durable subscription views, complete page capture, view counters, filing-date handling and account-bound saved sign-in references.</li>
+          <li><strong>Imports and the AI workspace.</strong> Prevented duplicate production months and repeated lease-import rows, and let the assistant read back its recorded proposals.</li>
+          <li><strong>Delivery and installation.</strong> Improved supplied-source citation resolution, package integrity checks and signed platform downloads with published checksums.</li>
+        </ul>
+        <p class="fine">In local verification for a subsequent update: large Codex evidence requests now avoid the app-server text-input limit without dropping source text. This fix is not included in the installers linked above yet.</p>
+        <p><a href="/download/">Download TitleDesk</a> · <a href="https://github.com/THE-HARNESS-LAB/titledesk/releases/tag/v0.2.18">v0.2.18 release notes</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <div>
+          <a class="hl-link" href="https://theharnesslab.com/"><img src="/harness-lab-lockup.webp" alt="The Harness Lab" width="800" height="184" loading="lazy" decoding="async"></a>
+          <p class="fine">TitleDesk Agent is built and supported by The Harness Lab.<br>Spencer Teague · <a href="mailto:spencer@theharnesslab.com">spencer@theharnesslab.com</a> · <a href="tel:+13257638701">325-763-8701</a></p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <nav aria-label="Product">
+            <a href="/how-it-works/">How it works</a>
+            <a href="/landman-software/">Landman software</a>
+            <a href="/title-runsheet-software/">Title runsheet software</a>
+            <a href="/mineral-title-research-software/">Mineral title research</a>
+            <a href="/chain-of-title-software/">Chain of title</a>
+            <a href="/landman-ocr/">Local OCR</a>
+            <a href="/customization-lab/">Customization Lab</a>
+            <a href="/security/">Security &amp; privacy</a>
+            <a href="/download/">Download</a>
+          </nav>
+        </div>
+        <div>
+          <h4>Learn &amp; buy</h4>
+          <nav aria-label="Learn and buy">
+            <a href="/roi/">ROI &amp; economics</a>
+            <a href="/guides/">Guides</a>
+            <a href="/glossary/">Landman glossary</a>
+            <a href="/texas-mineral-title/">Texas mineral title</a>
+            <a href="/compare/">Where it fits</a>
+            <a href="/desktop-agent/pricing/">Pricing</a>
+            <a href="/faq/">FAQ</a>
+            <a href="/contact/">Contact</a>
+            <a href="https://theharnesslab.com/">theharnesslab.com</a>
+          </nav>
+        </div>
+      </div>
+      <p class="product-disclaimer"><small><strong>Product information:</strong> About an hour to a few hours is a planning estimate, not a completion guarantee. Complex chains, missing records, scan quality, provider coverage, AI limits and professional review can extend the time. TitleDesk assists title research; a qualified landman or attorney must review sources, ownership and curatives before client use. AI and research-provider accounts, charges and coverage are separate from your TitleDesk licence. TexasFile automation is included in v0.2.17 on every platform. CourthouseDirect subscription viewing is configured in Setup and requires a suitable account; viewed working copies are distinct from original source documents. Live TexasFile free-index research is verified; paid acquisition has regression coverage and has not been verified with a live charge. Features vary by platform and release. Automatic updates require a compatible customer build; versions older than v0.2.4 need a one-time manual installation.</small></p>
+      <div class="footer-legal">
+        <span>© 2026 The Harness Lab. All rights reserved.</span>
+        <span><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/manage/">Manage billing</a> · <a href="mailto:sales@theharnesslab.com">sales@theharnesslab.com</a></span>
+      </div>
+    </footer>
+
+    <script src="/storefront.js?v=0.5.1" defer></script>
+  </body>
+</html>
