@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /thanks/
 
-Sitemap: https://title-desk.com/sitemap.xml
+Sitemap: https://desktop.title-desk.com/sitemap.xml
