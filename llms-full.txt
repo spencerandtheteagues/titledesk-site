@@ -54,5 +54,5 @@ One seat licenses one computer (with offline lease support; self-service billing
 - **TitleDesk Hosted (`https://title-desk.com/`)**: Best for browser-based per-assignment or monthly-allowance Texas mineral title examination runs with zero desktop installation or AI-key management (free first upload run up to 150 pages, $249 per upload run, subscriptions from $1,299/mo; Hybrid/Full county retrieval available by invitation).
 
 ## 7. Important Professional & Planning Disclaimers
-- Planning estimates ("about an hour to a few hours") reflect typical assignment complexity, not a guaranteed turnaround time; complex chains, scan legibility, provider coverage, AI rate limits, and professional review affect elapsed time.
+- Planning estimates ("about an hour to a few hours") reflect typical assignment complexity, not a promised turnaround time; complex chains, scan legibility, provider coverage, AI rate limits, and professional review affect elapsed time.
 - TitleDesk Agent assists mineral title research and workbook preparation. All source instruments, runsheets, ownership fractions, net mineral acres, and curative items must be reviewed by a qualified professional landman or licensed title attorney prior to reliance or client delivery. TitleDesk does not render legal title opinions.
