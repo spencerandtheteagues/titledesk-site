@@ -1,0 +1,35 @@
+# TitleDesk Agent (Desktop)
+
+> Local-first desktop title work automation software for oil and gas landmen and mineral title teams on macOS, Windows, and Linux. Built by The Harness Lab (https://theharnesslab.com/).
+
+TitleDesk Agent (`https://desktop.title-desk.com/`) connects county-record research, local $0/page PDF and multi-page TIFF OCR, source-linked chain-of-title runsheets, exact rational fraction mineral ownership arithmetic, curative tracking, and client-format Excel workbooks in an encrypted workspace on the landman's computer.
+
+## Key Facts
+- **Platforms & Current Releases**: Linux v0.2.19 (AppImage with signed GitHub verification receipt), Windows 10/11 v0.2.18 installer, macOS 12+ Apple silicon v0.2.17 (signed with Apple Developer ID, notarized, and stapled). Published SHA-256 checksums on `/download/`.
+- **County Record Connectors**: CountyRecords.com index research, configured CourthouseDirect subscription viewing, and TexasFile free-index search plus page-priced PDF acquisition under user-set spending ceilings.
+- **Exact Mineral Math**: Rational fraction arithmetic (`1/3 + 1/3 + 1/3 = 1`) for mineral interests, royalty reservations, Duhig/over-conveyance checks, and net mineral acres (NMA) without floating-point rounding drift.
+- **Local OCR & Bring-Your-Own AI**: Local OCR, exact-fraction math, encrypted project databases, and report assembly run locally on your machine with $0 per-page OCR fees. Automated page-image examination connects to the user's own ChatGPT/Codex or Claude subscription or API key.
+- **Security & Isolation**: Separate AES-256-GCM encrypted SQLite workspace per client company, append-only audit log, allowlisted research browser, and signed background updates applied on quit.
+- **Pricing**:
+  - **Individual**: $199 / seat / month (month-to-month, starts with a 7-day free trial; 1 seat = 1 licensed computer).
+  - **Enterprise**: $349 / seat / month ($4,188 / seat / year on a 12-month contract), including isolated company workspaces, Customization Lab, managed fleet profiles, and a 15-day technician-led build-out.
+  - **Enterprise Demo**: Free 14-day evaluation on up to 5 computers (no card required) with a live setup call with founder Spencer Teague.
+- **Professional Review Scope**: TitleDesk Agent assists mineral title research; outputs are draft research deliverables that must be reviewed by a qualified landman or title attorney before client use and are not a legal title opinion.
+
+## Core Pages
+- [Home](https://desktop.title-desk.com/): Product overview, workflow, feature highlights, and FAQ.
+- [Download & Checkout](https://desktop.title-desk.com/download/): 7-day Individual trial, seat checkout, 14-day Enterprise demo request, and verified macOS/Windows/Linux installers.
+- [Pricing](https://desktop.title-desk.com/pricing/): Individual ($199/mo), Enterprise ($349/seat/mo), Founder year-one offer, and 15-day onboarding details.
+- [How It Works](https://desktop.title-desk.com/how-it-works/): Step-by-step walkthrough from assignment intake and county search through exact fractions and package delivery.
+- [Title Runsheet Software](https://desktop.title-desk.com/title-runsheet-software/): Source-linked runsheet assembly for recorded deeds, leases, probate, and releases.
+- [Texas Mineral Title](https://desktop.title-desk.com/texas-mineral-title/): Texas abstract/survey indexing, CountyRecords.com, CourthouseDirect, and TexasFile workflows.
+- [Security & Privacy](https://desktop.title-desk.com/security/): Local storage, AES-256-GCM workspace encryption, and network data boundaries.
+- [ROI Calculator](https://desktop.title-desk.com/roi/): Interactive landman and brokerage economics model.
+- [Landman Guides](https://desktop.title-desk.com/guides/): Technical guides on chain of title, exact-fraction mineral ownership, county indexes, and curatives.
+- [Full Reference](https://desktop.title-desk.com/llms-full.txt): Complete technical, workflow, security, and licensing documentation for AI agents.
+
+## Related Products & Studio
+- [TitleDesk Hosted Web App](https://title-desk.com/): Browser-based per-run and subscription Texas mineral title examination workbooks (no desktop install required; free first upload run up to 150 pages).
+- [Artificial Landman](https://artificiallandman.io/): Hosted Texas mineral title runsheet and ownership workbook service (with New Mexico expansion on the roadmap).
+- [The Harness Lab](https://theharnesslab.com/): Parent product studio founded by Spencer Teague (`sales@theharnesslab.com`, `+1-325-763-8701`).
+- [The Harness Lab Engineering Foundry](https://theharnesslab.dev/): Systems engineering and research publication of The Harness Lab.

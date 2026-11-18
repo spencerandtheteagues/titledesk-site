@@ -1,3 +1,55 @@
+User-agent: Googlebot
+Allow: /
+Disallow: /thanks/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /thanks/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /thanks/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /thanks/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /thanks/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /thanks/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /thanks/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /thanks/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /thanks/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /thanks/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /thanks/
+
+User-agent: GrokBot
+Allow: /
+Disallow: /thanks/
+
+User-agent: xAI-Bot
+Allow: /
+Disallow: /thanks/
+
 User-agent: *
 Allow: /
 Disallow: /thanks/

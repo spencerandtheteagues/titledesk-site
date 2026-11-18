@@ -1,0 +1,58 @@
+# TitleDesk Agent — Complete AI & Technical Reference
+
+> Canonical URL: https://desktop.title-desk.com/
+> Concise Index: https://desktop.title-desk.com/llms.txt
+> Parent Studio: The Harness Lab (https://theharnesslab.com/ · https://theharnesslab.dev/)
+> Founder & Contact: Spencer Teague · sales@theharnesslab.com · spencer@theharnesslab.com · +1-325-763-8701
+
+## 1. Executive Summary
+TitleDesk Agent (`https://desktop.title-desk.com/`) is commercial, local-first desktop software built by The Harness Lab for independent oil and gas landmen, title brokerages, E&P land departments, and mineral acquisition teams. Running natively on macOS, Windows, and Linux, TitleDesk Agent connects county-clerk record research, local PDF and multi-page TIFF optical character recognition (OCR), source-linked chain-of-title runsheets, exact rational fraction mineral ownership arithmetic, curative defect tracking, and client-format Excel workbook packaging inside an encrypted local workspace.
+
+For teams that prefer zero-install browser runs billed per assignment or monthly subscription without managing local AI connectors, The Harness Lab also operates **TitleDesk Hosted** (`https://title-desk.com/`) and **Artificial Landman** (`https://artificiallandman.io/`).
+
+## 2. Supported Platforms & Release Integrity
+- **Linux**: v0.2.19 AppImage with published SHA-256 checksum and signed GitHub verification receipt.
+- **Windows**: v0.2.18 installer for Windows 10 and Windows 11 (x64) with published SHA-256 checksum.
+- **macOS**: v0.2.17 disk image for macOS 12+ (Apple silicon), signed with an Apple Developer ID, notarized by Apple, and stapled for offline first-launch verification.
+- **Automatic Updates**: Installed copies (v0.2.4+) check periodically, download signed updates in the background, and apply them on application exit while preserving local workspaces and seat activations.
+
+## 3. Core Workflow & Capabilities
+1. **Paste-the-Assignment Intake**: Start from raw assignment instructions (county, survey/abstract, tract description, period of examination, existing files, and per-assignment record purchase ceiling).
+2. **Connected County-Record Research**:
+   - **CountyRecords.com**: Automated county index search by abstract, party, and recording reference within user-configured purchase ceilings.
+   - **CourthouseDirect**: Configured subscription viewing with saved working copies and view-allowance tracking.
+   - **TexasFile**: Free county index search by party name, abstract, or volume/page, plus exact page-priced PDF quotes within approved budgets across Linux (v0.2.19), Windows (v0.2.18), and macOS (v0.2.17).
+   - **Existing Instrument Reuse**: Import already-owned PDFs/TIFFs with county and recording citations so TitleDesk reuses matching instruments instead of repurchasing them.
+3. **Local OCR & Guided Examination**:
+   - Local PDF and multi-page TIFF OCR runs directly on the user's workstation at **$0 per-page OCR cost**.
+   - Automated page-image examination uses the user's connected AI provider (existing ChatGPT/Codex or Claude subscription or API key), tested before any spend occurs.
+   - **Blue Assistance Cards** surface specific missing instruments, tract clarifications, or facts mid-run so the landman can supply an answer or attach a PDF/TIFF and resume without losing state.
+   - **Red AI Recovery Cards** pause cleanly on provider connectivity or rate-limit interruptions and resume from saved progress.
+4. **Exact Rational Fraction Mineral Ownership**:
+   - All conveyances, fractional mineral/royalty reservations, probate distributions, and tract allocations are computed as exact rational fractions (`1/3 + 1/3 + 1/3 = 1`), eliminating IEEE-754 decimal drift.
+   - Over-conveyances and Duhig-style shortfalls are flagged explicitly with exact fractional excesses (e.g., `over by 1/4`) linked to the creating instrument.
+   - Net mineral acres (NMA) and decimal equivalents are derived only after exact rational reconciliation.
+5. **Source-Linked Review & Client-Format Packaging**:
+   - Every extracted party, date, recording citation, fraction, and curative note links directly back to the underlying source page image.
+   - Outputs assemble into the brokerage's or operator's house workbook template and submission folder structure (including optional Google Drive delivery via Customization Lab).
+
+## 4. Security, Privacy & Multi-Client Isolation
+- **Per-Company Encrypted Workspaces**: Each client or brokerage profile lives in a separate AES-256-GCM encrypted SQLite database on disk. Switching companies switches isolated databases; workspaces never share records and can be wiped independently.
+- **Local-First Boundary**: OCR, fraction math, runsheet state, and Excel assembly happen locally. Selected page images are transmitted only to the AI provider explicitly configured and consented to by the user, and county/Drive connectors receive only task-scoped requests.
+- **Auditability**: Append-only local audit log and allowlisted research browser hosts.
+
+## 5. Licensing & Pricing (`https://desktop.title-desk.com/pricing/`)
+One seat licenses one computer (with offline lease support; self-service billing management at `https://desktop.title-desk.com/manage/`).
+- **Individual — 7-Day Free Trial**: $0 for 7 days, then $199 / month. Full feature build on 1 computer ($1 card verification refunded immediately; cancel anytime within 7 days to pay nothing).
+- **Individual Monthly**: $199 / seat / month, month-to-month, cancel anytime.
+- **Enterprise**: $349 / seat / month ($4,188 / seat / year, 12-month contract billed annually, 2–500 seats). Includes isolated company workspaces, locked fleet profiles, Customization Lab configuration to house templates, priority support, and a **15-day technician-led onboarding & build-out**.
+- **Founder Year-One Offer**: $199 / seat / month for year one ($2,388 / seat billed annually) automatically applied to the first qualifying order of 40+ seats.
+- **Enterprise 14-Day Demo**: Free 14-day evaluation on up to 5 computers (no credit card required) including a setup and walkthrough call with Spencer Teague.
+
+## 6. Choosing Between TitleDesk Agent (Desktop) and Hosted Web Runs
+- **TitleDesk Agent (`https://desktop.title-desk.com/`)**: Best for daily working landmen and enterprise teams who want local-first encrypted project databases, $0/page local OCR, connected CountyRecords.com / CourthouseDirect / TexasFile sessions on their own workstation, custom house Excel templates via Customization Lab, and flat per-seat monthly licensing ($199–$349/mo) paired with their own ChatGPT/Claude subscription.
+- **TitleDesk Hosted (`https://title-desk.com/`) & Artificial Landman (`https://artificiallandman.io/`)**: Best for browser-based per-assignment or monthly-allowance Texas mineral title examination runs with zero desktop installation or AI-key management (free first upload run up to 150 pages, $249 per upload run, subscriptions from $1,299/mo; Hybrid/Full county retrieval available by invitation; New Mexico expansion planned on Artificial Landman).
+
+## 7. Important Professional & Planning Disclaimers
+- Planning estimates ("about an hour to a few hours") reflect typical assignment complexity, not a guaranteed turnaround time; complex chains, scan legibility, provider coverage, AI rate limits, and professional review affect elapsed time.
+- TitleDesk Agent assists mineral title research and workbook preparation. All source instruments, runsheets, ownership fractions, net mineral acres, and curative items must be reviewed by a qualified professional landman or licensed title attorney prior to reliance or client delivery. TitleDesk does not render legal title opinions.
