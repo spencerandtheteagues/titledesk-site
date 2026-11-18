@@ -8,7 +8,7 @@
 ## 1. Executive Summary
 TitleDesk Agent (`https://desktop.title-desk.com/`) is commercial, local-first desktop software built by The Harness Lab for independent oil and gas landmen, title brokerages, E&P land departments, and mineral acquisition teams. Running natively on macOS, Windows, and Linux, TitleDesk Agent connects county-clerk record research, local PDF and multi-page TIFF optical character recognition (OCR), source-linked chain-of-title runsheets, exact rational fraction mineral ownership arithmetic, curative defect tracking, and client-format Excel workbook packaging inside an encrypted local workspace.
 
-For teams that prefer zero-install browser runs billed per assignment or monthly subscription without managing local AI connectors, The Harness Lab also operates **TitleDesk Hosted** (`https://title-desk.com/`) and **Artificial Landman** (`https://artificiallandman.io/`).
+For teams that prefer zero-install browser runs billed per assignment or monthly subscription without managing local AI connectors, The Harness Lab also operates **TitleDesk Hosted** (`https://title-desk.com/`).
 
 ## 2. Supported Platforms & Release Integrity
 - **Linux**: v0.2.19 AppImage with published SHA-256 checksum and signed GitHub verification receipt.
@@ -51,7 +51,7 @@ One seat licenses one computer (with offline lease support; self-service billing
 
 ## 6. Choosing Between TitleDesk Agent (Desktop) and Hosted Web Runs
 - **TitleDesk Agent (`https://desktop.title-desk.com/`)**: Best for daily working landmen and enterprise teams who want local-first encrypted project databases, $0/page local OCR, connected CountyRecords.com / CourthouseDirect / TexasFile sessions on their own workstation, custom house Excel templates via Customization Lab, and flat per-seat monthly licensing ($199–$349/mo) paired with their own ChatGPT/Claude subscription.
-- **TitleDesk Hosted (`https://title-desk.com/`) & Artificial Landman (`https://artificiallandman.io/`)**: Best for browser-based per-assignment or monthly-allowance Texas mineral title examination runs with zero desktop installation or AI-key management (free first upload run up to 150 pages, $249 per upload run, subscriptions from $1,299/mo; Hybrid/Full county retrieval available by invitation; New Mexico expansion planned on Artificial Landman).
+- **TitleDesk Hosted (`https://title-desk.com/`)**: Best for browser-based per-assignment or monthly-allowance Texas mineral title examination runs with zero desktop installation or AI-key management (free first upload run up to 150 pages, $249 per upload run, subscriptions from $1,299/mo; Hybrid/Full county retrieval available by invitation).
 
 ## 7. Important Professional & Planning Disclaimers
 - Planning estimates ("about an hour to a few hours") reflect typical assignment complexity, not a guaranteed turnaround time; complex chains, scan legibility, provider coverage, AI rate limits, and professional review affect elapsed time.

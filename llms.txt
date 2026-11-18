@@ -30,6 +30,5 @@ TitleDesk Agent (`https://desktop.title-desk.com/`) connects county-record resea
 
 ## Related Products & Studio
 - [TitleDesk Hosted Web App](https://title-desk.com/): Browser-based per-run and subscription Texas mineral title examination workbooks (no desktop install required; free first upload run up to 150 pages).
-- [Artificial Landman](https://artificiallandman.io/): Hosted Texas mineral title runsheet and ownership workbook service (with New Mexico expansion on the roadmap).
 - [The Harness Lab](https://theharnesslab.com/): Parent product studio founded by Spencer Teague (`sales@theharnesslab.com`, `+1-325-763-8701`).
 - [The Harness Lab Engineering Foundry](https://theharnesslab.dev/): Systems engineering and research publication of The Harness Lab.
