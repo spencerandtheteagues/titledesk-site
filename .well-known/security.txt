@@ -1,0 +1,4 @@
+Contact: mailto:sales@theharnesslab.com
+Expires: 2027-11-18T00:00:00Z
+Preferred-Languages: en
+Canonical: https://desktop.title-desk.com/.well-known/security.txt
