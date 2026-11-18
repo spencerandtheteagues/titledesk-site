@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TitleDesk storefront — title-desk.com  (v0.5.1)
+   Title-Desk storefront — title-desk.com  (v0.5.1)
 
    CSP: script-src 'self'. No inline handlers; everything binds from here.
 
@@ -164,7 +164,7 @@ function initDownloadPage() {
         window.location.href = data.url;
       } catch (error) {
         statusWithSalesLink(status, customerSafeError(error, 'Checkout could not open Stripe. No charge was made.'),
-          trial ? 'TitleDesk 7-day trial' : 'TitleDesk Individual seat');
+          trial ? 'Title-Desk 7-day trial' : 'Title-Desk Individual seat');
         if (submit) submit.disabled = false;
       }
     });
@@ -247,7 +247,7 @@ function initDownloadPage() {
         if (!data.url) throw new Error('Stripe did not return a checkout URL.');
         window.location.href = data.url;
       } catch (error) {
-        statusWithSalesLink(enterpriseStatus, customerSafeError(error, 'Checkout could not open Stripe. No charge was made.'), 'TitleDesk ' + seats() + ' seat purchase');
+        statusWithSalesLink(enterpriseStatus, customerSafeError(error, 'Checkout could not open Stripe. No charge was made.'), 'Title-Desk ' + seats() + ' seat purchase');
         if (enterpriseSubmit) enterpriseSubmit.disabled = false;
       }
     });
@@ -280,7 +280,7 @@ function initDownloadPage() {
         if (error && error.code === 'demo_exists') {
           setStatus(status, error.message, 'warn');
         } else {
-          statusWithSalesLink(status, customerSafeError(error, 'The demo could not be set up. Nothing was charged.'), 'TitleDesk Enterprise demo');
+          statusWithSalesLink(status, customerSafeError(error, 'The demo could not be set up. Nothing was charged.'), 'Title-Desk Enterprise demo');
         }
         if (submit) submit.disabled = false;
       }
@@ -307,7 +307,7 @@ function initDownloadPage() {
         window.history.replaceState(null, '', url.toString());
         unlock(data.downloadToken, 'code');
       } catch (error) {
-        statusWithSalesLink(status, customerSafeError(error, 'The code could not be checked.'), 'TitleDesk download');
+        statusWithSalesLink(status, customerSafeError(error, 'The code could not be checked.'), 'Title-Desk download');
       } finally {
         if (submit) submit.disabled = false;
       }
@@ -395,7 +395,7 @@ function initThanksPage() {
         lede: 'This page could not reload the demo record in this browser, but the activation code and download link are in the email we just sent. Spencer will call you to set the demo up.' });
       return;
     }
-    show({ kicker: 'Enterprise demo · 14 days', title: 'Thank you, ' + demo.name + '. Your TitleDesk demo is ready.',
+    show({ kicker: 'Enterprise demo · 14 days', title: 'Thank you, ' + demo.name + '. Your Title-Desk demo is ready.',
       lede: 'Your activation code is below and in the email we sent to ' + demo.email + '. Spencer will call you to set the demo up, walk through the workflow and handle anything in the way. The 14 days start when the first computer activates.' });
     reveal(demo);
     return;
@@ -406,7 +406,7 @@ function initThanksPage() {
     return;
   }
 
-  show({ kicker: 'Thank you', title: 'Thank you for purchasing TitleDesk Agent.', lede: 'Your activation code will appear here in a moment — it is also being emailed to you.' });
+  show({ kicker: 'Thank you', title: 'Thank you for purchasing Title-Desk Agent.', lede: 'Your activation code will appear here in a moment — it is also being emailed to you.' });
   let attempts = 0;
   let portalArmed = false;
 
@@ -422,7 +422,7 @@ function initThanksPage() {
       } catch (error) {
         portalArmed = false;
         portal.textContent = 'Manage or cancel your subscription';
-        statusWithSalesLink(status, customerSafeError(error, 'The billing portal could not be opened.'), 'TitleDesk billing');
+        statusWithSalesLink(status, customerSafeError(error, 'The billing portal could not be opened.'), 'Title-Desk billing');
       }
     });
   }
@@ -445,10 +445,10 @@ function initThanksPage() {
     switch (result.state) {
       case 'ready':
         show({
-          kicker: result.trial ? 'Your 7-day trial has started' : 'Thank you for purchasing TitleDesk Agent',
-          title: result.trial ? 'Your TitleDesk trial is ready.' : 'Thank you for purchasing TitleDesk Agent.',
+          kicker: result.trial ? 'Your 7-day trial has started' : 'Thank you for purchasing Title-Desk Agent',
+          title: result.trial ? 'Your Title-Desk trial is ready.' : 'Thank you for purchasing Title-Desk Agent.',
           lede: 'Your activation code is below' + (result.emailSent ? ' and in the email we sent to ' + result.email + '.' : '. The same code is being emailed to ' + result.email + '.') +
-            ' Enter it into your downloaded copy of TitleDesk to activate it.',
+            ' Enter it into your downloaded copy of Title-Desk to activate it.',
         });
         reveal(result);
         return;
@@ -505,7 +505,7 @@ if (form) {
       setStatus(status, 'Sent. Spencer will reply from sales@theharnesslab.com.', 'ok');
       form.reset();
     } catch (error) {
-      statusWithSalesLink(status, error instanceof Error ? error.message : 'Could not send.', 'TitleDesk inquiry');
+      statusWithSalesLink(status, error instanceof Error ? error.message : 'Could not send.', 'Title-Desk inquiry');
     } finally {
       if (submit) submit.disabled = false;
     }
@@ -561,7 +561,7 @@ function initManagePage() {
     postJson('/v1/billing/portal-by-link', { token: token })
       .then((data) => { setStatus(linkStatus, 'Taking you to Stripe…', 'ok'); open(data.url); })
       .catch((error) => {
-        statusWithSalesLink(linkStatus, customerSafeError(error, 'The link could not be opened.'), 'TitleDesk billing');
+        statusWithSalesLink(linkStatus, customerSafeError(error, 'The link could not be opened.'), 'Title-Desk billing');
       });
   }
 
@@ -580,7 +580,7 @@ function initManagePage() {
         setStatus(status, 'Taking you to Stripe…', 'ok');
         open(data.url);
       } catch (error) {
-        statusWithSalesLink(status, customerSafeError(error, 'The code could not be checked.'), 'TitleDesk billing');
+        statusWithSalesLink(status, customerSafeError(error, 'The code could not be checked.'), 'Title-Desk billing');
       } finally {
         if (submit) submit.disabled = false;
       }
@@ -602,7 +602,7 @@ function initManagePage() {
         setStatus(status, (data && data.message) || 'If that address has a subscription, a link is on its way.', 'ok');
         if (input) input.value = '';
       } catch (error) {
-        statusWithSalesLink(status, customerSafeError(error, 'The request could not be sent.'), 'TitleDesk billing');
+        statusWithSalesLink(status, customerSafeError(error, 'The request could not be sent.'), 'Title-Desk billing');
       } finally {
         if (submit) submit.disabled = false;
       }

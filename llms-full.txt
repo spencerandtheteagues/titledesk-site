@@ -1,4 +1,4 @@
-# TitleDesk Agent — Complete AI & Technical Reference
+# Title-Desk Agent — Complete AI & Technical Reference
 
 > Canonical URL: https://desktop.title-desk.com/
 > Concise Index: https://desktop.title-desk.com/llms.txt
@@ -6,9 +6,9 @@
 > Founder & Contact: Spencer Teague · sales@theharnesslab.com · +1-325-763-8701
 
 ## 1. Executive Summary
-TitleDesk Agent (`https://desktop.title-desk.com/`) is commercial, local-first desktop software built by The Harness Lab for independent oil and gas landmen, title brokerages, E&P land departments, and mineral acquisition teams. Running natively on macOS, Windows, and Linux, TitleDesk Agent connects county-clerk record research, local PDF and multi-page TIFF optical character recognition (OCR), source-linked chain-of-title runsheets, exact rational fraction mineral ownership arithmetic, curative defect tracking, and client-format Excel workbook packaging inside an encrypted local workspace.
+Title-Desk Agent (`https://desktop.title-desk.com/`) is commercial, local-first desktop software built by The Harness Lab for independent oil and gas landmen, title brokerages, E&P land departments, and mineral acquisition teams. Running natively on macOS, Windows, and Linux, Title-Desk Agent connects county-clerk record research, local PDF and multi-page TIFF optical character recognition (OCR), source-linked chain-of-title runsheets, exact rational fraction mineral ownership arithmetic, curative defect tracking, and client-format Excel workbook packaging inside an encrypted local workspace.
 
-For teams that prefer zero-install browser runs billed per assignment or monthly subscription without managing local AI connectors, The Harness Lab also operates **TitleDesk Hosted** (`https://title-desk.com/`).
+For teams that prefer zero-install browser runs billed per assignment or monthly subscription without managing local AI connectors, The Harness Lab also operates **Title-Desk Hosted** (`https://title-desk.com/`).
 
 ## 2. Supported Platforms & Release Integrity
 - **Linux**: v0.2.19 AppImage with published SHA-256 checksum and signed GitHub verification receipt.
@@ -22,7 +22,7 @@ For teams that prefer zero-install browser runs billed per assignment or monthly
    - **CountyRecords.com**: Automated county index search by abstract, party, and recording reference within user-configured purchase ceilings.
    - **CourthouseDirect**: Configured subscription viewing with saved working copies and view-allowance tracking.
    - **TexasFile**: Free county index search by party name, abstract, or volume/page, plus exact page-priced PDF quotes within approved budgets across Linux (v0.2.19), Windows (v0.2.18), and macOS (v0.2.17).
-   - **Existing Instrument Reuse**: Import already-owned PDFs/TIFFs with county and recording citations so TitleDesk reuses matching instruments instead of repurchasing them.
+   - **Existing Instrument Reuse**: Import already-owned PDFs/TIFFs with county and recording citations so Title-Desk reuses matching instruments instead of repurchasing them.
 3. **Local OCR & Guided Examination**:
    - Local PDF and multi-page TIFF OCR runs directly on the user's workstation at **$0 per-page OCR cost**.
    - Automated page-image examination uses the user's connected AI provider (existing ChatGPT/Codex or Claude subscription or API key), tested before any spend occurs.
@@ -49,10 +49,10 @@ One seat licenses one computer (with offline lease support; self-service billing
 - **Founder Year-One Offer**: $199 / seat / month for year one ($2,388 / seat billed annually) automatically applied to the first qualifying order of 40+ seats.
 - **Enterprise 14-Day Demo**: Free 14-day evaluation on up to 5 computers (no credit card required) including a setup and walkthrough call with Spencer Teague.
 
-## 6. Choosing Between TitleDesk Agent (Desktop) and Hosted Web Runs
-- **TitleDesk Agent (`https://desktop.title-desk.com/`)**: Best for daily working landmen and enterprise teams who want local-first encrypted project databases, $0/page local OCR, connected CountyRecords.com / CourthouseDirect / TexasFile sessions on their own workstation, custom house Excel templates via Customization Lab, and flat per-seat monthly licensing ($199–$349/mo) paired with their own ChatGPT/Claude subscription.
-- **TitleDesk Hosted (`https://title-desk.com/`)**: Best for browser-based per-assignment or monthly-allowance Texas mineral title examination runs with zero desktop installation or AI-key management (free first upload run up to 150 pages, $249 per upload run, subscriptions from $1,299/mo; Hybrid/Full county retrieval available by invitation).
+## 6. Choosing Between Title-Desk Agent (Desktop) and Hosted Web Runs
+- **Title-Desk Agent (`https://desktop.title-desk.com/`)**: Best for daily working landmen and enterprise teams who want local-first encrypted project databases, $0/page local OCR, connected CountyRecords.com / CourthouseDirect / TexasFile sessions on their own workstation, custom house Excel templates via Customization Lab, and flat per-seat monthly licensing ($199–$349/mo) paired with their own ChatGPT/Claude subscription.
+- **Title-Desk Hosted (`https://title-desk.com/`)**: Best for browser-based per-assignment or monthly-allowance Texas mineral title examination runs with zero desktop installation or AI-key management (free first upload run up to 150 pages, $249 per upload run, subscriptions from $1,299/mo; Hybrid/Full county retrieval available by invitation).
 
 ## 7. Important Professional & Planning Disclaimers
 - Planning estimates ("about an hour to a few hours") reflect typical assignment complexity, not a promised turnaround time; complex chains, scan legibility, provider coverage, AI rate limits, and professional review affect elapsed time.
-- TitleDesk Agent assists mineral title research and workbook preparation. All source instruments, runsheets, ownership fractions, net mineral acres, and curative items must be reviewed by a qualified professional landman or licensed title attorney prior to reliance or client delivery. TitleDesk does not render legal title opinions.
+- Title-Desk Agent assists mineral title research and workbook preparation. All source instruments, runsheets, ownership fractions, net mineral acres, and curative items must be reviewed by a qualified professional landman or licensed title attorney prior to reliance or client delivery. Title-Desk does not render legal title opinions.

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TitleDesk Agent — title-desk.com
+   Title-Desk Agent — title-desk.com
    Art direction: "Instrument Black"
 
    True black ground. Surfaces are defined by light and hairline rule, never
@@ -460,7 +460,7 @@ p { margin: 0 0 14px; }
 .reveal-ready .is-in .meter .fill-60 { width: 60%; }
 
 /* --------------------------------------------------------------------------
-   The layer stack — where TitleDesk fits. The intellectual centrepiece.
+   The layer stack — where Title-Desk fits. The intellectual centrepiece.
    -------------------------------------------------------------------------- */
 .stack { display: grid; gap: 10px; margin-top: 26px; }
 .stack-row {

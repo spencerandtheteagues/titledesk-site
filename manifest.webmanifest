@@ -1,6 +1,6 @@
 {
-  "name": "TitleDesk Agent",
-  "short_name": "TitleDesk",
+  "name": "Title-Desk Agent",
+  "short_name": "Title-Desk",
   "description": "Local-first desktop software for oil and gas landmen: county-record research, local OCR, source-linked runsheets, exact fraction mineral ownership, and client-format workbooks.",
   "start_url": "/",
   "scope": "/",

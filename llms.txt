@@ -1,8 +1,8 @@
-# TitleDesk Agent (Desktop)
+# Title-Desk Agent (Desktop)
 
 > Local-first desktop title work automation software for oil and gas landmen and mineral title teams on macOS, Windows, and Linux. Built by The Harness Lab (https://theharnesslab.com/).
 
-TitleDesk Agent (`https://desktop.title-desk.com/`) connects county-record research, local $0/page PDF and multi-page TIFF OCR, source-linked chain-of-title runsheets, exact rational fraction mineral ownership arithmetic, curative tracking, and client-format Excel workbooks in an encrypted workspace on the landman's computer.
+Title-Desk Agent (`https://desktop.title-desk.com/`) connects county-record research, local $0/page PDF and multi-page TIFF OCR, source-linked chain-of-title runsheets, exact rational fraction mineral ownership arithmetic, curative tracking, and client-format Excel workbooks in an encrypted workspace on the landman's computer.
 
 ## Key Facts
 - **Platforms & Current Releases**: Linux v0.2.19 (AppImage with signed GitHub verification receipt), Windows 10/11 v0.2.18 installer, macOS 12+ Apple silicon v0.2.17 (signed with Apple Developer ID, notarized, and stapled). Published SHA-256 checksums on `/download/`.
@@ -14,7 +14,7 @@ TitleDesk Agent (`https://desktop.title-desk.com/`) connects county-record resea
   - **Individual**: $199 / seat / month (month-to-month, starts with a 7-day free trial; 1 seat = 1 licensed computer).
   - **Enterprise**: $349 / seat / month ($4,188 / seat / year on a 12-month contract), including isolated company workspaces, Customization Lab, managed fleet profiles, and a 15-day technician-led build-out.
   - **Enterprise Demo**: Free 14-day evaluation on up to 5 computers (no card required) with a live setup call with founder Spencer Teague.
-- **Professional Review Scope**: TitleDesk Agent assists mineral title research; outputs are draft research deliverables that must be reviewed by a qualified landman or title attorney before client use and are not a legal title opinion.
+- **Professional Review Scope**: Title-Desk Agent assists mineral title research; outputs are draft research deliverables that must be reviewed by a qualified landman or title attorney before client use and are not a legal title opinion.
 
 ## Core Pages
 - [Home](https://desktop.title-desk.com/): Product overview, workflow, feature highlights, and FAQ.
@@ -29,6 +29,6 @@ TitleDesk Agent (`https://desktop.title-desk.com/`) connects county-record resea
 - [Full Reference](https://desktop.title-desk.com/llms-full.txt): Complete technical, workflow, security, and licensing documentation for AI agents.
 
 ## Related Products & Studio
-- [TitleDesk Hosted Web App](https://title-desk.com/): Browser-based per-run and subscription Texas mineral title examination workbooks (no desktop install required; free first upload run up to 150 pages).
+- [Title-Desk Hosted Web App](https://title-desk.com/): Browser-based per-run and subscription Texas mineral title examination workbooks (no desktop install required; free first upload run up to 150 pages).
 - [The Harness Lab](https://theharnesslab.com/): Parent product studio founded by Spencer Teague (`sales@theharnesslab.com`, `+1-325-763-8701`).
 - [The Harness Lab Engineering Foundry](https://theharnesslab.dev/): Systems engineering and research publication of The Harness Lab.
