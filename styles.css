@@ -1308,3 +1308,6 @@ a.choice, a.choice:hover { text-decoration: none; color: var(--ink); }
 .manage-card input:focus { outline: 2px solid var(--gold); outline-offset: 1px; }
 .manage-card .button { justify-self: start; }
 @media (max-width: 760px) { .manage-grid { grid-template-columns: 1fr; } }
+
+/* Keep the hyphenated brand name on one line in headings. */
+.nw { white-space: nowrap; }
