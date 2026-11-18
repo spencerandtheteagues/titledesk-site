@@ -148,7 +148,8 @@ a:hover { color: var(--gold-pale); }
   text-decoration: none; color: var(--ink);
   flex-shrink: 0;
 }
-.brand-lock img { height: 38px; width: 38px; }
+.brand-lock picture { display: block; flex-shrink: 0; line-height: 0; }
+.brand-lock img { height: 48px; width: 48px; display: block; }
 .brand-lock strong {
   font-family: var(--mono);
   font-size: 12px;
@@ -374,8 +375,10 @@ p { margin: 0 0 14px; }
   padding: clamp(34px, 5vw, 64px) 0 clamp(24px, 3vw, 40px);
 }
 .hero-logo {
-  width: min(100%, 560px);
+  width: min(100%, 320px);
+  height: auto;
   display: block;
+  margin: 0 auto 22px;
   filter: drop-shadow(0 24px 60px rgba(212, 160, 23, 0.18));
 }
 .hero h1 { margin-top: 12px; }
@@ -1125,7 +1128,7 @@ footer {
 @media (max-width: 880px) {
   .hero { grid-template-columns: 1fr; }
   .hero-visual { order: 0; }
-  .hero-logo { margin: 0 auto; }
+  .hero-logo { margin: 0 auto 18px; width: min(60vw, 220px); }
   .grid-2, .grid-3, .grid-4, .feat-grid,
   .downloads, .price-grid, .contact-grid, .shots,
   .pkg-list, .hl-doors { grid-template-columns: 1fr; }
