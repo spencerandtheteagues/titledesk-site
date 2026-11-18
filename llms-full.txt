@@ -3,7 +3,7 @@
 > Canonical URL: https://desktop.title-desk.com/
 > Concise Index: https://desktop.title-desk.com/llms.txt
 > Parent Studio: The Harness Lab (https://theharnesslab.com/ · https://theharnesslab.dev/)
-> Founder & Contact: Spencer Teague · sales@theharnesslab.com · spencer@theharnesslab.com · +1-325-763-8701
+> Founder & Contact: Spencer Teague · sales@theharnesslab.com · +1-325-763-8701
 
 ## 1. Executive Summary
 TitleDesk Agent (`https://desktop.title-desk.com/`) is commercial, local-first desktop software built by The Harness Lab for independent oil and gas landmen, title brokerages, E&P land departments, and mineral acquisition teams. Running natively on macOS, Windows, and Linux, TitleDesk Agent connects county-clerk record research, local PDF and multi-page TIFF optical character recognition (OCR), source-linked chain-of-title runsheets, exact rational fraction mineral ownership arithmetic, curative defect tracking, and client-format Excel workbook packaging inside an encrypted local workspace.
