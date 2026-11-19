@@ -251,6 +251,7 @@ h1 em, h2 em {
 
 p { margin: 0 0 14px; }
 .fine { color: var(--muted-dim); font-size: 12.5px; line-height: 1.6; }
+.readouts + .fine { margin-top: 18px; }
 .fine a { color: var(--muted); }
 
 .release-pill {
@@ -1148,6 +1149,19 @@ footer {
   .article table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
 
+/* Phone legibility floor (2026-11-19): no text under 12px on small or touch screens, a little less tracking on the
+   widest mono labels so they keep their line, and 44px touch rows for the footer, legal and breadcrumb links. */
+@media (max-width: 820px), (hover: none) and (pointer: coarse) {
+  .brand-lock b, .section-kicker, .eyebrow, .feature-label, .hero-trust, .readout .r-label, .stack-cat,
+  .pipe b, .phase-num, .phase-head span.phase-count, .example::before, .dl-os, .price-tier, .badge,
+  .pkg-price small, .seats-row label, .quote-live, label.field, th, .person .p-role, .hl-door .d-go,
+  .footer-inner h4 { font-size: 12px; }
+  .section-kicker, .eyebrow, .footer-inner h4, .readout .r-label { letter-spacing: 0.15em; }
+  .footer-inner nav { gap: 0; }
+  .footer-inner nav a { display: flex; align-items: center; min-height: 44px; font-size: 15px; }
+  .footer-legal a, .breadcrumb a, .related li a { display: inline-flex; align-items: center; min-height: 44px; }
+}
+
 @media (max-width: 560px) {
   .readouts { grid-template-columns: 1fr; }
   .stack-row { grid-template-columns: 1fr; gap: 8px; }
@@ -1311,3 +1325,8 @@ a.choice, a.choice:hover { text-decoration: none; color: var(--ink); }
 
 /* Keep the hyphenated brand name on one line in headings. */
 .nw { white-space: nowrap; }
+
+/* Phone legibility floor, continued: these labels are declared above, after the main phone block. */
+@media (max-width: 820px), (hover: none) and (pointer: coarse) {
+  .choice-tier, .code-label { font-size: 12px; letter-spacing: 0.15em; }
+}
