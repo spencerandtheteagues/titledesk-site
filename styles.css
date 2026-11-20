@@ -977,6 +977,12 @@ details.qa .qa-body code {
   margin-bottom: 18px;
 }
 .person img { width: 62px; height: 62px; flex-shrink: 0; }
+/* Contact page: the founder card holds stacked text (no photo), and the form is one column inside its card.
+   As a flex row / two-column grid they squeezed into slivers on desktop and pushed the page 240px wide on phones. */
+.card.person { display: block; }
+.card.person h3 { margin-top: 0; }
+form.contact-grid { grid-template-columns: 1fr; gap: 0; }
+form.contact-grid .button { justify-self: start; margin-top: 18px; }
 .person .p-name { font-size: 1.16rem; color: var(--ink); font-weight: 700; margin: 0; letter-spacing: -0.01em; }
 .person .p-role { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.17em; text-transform: uppercase; color: var(--gold); margin: 4px 0 10px; }
 .person .p-line { display: block; font-size: 14.4px; margin-bottom: 3px; }
